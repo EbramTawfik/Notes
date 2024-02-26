@@ -1,5 +1,6 @@
 #01-03 The power of NumPy
-##1. What is NumPy?
+
+## 1. What is NumPy?
 
 1. **Introduction to NumPy**: NumPy is introduced as a numerical library for Python.
 2. **Speed**: It's highlighted that NumPy is fast because it wraps around C and Fortran code.
@@ -10,7 +11,7 @@
 
 5. **Usage in Financial Research**: NumPy is noted as one of the important reasons people use Python for financial research.
 
-##2.Relationship to Pandas
+## 2.Relationship to Pandas
 
 1. **Introduction to NumPy and Pandas Relationship**: The instructor begins by addressing the relationship between NumPy and Pandas.
 
@@ -32,7 +33,7 @@
 
 ![2](./images/2.png)
 
-##3. Notes on Notation
+## 3. Notes on Notation
 
 1. **Introduction to ndarray Access**: The instructor introduces the concept of accessing elements within ndarrays.
 
@@ -54,7 +55,7 @@
 
 ![3](./images/3.png)
 
-##4. Replace a slice Solution
+## 4. Replace a slice Solution
 
 1. **Correct Answer Explanation**: The instructor explains why a particular option is the correct answer out of four options provided.
 2. **Identification of Correct Rows and Columns**: The instructor points out the correct rows and columns based on the provided syntax.
@@ -69,7 +70,7 @@
 
 ![4](./images/4.png)
 
-##5. Creating NumPy arrays
+## 5. Creating NumPy arrays
 
 1. **Introduction to Accessing NumPy Arrays in Pandas**: The tutorial begins by explaining how to access the underlying NumPy array within a Pandas DataFrame using the `values` property.
 
