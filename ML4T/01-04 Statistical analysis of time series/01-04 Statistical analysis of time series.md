@@ -1,4 +1,4 @@
-#01-04 Statistical analysis of time series
+# 01-04 Statistical analysis of time series
 
 ## Are you ready
 
@@ -41,7 +41,7 @@
    - The presentation concludes by mentioning that Dave will demonstrate how to perform these computations in code.
      ![2](./images/2.png)
 
-##Compute global statistics
+## Compute global statistics
 
 1. **Introduction to Coding Example:**
 

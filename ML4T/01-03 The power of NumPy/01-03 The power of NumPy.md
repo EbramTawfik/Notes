@@ -1,4 +1,4 @@
-#01-03 The power of NumPy
+# 01-03 The power of NumPy
 
 ## 1. What is NumPy?
 
