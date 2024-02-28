@@ -1,0 +1,616 @@
+
+
+Unknown speaker 
+So, thank you very much, everyone, for joining us today. We're going to get started now. Hello there in TV land. We have our online members also participating. Today is a special day I try each semester at least once to have professionals who actually apply machine learning and AI in finance come and speak to us. 
+
+Unknown speaker 
+Today we're fortunate to have a team from some trust who is a hit for you today. Here in Atlanta, you can tell us some of the things they do with finance using some of the same tools right here. Also be advised that they are looking too higher, potentially both full -time folks and interns. 
+
+Unknown speaker 
+So pay attention, take down their email addresses. During the presentations, they've said that they're willing to answer questions along the way. So if you have a question, please raise your hand and ask. 
+
+Unknown speaker 
+One thing for some trustees, repeat the question because the people online aren't necessarily going to have heard it. So repeat it. Also, sometimes someone's up front with people in the back here, so we'll get to questions. 
+
+Unknown speaker 
+Anyways, let me start off by inviting Bob Papowski to come out then and give us an overview of the questions. We're going to hear from some So good afternoon, my name is Bob. I'll see what I do within Subtrust is I'm responsible for sales creating research and the investment bank So when you think about the investment process, we'll talk a little bit about that today. 
+
+Unknown speaker 
+We help facilitate investors investing in securities right and how we apply Machine learning AI algorithms and tools is a little bit of a different version of what and how traditional investments Magic company edge funding Along with me. 
+
+Unknown speaker 
+I have Jeff Hughes who's responsible for equity research I'll talk briefly about three things that we're doing thinking about doing he'll be talking about one of those three things As well we have I'm in the spot of the emergency who's responsible for data and analytics AI machine learning within the consumer bank and we have John who is responsible for Risk in analytics with this event itself And so I'll briefly touch on three things and I'll pass it off. 
+
+Unknown speaker 
+So feel free to interrupt me with questions along the way Three main bodies of work exist within investment banks at the moment including Subtrust for office and how free first is trade identification Okay So if you think about what a dealer is a dealer is a market maker who is trying to buy and sell securities Some of them they own some of them. 
+
+Unknown speaker 
+They don't know Some of these markets are not people So if you come to me and you ask me to buy a specific security that I do not own It would be really useful for me as a salesperson or as a trader to quickly identify something that has similar characteristics that make the needs fit the needs of the client Machine learning and analytics will be able to and do analyze behaviors individuals at companies of companies themselves and the predictive analytics that we can deploy to determine whether or not a transaction is a suitable fit could in fact make a transaction happen between us at the investment bank and that client as opposed to calling another investment bank away from us. 
+
+Unknown speaker 
+The trade identification is a big and important deal that's fairly new. If you think about it, it's kind of what Amazon does in a different application. Trade execution. The traditionally trade execution within investment bank in the sales and trading groups has been identified through, identified factors that could be quickly analyzed to produce a price with or without human intervention. 
+
+Unknown speaker 
+That's been around for a long time. What's changing is the analytical power that's available through cloud computing and other computing services that allow for the machines to start to learn how to enhance the algorithms independently of human intervention. 
+
+Unknown speaker 
+Trade algorithms that start to use machine learning to determine and optimize the business model itself. Lastly, research. A large part of what investment banks do, and we're no different, is spend a lot of time analyzing companies, analyzing markets. 
+
+Unknown speaker 
+And in order to do that, we need a data science program behind you that supports all three disciplines I just talked about. And we are embarking on a data science project, which Jeff will talk about. 
+
+Unknown speaker 
+What I would say, more broadly speaking, having grown up, I was originally a science major and then changed to finance. I wish I stayed in science because the market is coming your way. A lot of what we're going to be working on, and I believe a lot of the future leaders of not only STRH, but broadly speaking, investment banks are going to have your backgrounds. 
+
+Unknown speaker 
+So the more you can focus on programming and understanding finance, the more applicable you're going to be to how we're trying to develop our company and how the market is trying to recruit talent as well. 
+
+Unknown speaker 
+So I won't answer any questions throughout the day, but I don't want to take Jeff's time, so I'll pass it off to Jeff so he can talk a little bit more about data science as it relates to equity research. 
+
+Unknown speaker 
+Good afternoon, everyone. It's a pleasure to be on Georgia Tech's campus. You definitely sent us the Vibrantee back room. It's great to be here at campus. As Bob mentioned, my name is Jeff Utes. I run equity research at SunTrust Roberts and Humphrey. 
+
+Unknown speaker 
+Quick background before I get into talking about how we and the sell side is using data analytics to provide value, add value to the buy side. I've been at SunTrust Roberts and Humphrey for five years. 
+
+Unknown speaker 
+I've been director of equity research in that capacity. Before joining SunTrust Roberts and Humphrey, I spent 15 years. at a global investment bank, spending time in New York as well as Chicago. Before that, I received my MBA at the Fuqua School of Business at Duke. 
+
+Unknown speaker 
+And before that, I spent seven years in corporate banking in Chicago, and I received my undergrad at the University of Notre Dame. As Bob mentioned, I think 20 years from now, maybe even 10 years from now, maybe seven years from now, the background of the Directors of Equity Research will have backgrounds like yours, not mine. 
+
+Unknown speaker 
+So this is very relevant, I think, and the opportunities in this career for folks with your background are significant and substantial. Before I get started on talking a little bit about analytics, I wanna just give everyone a little background on our industry, the securities industry. 
+
+Unknown speaker 
+And there are a lot of terms that are thrown around, buy side, sell side, issuers, and I just wanna make sure that everyone understands some of the basics here. On the sell side, we're talking about broker dealers, the investment thing, some trust around some people. 
+
+Unknown speaker 
+Other firms you've probably heard of, Golden Tax, Morgan Stanley, Geeky. We're sell -siders and we provide information and trading execution to our clients on the buy side. So on the buy side, that's institutional investors that are clients of ours, and that includes long -only complexes, asset management complexes like American Century, Waddell and Reed, Wellington Fidelity, names you're probably familiar with. 
+
+Unknown speaker 
+Also includes increasingly hedge funds, number of names you're probably familiar with, Citadelle Surveyor, Bridgewater for example, Braidale was on TFC this morning, but we bought that. And also pension funds and endowment funds that are considered institutional investors on the buy side. 
+
+Unknown speaker 
+And then lastly, issuers, they're publicly traded companies that we might cover. There are about 3 ,700 publicly traded companies on US stock exchanges right now. Moving on, what is a sell side analyst do? 
+
+Unknown speaker 
+In our research department, we have about 100 teammates and about 40 publishing equity research analysts covering a variety of industries, from TMT to financials to consumer to industrials to energy, you name it, they cover verticals, sub -verticals, etc. 
+
+Unknown speaker 
+They really wear a number of different hats. One is consultants, serve as an industry expert on typically 10 to 30 companies that are coverage. That's Santhras Robinson, Humphrey, our 40 analysts on average cover about 20 stocks. 
+
+Unknown speaker 
+And they serve as really portfolio consultants to our clients on the buy side. They provide information to clients to help them make better investment decisions. They also serve as financial analysts. 
+
+Unknown speaker 
+They build multi -year forecasts. establish earnings estimates, sales estimates, and those can be extremely helpful to the buy side. We'll also do fundamental channel check research which is extremely important. 
+
+Unknown speaker 
+The job is really to change pretty dramatically from being a reporter of earnings previews and reviews to really doing more value added work now. Our research analysts are on the road an awful lot. They spend a lot of time doing proprietary research, attending conferences, also taking up our companies, the companies that we cover on the road to see institutional investors as well. 
+
+Unknown speaker 
+So, the job is changing, I referenced that earlier. The job of a research analyst used to be focused on publishing earnings previews and earnings recaps and that's really become commoditized. The real value added now is coming up of quantitative differentiated proprietary work that the buy side will pay for. 
+
+Unknown speaker 
+Increasing the buy side wallpaper and recaps because there's very little value at You can see on this graph here that the amount of money that our clients are spending on data has been growing Astronomically 168 million on data just two years ago 400 million this year and the outlook for data spending going forward is very robust When we talk about Alternative data want to make sure everyone's kind of clear on this how was it and how the buy side is using it Generally to find alternative data is independent data. 
+
+Unknown speaker 
+It does not come directly from the companies that we cover It basically is information that helps the buy side understand the insights on the income statement Specifically revenues as well as margins are coming up with earnings for share estimates And there are all kinds of alternative data as I've spelled out here You know some of the data is is stuff You're probably familiar with credit card data satellite imaging and social media data online product reviews search patterns on popular word searches And you'll see in the bottom pie graph there alternate the data is Some alternate data is considered more accurate than others specifically credit card data is very valuable information as is web scraping data So how are How is data analytics used in the research process really two ways number one is is data management and the second and second? 
+
+Unknown speaker 
+Item is advanced analytics Data management you have to obtain the data first Extract it it comes from you come from labor intensive Web scraping or you can buy the data from third -party data providers The second thing your data cleansing very very important, and this is probably the most difficult most value -added element here on this page most of the reason for that is most of the data, many experts say that the data is really not usable. 
+
+Unknown speaker 
+And why is that? You might have time series that are wrong, you might have differing years of data, you know, questions about can you normalize the data, can you back test the data, can you use some statistical tools to assess if the data is good or bad. 
+
+Unknown speaker 
+That's very, very important. And the buy side and the sell side spend a lot of time to try to clean the data. Once you clean the data, you know, the next part is making the data presentable. And then a number of tools are used, advanced analytics are used to test, to run hypotheses. 
+
+Unknown speaker 
+You've got scenario analysis and simulation, correlation analysis that's used, and machine learning for pattern recognition, regression analysis, etc. Now the next slide here shows the big picture how we use data analytics. 
+
+Unknown speaker 
+We use it to improve the quality of our research to focus more on Higher value add work such as deep dive thematic pieces differentiate real research But moving away from what I described earlier as the commoditized research product, which is just reporting and is not valued by Our clients on the buy side. 
+
+Unknown speaker 
+We also use it as a tool to help us be more efficient That allows us to cover more stocks and Lastly to become more client -centric as I mentioned earlier. There's a lot more money being spent the data by the buy side essentially every type of client whether you're a small cap manager or a large cap manager or a long only Asset manager with a three -year plus time horizon or a hedge fund with a two -week time horizon you want more data Here's some examples on the next few slides. 
+
+Unknown speaker 
+I've got some examples of of Analytics and specific verticals that we'll talk about I'm not going to go through every single one of these But you can take a look at these online and and see some of the applications of how they're used within consumer Space we have an analyst right now covers cruise lines, and he scrapes cruise line data From websites from either travel agency websites or directly from the cruise lines And he finds changes in pricing to be very effective in understanding the trends in top line That's been very well received By the buy side. 
+
+Unknown speaker 
+They're also analysts on the street who check inventory Some websites like AutoNation or Carvana We'll check them on a weekly basis and look at the SKUs and vehicle identification numbers to identify How a product is moving it as quickly as the discounted aggressively etc And that can be very helpful with regard to identifying your term trends Also on social media media sites, we use, there are folks that use a lot of tools to quantify reviews on social media sites, and that can be very valuable as well. 
+
+Unknown speaker 
+Other verticals in healthcare, you look at trends in advertising and the correlation between drug spending to come up with sales projections. Also, currently approved drugs and non -approved drugs, looking at comparative profiles, product descriptions, and the related companies to try to formulate what the top line might look like and if it mirrors a competitive product, to come up with kind of peak revenue and sustainable revenues going forward. 
+
+Unknown speaker 
+Also, within the EMT vertical, there's a lot of technology tools that are being used. I mentioned earlier, scraping pricing data, and you can see a couple examples there cited. Google Trends, search word analysis, a lot of reviews on websites, etc. 
+
+Unknown speaker 
+And then oil and gas is another energy sector. There's a lot of analytical tools that are used to scrape data, to find alternative data, and come up with unique insights. So how are we currently using data and analytics, and how will we use it in the future? 
+
+Unknown speaker 
+We have a retail, it's real estate investment trust analyst, named Keevan Kim. And Keevan puts out a quarterly piece about the key to self -storage. He covers a number of publicly traded self -storage companies and his read companies. 
+
+Unknown speaker 
+And he goes through 300 self -storage units in order to come up with pricing trends and promotion. This has been very predictive with regard to understanding near -term trends. And it's basically must reading for anyone that is us in self -storage space right now, Keevan Kim's work. 
+
+Unknown speaker 
+Our restaurant analyst, Jake Bartlett, manually reviews pricing items on a number of websites. The fast, casual, and casual restaurant space, such as like a Tardons or David Busters, coming up with unique insights on pricing that's been very valuable to the buy side. 
+
+Unknown speaker 
+Our leisure analyst, who covers theme parks and golf manufacturing equipment, as well as boat manufacturers. Mike Schwartz does proprietary work on understanding the monthly, how new product especially is tracking. 
+
+Unknown speaker 
+And we use a lot of data analytics to come up with some identified trends in pricing and on the top line. In the future, we wanna use some tools to help us and a couple other verticals, specifically energy, as well as aerospace. 
+
+Unknown speaker 
+There are a number of government websites that we can access and use some tools to help us accumulate data on. For example, on a county basis, how wells are, the productivity on certain wells in certain counties in the state of Texas. 
+
+Unknown speaker 
+And same thing with aerospace and defense. data points from government websites. There's a current use example that's pretty neat. About three or four months ago our internet analyst, Yusuf Scully, came out with a report really focusing on Amazon and specifically their private label business clothing specifically. 
+
+Unknown speaker 
+We looked at SKUs offered by Amazon as well as competitive brands from Calvin and clients and other competitors and looked at pricing data on each brand. What Yusuf concluded is that Amazon's private label brands have tremendous opportunity to continue to gain share based on customer use and the Amazon private label brand versus other competing brands. 
+
+Unknown speaker 
+This is going to be a source of upside we think for Amazon in the near term and longer term. It's been a great call. We got a lot of publicity on this one. It was highlighted in the New York Times Sunday edition on June 24th and Amazon stocks up about 15% since we published this data. 
+
+Unknown speaker 
+It was one of our most widely pieces of research for the last year. So, in conclusion, the times are really changing in equity research on the buy side as well as the sell side. The days of sell side research analysts relying on quarterly previews and reviews to do primary research, the buy side just won't pay for that anymore. 
+
+Unknown speaker 
+The buy side is demanding more proprietary, creative, and quantitative research from the sell side. And technology advancements are creating a tremendous amount of opportunity here for us to have value to look up the key proprietary insights to offer the buy side. 
+
+Unknown speaker 
+The Holy Grail is taking the expertise, the experience of our analysts combined with the technology tools that are in place right now and are continuing to evolve. The power of the data as well as the combining with the intellectual capabilities of our analysts is really where the Holy Grail is with regards to how the buy side is using sell side research going forward. 
+
+Unknown speaker 
+And with that, I'm happy to take any questions. One over there. Sir? I was wondering about the process. How you look at a given company in this sector and determining in the end which kind of data sources are relevant for making any valuable predictions if there's like it's more of a scientific process or it's more of a hard question. 
+
+Unknown speaker 
+So the question is, when we come up with, when you're looking at companies, how do we assess what data sources that will be valuable? Is that kind of the gist of the question? So that's a very good question. 
+
+Unknown speaker 
+And it really comes up, it comes down to, our analysts all have quite a bit of experience in our industry experts understanding what the key drivers are with regard to the top one I mentioned. The impact on the business model. 
+
+Unknown speaker 
+And a lot of it is just having an understanding, being an industry expert and understanding what will drive those key variables. Give me an example. There are some third party data providers who will give you parking lot data. 
+
+Unknown speaker 
+So if you have a consumer analyst who covers Home Depot or Lowe's, for example, Home Depot or company, there are entities out there that will provide parking lot data, satellite feeds, to give you an understanding of how busy the parking lot is, specifically on weekends, because that's when the majority of sales occurs for these two companies. 
+
+Unknown speaker 
+And you can have a greater understanding of the weather impact, for example. There's been particularly dismal weather in the spring that can have an adverse impact on traffic for Home Depot, specifically in the garden. 
+
+Unknown speaker 
+Area Home Depot and that that can really drive your term. It's all true at Home Depot or less. That's one example It's you know, it's really having an understanding of what's driving the underlying metrics that are most important Might be the same store sales comps in a retail Environment might be foot traffic. 
+
+Unknown speaker 
+It really depends on specific industry specific company I don't please what I might say is on top of that. So I think the answer is it can be both We're starting to develop on the thesis. It can be both that You know, we want the expertise of fundamental analysts tell us that think are interesting and then we try to find better ways to access data or more unique data sets that maybe you a couple layers below that but then there's also the discipline of Finding unique data sets and patterns things that we didn't think were correlated to a particular stock Right, and that's the initiative that we're starting to kick off in 2019 so I think you can approach it from a data science perspective and that can inform An equity fundamental research analyst and then you can take equity fundamental research and you can find better You know patterns and and data sets Around the things they care about right a lot of firms are setting up firms being investment banks Setting up subsidiaries around the thesis that you can create unique data sets They go into the revenue graph that Jeff showed early But I think that's probably a fair assessment of the capacity to both empower the 40 analysts that we have But also create a new discipline and a new product that could be sold into the buy side as well I Didn't mean to take precedence over sorry well imagine a fresh Georgia Tech graduate completes this course, starts work at SunTrust. 
+
+Unknown speaker 
+Where would you imagine they would plug in here? So for instance, would they be paired with an analyst and do studies for them? Would they be an analyst? How does that work? The answer to that question is because there's plenty of opportunities at SunTrust. 
+
+Unknown speaker 
+Rob is now free. Yes, you could come in and work with one of our industry experts. But Bob referenced a new investment that SunTrust, Rob is making in data analytics and data science. We were building a data science team. 
+
+Unknown speaker 
+We're in the process of trying to hire a data scientist right now. And then we'll be building a team around that person. So there would be great opportunities there to come in and work with our data scientists who are interviewing folks right now, actually, for that senior level position. 
+
+Unknown speaker 
+So there's plenty of opportunities. And I truly do believe that 10 years from now, 12 years from now, next DOR will have some quantitative experience. So I keep them all out. Question in the back. Thank you. 
+
+Unknown speaker 
+What data makes you very all using to store your data? Are you using something centralized? Second, specific tools you are using for advanced analytics, specific languages you like to play in, visualization packages. 
+
+Unknown speaker 
+And third is, how big is the centrist profits and Humphrey doing right now? How big is centrist? Robinson Humphrey, specific. OK, sure. So the question is, what data sets are we using right now? Pardon me? 
+
+Unknown speaker 
+Data bases. Data bases. What kind of analytical tools are we using right now? And then the size of centrist Robinson Humphrey. Let me start with the last one, which is the easiest for someone who doesn't have a lot of background. 
+
+Unknown speaker 
+Some trust Robinson Humphrey is about $2 billion in revenues, roughly, right? Our investment bank, the investment bank, subsidiary of some trust bank. The bottom line, probably, if you want to keep it. 
+
+Unknown speaker 
+So the investment bank is about 1 ,160 people. Sales and trading is about 360 of that. Every research is about 100 of that. The data analytics team I have is about seven people. At the moment, that's going to continue to work, right? 
+
+Unknown speaker 
+It's a fairly new initiative for us. There are a few databases. One is centrally owned. The nice thing about being associated with bank, and we have two other colleagues who come up and speak, is that there's a lot of infrastructure that's available in shared services. 
+
+Unknown speaker 
+So there's a data lake that's available for big data. And analytics around the data lake, we haven't called out. There's a recent initiative that was stood up within some trust bank itself. And so I get built for free in life, but I have the ability to access tools. 
+
+Unknown speaker 
+Primarily, every research analyst and journalist people, the QCF folks that we have. most of them have actually come from this college, are folks on Python and ARP, and analytics around it. But we're in very early stages, as Jeff mentioned, building out a data science team. 
+
+Unknown speaker 
+I think that's, to me, an exciting thing, right? A lot of opportunity is available when you're starting something new around the investment bank. I grew up in an investment bank that was very small and became very big when we came to DFA. 
+
+Unknown speaker 
+So when I think about my career, it's aligning yourselves with the right firm, given the interest they have, where you think you can take incremental steps. I just built it off of Jeff's comment, and I do want to turn it over to the other two names. 
+
+Unknown speaker 
+What is the fundamental research animals have? They have C -suite relationships, which you don't have, and they have industry expertise, which you don't have. What's their biggest fear? Data analytics. 
+
+Unknown speaker 
+Because they know that that's important to how they're going to continue to be relevant. Why? Because the C -suite at the firms that we research are spending a lot of money on data analytics themselves. 
+
+Unknown speaker 
+And so if you can't converse in a meaningful way and collaborate, you're going to start to become less and less relevant to the C -suite of research companies that we focus on. So they need help. That's my job, is to try to find the resources available. 
+
+Unknown speaker 
+That's why we're talking to you guys. Does that make sense? Does that answer your question? Yes, very good. So let's turn it over to Anand, if that's okay, so we can get another play on how we're using that inside the C -suite. 
+
+Unknown speaker 
+Hi there. My name is Anand and I lead our consumer data analytics office. I'm here to tell you about... I took this job only a couple of months back. I was waiting for myself, like, should I talk to you about the areas that we do machine learning? 
+
+Unknown speaker 
+Should I talk to you about how the retail industry... I work for the consumer bank, so it's kind of part of the retail bank. How the retail industry itself can use machine learning? This is something I've been discussing with my leadership, so I thought I would start with that and give you more of an industry perspective rather than specific areas that we do machine learning. 
+
+Unknown speaker 
+There was a question about how big SGRH is. I'll start with how big the consumer bank is. We are about $6 billion in revenues. We have a $75 -76 billion portfolio in loans. About the asset under management is about $65 billion. 
+
+Unknown speaker 
+These are big numbers. Deposits of $110 billion that you are taking. And to abide by itself could be a fortune of mine to come. It's a huge part of the business. that, not just because the news are big, the deposits, for how many of you bank the tempest? 
+
+Unknown speaker 
+All right. Thank you. Your deposits are the big reason that we run other parts of the bank, wholesale banking, which we bank, to go pay it out. Right? The deposits are lifeblood for the bank. So if you can move on. 
+
+Unknown speaker 
+This is a statistic from Boston Journal. I'm not going to share anything with you. This is from Boston Journal. How many of you are banked with the top three banks in the United States, JP Morgan, Liz Bardo, Bank of America? 
+
+Unknown speaker 
+Right up here. All of you have given. An incremental deposit of $118 billion into 2017. Last year alone, BFA, JP Martin, Wells Fargo, got an incremental deposits of $118 billion. Just lifeguard of the bank. 
+
+Unknown speaker 
+Any bank. Chief funding, right? Regional banks that include Sanchez, DDNT, PNC, CAP -1, MNT. 22 regional banks together. Guess how much deposits they got in 2017 together. People, make a guess. It looks like negative, if I understand your chart. 
+
+Unknown speaker 
+This is not so good. $100 million? $100 billion? $1 million. $1 million? Oh, that's too low. Half a billion? Because that would sink my heart. Half a billion? Half a billion? $55 billion. $55 billion? 
+
+Unknown speaker 
+$118 billion? The divide is getting larger and larger and larger. That is something to scale, right? Bigger the bank, bigger the deposit growth. Seems like that, right? So I kind of think, how many of you think Google, Amazon, and Facebook, these kind of companies are going to rule the world? 
+
+Unknown speaker 
+I have quite a few. I disagree with that notion, by the way. I'll tell you why. You know that? Traditional banking model is being redefined. Steph told me about how the traditional analysts aspired with data scientists. 
+
+Unknown speaker 
+They could be better together. We have proven the humanity by itself. Man or women, human plus machine together is better than human or machine. We are on this hybrid land today. Traditional banking has been redefined. 
+
+Unknown speaker 
+How many of you have missed outcomes? How many of you have made more than 100? trades in the past one year. J .B. Morgan made all the investment accounts free if you're making less than 100 trades. 99% of the class who do free trades in J .B. 
+
+Unknown speaker 
+Morgan, if you haven't noticed back on that, I went back and checked how many trades I made last year, 57, I'll be okay with J .B. Morgan. Doesn't have to pay any free. A lot of different business models are coming. 
+
+Unknown speaker 
+So you have to pay something, right? Either you pay with your money, which you do for other banks, but if you use J .B. Morgan, you pay with your data. A lot of subscription models are out there. J .B. 
+
+Unknown speaker 
+Morgan wants to tie into a Netflix subscription model. They want Here is another thing that is also a problem with the traditional bank. This is JP Morgan's offering software banking. You have to have $75 ,000 in your deposit account, or investment account, total investment assets, to access their private loan. 
+
+Unknown speaker 
+They have lowered the bar. This is going to change the industry. In centrist, for all these services, you need a minimum of $100 ,000 in investment assets, or in some cases, $1 million or more in investment assets, the lower the bar. 
+
+Unknown speaker 
+I think it is still flawed. If I am not having $75 ,000 with them, but I'm really a high -network guy, or a girl, you wouldn't know. So most of the industry is going with rules, not with an adaptive machine learning type approach to make, implement their strategies. 
+
+Unknown speaker 
+This is a challenge that I pose to my leadership in my group in consumer. What can we learn from other industries, right? So some of you think Google or Amazon can rule the world. I disagree. Here is why. 
+
+Unknown speaker 
+If you look at pharma industry, right? If you look at the list of all these companies, these are huge companies, Johnson& Johnson, Roche, Pfizer, Novartis, Bay Area. All of them have more than 100 years of history. 
+
+Unknown speaker 
+They have weathered so much. They have weathered the Great Depression, world wars, they're still dominating the market, right? All these companies started with organic industry, aspirin, drugs like that. 
+
+Unknown speaker 
+Then they migrated to microbiology, vaccines. insulin, antibiotics, and all that, right. And then, now they are like genomics. They have a core of research and development, right. That's their core. They're driven from one market discipline to another discipline, another knowledge discipline, another knowledge discipline, from organic industry to microbiology to genomics. 
+
+Unknown speaker 
+When it comes to banks, can you use the same template? I think it is, yes. In consumer bank, especially, is the knowledge about the client? If we go to village somewhere, the killer knows who is coming in. 
+
+Unknown speaker 
+The baker comes in, the killer knows whether the baker has a working family they have. They keep going to school and all that. It's like a localized knowledge, right. The knowledge of the client. Is there a way to use that and treat the client differently? 
+
+Unknown speaker 
+We need a differentiated client experience, regardless of how much you want. It's not like you have a $75 ,000, I'll treat you in one way, $100 ,000 million, I'll treat another way. That's old school. 
+
+Unknown speaker 
+That's not going to work. So if you use that kind of the same template, for centuries, banks really thrive on intermediation. Somebody wanted money. Somebody has excess money. Banks are in the ring. A colleague who owns capital markets. 
+
+Unknown speaker 
+It's intermediation. Worked very well for centuries. Somebody in Columbia made a research and found out the capital market type theme. Remains of the 2% to 7% range for centuries. Like from 600 bucks from the rotation CEO company onwards. 
+
+Unknown speaker 
+Very well. Then access makes you a big part. Do you know who said this? The greatest invention the banking has done in the past 50 or 60 years is APM. He was a chairman of the Fed. Things that I would never say that. 
+
+Unknown speaker 
+Paul Walker said that, which is true. The access to the money, 24 bits of that access to the money, then from intermediation to access. Today, it is client centricity. Anybody who can do well in client centricity can do really good. 
+
+Unknown speaker 
+So what does client centricity actually mean? 90% of Americans live 20 miles from the nearest Walmart. 90%, right? When I go to Walmart, they're shaving cream. Shave my hand. Like socks, a T -shirt, or anything like that, right? 
+
+Unknown speaker 
+Walmart treats me. as a way to push inventory out, clear inventory sales. Banks are very similar. They'll sell you a money market account, deposit account, credit cards, e -locks, mortgages, any of those sorts, right? 
+
+Unknown speaker 
+If we go to Amazon .com, it's offline centric. My landing page is very different from yours. Very different from yours. It's offline centric. So the knowledge discipline that could take us into client centricity is machine learning and analytics, right? 
+
+Unknown speaker 
+Here is another example of how this analytics can differentiate us to the market. You all take investment course. I'm going to give you a, this is the question. These companies, there are two different companies in here, Blue and Red, right? 
+
+Unknown speaker 
+Both have very similar market cap, right? One has... And then from P -164, what companies are those? They are the same industry. Thank you, guys. Another clue here. Tesla and Ford. Tesla and Ford, very close. 
+
+Unknown speaker 
+I mean, I like your thinking when you're going, but it's similar. Any guesses? Look at their voice. Number of people voice. Look at the P. There is some clue. Salesforce? Salesforce? Salesforce and something else. 
+
+Unknown speaker 
+Close, but not quite right. I'll give you an example. They are an entertainment industry. Yeah, thank you. What is the network? There you go. Netflix and Walt Disney. So why would Netflix have this P .E.? 
+
+Unknown speaker 
+That is Walt Disney is this much. I can't quite see it. What is it for Netflix, the P .E.? 148 versus, yeah. So we haven't gotten to P .E. yet in the course, but tell them first what that is so they know. 
+
+Unknown speaker 
+That's a multiple of the market rates. So market rates one to three times more from the earnings of Netflix versus 15 times more. If you look it up, it would be a very good thing. So if they earn $1 a year, there's $42. 
+
+Unknown speaker 
+And by the way, that's an outrageously large number. Outrageously large number, right? In any way, it's outrageously large number. How do you really substantiate something? Even if you give this recommendation, you come up with some numbers, run algorithms, go, and give this to Jeff or Bob. 
+
+Unknown speaker 
+even laugh at you. Why would you give this? That's a very make sense. To me it makes sense. Only one reason. Disney. Disney owns LucasDome, Disney owns Pixar, Disney owns Marvel. They have all these assets, massive assets. 
+
+Unknown speaker 
+How many of you are Disney fans? How many have Netflix accounts? Disney has all these assets, but when I go see a movie in a neighborhood A .M .T. theater, right? I'm an A .M .C. customer, not a Disney customer. 
+
+Unknown speaker 
+If a wife is ten years old, so whatever he calls him, so I find something which really suits him. So I find I find something, I get it. I'm a target client, or a Walmart client, by the way, by the toy. 
+
+Unknown speaker 
+Disney has lost the sight of their client. They accumulate the assets. They don't have my incentive. They cannot use machine learning and analytics like Netflix does. Netflix has all the right walks. 
+
+Unknown speaker 
+They know what to watch, what to don't watch, how much we pause, how much we repeat, all that, right? What is the use of all that? Netflix was a DVD mailing company not long before. And you were like kids. 
+
+Unknown speaker 
+So it wasn't that good. Then when there's like, they've worked at themselves and went for streaming. And now they have 10% of Hollywood production. From zero 10 years back to almost 10% of the Hollywood production. 
+
+Unknown speaker 
+That comes with clients. They will produce something and put out there the confidence that Hollywood cannot do. Hollywood economics is like a term, you must record, right? You put something out there and pay for it for Netflix. 
+
+Unknown speaker 
+Many companies push products like the Hollywood economics. They'll come up with some kind of business plan of sort, which is essentially Hollywood economics. Not Netflix, it doesn't have to. So client -centricity is a theme for some firms and many other banks. 
+
+Unknown speaker 
+And the more we do, the better we do on client -centricity, I think we are going to win. My bank is going to be very different from my bank. And the bank of the future is going to use analytics. It's going to use machine learning much more in an effective way that could keep clients in this city. 
+
+Unknown speaker 
+And I walk in or take my mobile app and launch my app. The bank would know me much better, just like the village, 20 years of experience, knowledge, the community, that was knowledge to be packed. And the only way we could pack that is through our exclamation point, right? 
+
+Unknown speaker 
+stop. I wanted to show something real quick, a couple of minutes of video. How many of you have heard a company called DataRobot? A few of those, right? So the reason I'm going to play this is you're going to learn a lot about machine learning and how to do machine learning, or the period of time you can take a little bit. 
+
+Unknown speaker 
+Controversial thing, I'm going to say. Because artificial intelligence is going to automate many of those, right? So this is a company I visited like a year back. Fascinated, we're going to do some experiments with them. 
+
+Unknown speaker 
+I'll play this on the top of my head. DataRobot is an automated machine learning platform that helps you solve business problems by finding the best predictive model for your data. And an incredibly clean interface allows analysts, developers, and data professionals to rapidly build highly accurate predictive models, embedding the best practices of the world's top data scientists into every model they build. 
+
+Unknown speaker 
+Massively parallel processing allows users to build many models at once, so the work that used to take weeks now happens in an afternoon. Instead of guessing which model will work for any given data set, DataRobot systematically compares models built with Python's scikit -learn, R, Spark, H2O, Valpal Web, TensorFlow, and others. 
+
+Unknown speaker 
+Models are described with incredible transparency, and DataRobot uses novel techniques to extract deep insights from each and every one. No, you can't use this for your homework. You must commit by generating a simply elegant one -line API code at the touch of a body. 
+
+Unknown speaker 
+With DataRobot, you can deliver predictive analytics and insights to your business in hours instead of months. DataRobot, the world's most advanced machine learning platform for accurate predictive modeling made easy, fast, and powerful. 
+
+Unknown speaker 
+So there's a saying, with all the getting and getting understanding, a lot of wisdom to it. Jeff talked about the data sets, aggregating all those data sets and making sense, like in a way that people influence people with clear logic, it will be worth much more than working on techniques. 
+
+Unknown speaker 
+There is a story from, you must have heard this, the monk is passing through a village, and he sees a couple of folks stacking stones at the outskirts of the village. So he's asking one of them, hey, what are you doing? 
+
+Unknown speaker 
+He says, Oh, can't you see, I'm just stacking stones. So he passes 10 meters, 20 meters, there's this other guy carrying the stones, and he's asking the same question. Hey, what are you doing? The other guy says, oh, you're building this beautiful cathedral. 
+
+Unknown speaker 
+This is going to be the biggest church in the village. And he gives live information about it. Machine learning analytics is like stacking stones. Right? What you do with it is much more important than how you do it. 
+
+Unknown speaker 
+So if you are looking for a very, you are all very bright, I think the thing that would differentiate you in the marketplace and give you a lot of fulfillment in your career is then build the cathedral. 
+
+Unknown speaker 
+And I know you all do it. That's all. Thank you. So, I am banking with JP Morgan because it has presence everywhere even though I am in Atlanta right now, I go to more, I go to different states and I want my, I want my bank to a bank at least. 
+
+Unknown speaker 
+So, how do you think SunTrust will be able to compete with that in future? So, tomorrow there will be mobile banking because of that the presence of the bank whether there is a branch or ATM in there won't really matter or do you think expanding branches in various locations will be more helpful? 
+
+Unknown speaker 
+The question is I want to bank with a bank which has presence in all states not with the regional bank which is localized. What do you think tomorrow is going to be? So, tomorrow the definition of bank will change. 
+
+Unknown speaker 
+Do you think probably of branches and scientists? You probably think of mobile app tomorrow. There are a lot of, how many of you are from Europe? Do you bank with N26? Monzo, any of the internet only banks? 
+
+Unknown speaker 
+It's catching up real, real quick. So, the notion of what banking will change and you will be able to identify with an entity that would manage or finance this in a very different way but just with technology rather than physical structure. 
+
+Unknown speaker 
+That's my question. Any other questions? Yes. You highlighted the resilience of these companies and I wonder if you see if that's because that product that they're creating is more essential, where it's perceived to be. 
+
+Unknown speaker 
+You see banking in a perceived similarly, an essential thing, or does that allow some flexibility in how fast you catch up with technology trends? So the question is, we talked about banking and pharma and financial services. 
+
+Unknown speaker 
+Pharma is very essential if you don't take it or drive it by. So financial services, can you equate or what is the relationship, right? Is it the same? How many of you want to have a life that is out of poverty? 
+
+Unknown speaker 
+How many of you don't want to suffer from poverty? How many of you want to buy a car? How many of you want to buy your dinner tonight? So when you think of bank, you don't think of all these. Essentially, financial services enables this and much more. 
+
+Unknown speaker 
+It's fundamental to a society that wants to make progress. Whether the bank of today can do this well, it's a test for tomorrow. The bank of the future is going to do it much, much better then. And we want to be the bank of the future. 
+
+Unknown speaker 
+By the way, just like Bob's team is hiding, my team is hiding. That's me. Thank you. Hi, my name is John Marmalino. I represent the Risk and Finance Data Analytics Office. So I unfortunately don't have a slide or interesting presentation to show you. 
+
+Unknown speaker 
+But what my area does is it manages data foundation and analytics capabilities that some trust uses to manage its risk and its financial performance. That has a fairly wide distribution of use cases where machine learning can come into play. 
+
+Unknown speaker 
+So one microcosm of my space is financial products. So within the financial product space, we are monitoring for money laundering, human trafficking, terrorist financing, and then fraud, identity theft. 
+
+Unknown speaker 
+Each one of those traditionally has presented different challenges for banks. To some extent, the old way of managing these things were to create traps for behaviors. So look for new accounts, look for accounts that were open out of state, look for accounts with multiple cash deposits, look for accounts that have frequently changed addresses. 
+
+Unknown speaker 
+But the problem with any of those methods is those traps pretty quickly become obsolete. Criminals and the people who are intending to do harm to us are pretty quick at adapting and finding those traps. 
+
+Unknown speaker 
+And then they operate in a way that's slightly outside of the capability of the rules to find them. Machine learning is truly an area where banks are starting to move into the forefront of machine learning, to create opportunities to bring lots of data together in a way that can be utilized to manage active threats and an ever changing method of committing fraud or laundering money or financing terrorism. 
+
+Unknown speaker 
+But within our space, we have opportunities to develop machine learning models can deal with almost every aspect of it. So one of the, one of them, I'm gonna go very micro. I know these guys say very high level, I'm gonna go very micro. 
+
+Unknown speaker 
+Common problem that the Fed takes is third party check fraud. So what that means is you as a SunTrust client are presented with a check from outside of SunTrust. So it's not a SunTrust check, it's could be Bank of America, we'd make it China, it could be anybody. 
+
+Unknown speaker 
+They write a check, they present it to us. We have to, per law, make an assessment very quickly within 24 hours really, determine whether your check needs to be held or whether we need to make those funds available to you. 
+
+Unknown speaker 
+To do that, we need to bring together a vast amount of information. We need to understand who you are, what is your routine types of activities? Is this outside of the norm for you? Are you likely to be committing fraud at SunTrust? 
+
+Unknown speaker 
+But above that, I know you, I like you, I trust you. Do I know the other guy? Do I know the guy who wrote you the check? Do I know the institution the check was written from? That requires us to bring in, to play, information that could be provided by us at the party. 
+
+Unknown speaker 
+It could be other information that we house across the organization. It could be on the lists, watch lists that we've accumulated, watch lists that we purchased. And we bring all that information to bear to determine whether or not there's a probability of fraud on that check. 
+
+Unknown speaker 
+I presented a whole new host of problems that banks haven't typically been able to deal with. In the past, the way we could deal with it is we would just call it checks. So I was presented by a third party check. 
+
+Unknown speaker 
+The traditional way to handle that was we just wouldn't catch the check until the other bank made good on the check, deposited their funds into our accounts. We felt that it was pretty safe to now make those funds available to you. 
+
+Unknown speaker 
+But the world is changing, one. clients won't stand for it. But two, the regulators won't bother. So in this case, we're bringing together data sets from a vast amount of sources. So in some cases, structured data, where we're looking at things like your account balances, what your addresses, unstructured data, where we're pulling information out of your social media in order to ensure that you're managing the risk -important data. 
+
+Unknown speaker 
+The key to this, when you think about it, is really the application. So while it's very specific to a one -use case for SunTrust, the techniques and the capabilities, the techniques and capabilities that this provides to us is actually utilized, it could be utilized by many of those sources. 
+
+Unknown speaker 
+So when a non -talk to you about clients' interests and you know the client, there's an extremely valuable proposition to SunTrust to make sure that we're offering you that. products and services And he will go without doing that for his purposes But the same techniques that he's going to need to do that But know who his clients are what the probabilities of his clients are to take an offer What his clients need is going to be the same types of activities and techniques that we need to do to monitor fraud or to monitor risk of the client You had an earlier question as to whether or not a French physical location Matters, right? 
+
+Unknown speaker 
+So JP Morgan JP Morgan is located in lots of places Bank of America similarly Does that matter and the reality is the physical location of the lessons We're moving to a Point where the client Aspects its financial institutions to be available to it when it needs it now that isn't tomorrow morning between the hours of nine 4pm that's whenever the client needs it. 
+
+Unknown speaker 
+So You see you see the advent of things like demo PayPal Capabilities to move money and rate around very quickly You see in the advent of more mobile applications for trading so that clients can trade I've worked with SunTrust for 13 years and every day when I walk into the office I pass a branch of SunTrust branches within our physical building. 
+
+Unknown speaker 
+I've been in that branch probably 10 times in 13 years and most of the time because I need to make change Most banks most people don't need physical locations And so the relevancy of our of our institution is our ability to make SunTrust available to you as a client When you need it now that has implications on the risk space because what that means is I can't risk review Your loan application as you present it by the time you're ready to apply for a You probably have already decided meet the loan Want the money now and you're probably in a place where you want to make the purchase. 
+
+Unknown speaker 
+If you think about the way you handle car purchases, for example, you walk into a dealership, you don't have financing, you probably don't have enough money to buy the car immediately, but you walk into a branch or a dealership and each out of the car, yeah, how much do you pay, how much do you want your payments to be, and then you go to a finance office and they'll be a risk rate. 
+
+Unknown speaker 
+The future of banking will be, you have been risk rated as a client every single day, and every time you do something through the bank, or really anything that we capture or we monitor, updates your risk profile. 
+
+Unknown speaker 
+And then we make available to you the services and offerings based on the risk profile you present to us. That's the future of banking. That's where banking will be in the future. And so we will continue to be relevant if we are able to adapt. 
+
+Unknown speaker 
+The banks that are able to adapt can make the financial institutions available to you at the time you need to transact. Those are going to be the banks that will survive. SunTrust has made a tremendous amount of investment over the past five years on data infrastructure, large data capabilities, and advanced tools like DataRobot. 
+
+Unknown speaker 
+The challenge will always be the information. The information feeding those machines, the tools and techniques that are used to analyze and to make decisions. But the applications are limitless. So while we're talking about some very specific use cases, they're not limited at all to those use cases we talked about. 
+
+Unknown speaker 
+To give you some ideas, the regression models, the regression models that were used to do Moneyball, I don't know if all of you guys saw Moneyball, first use of statistics and baseball to manage baseball teams. 
+
+Unknown speaker 
+Those are the same regression models we use for forecasting balance sheet activity, probability of default. The analytics that are used to determine portfolio optimization for the machine learning that's used or the neural networks that are used to do machine learning are the same models that we use for optimizing balance sheets, size, parameters. 
+
+Unknown speaker 
+The techniques are what is important. The types of information you need to solve the problem are what's important. The particular use case is less relevant because I promise you the problems you will work on the first year you get out of this program will be completely irrelevant to you 20 years into your career. 
+
+Unknown speaker 
+The challenges you will face, the problems you will have to address, the tools that you will use, the languages, they won't exist in 20 years. They probably won't exist in five years after you graduate, but they probably won't exist in 20 years after you graduate. 
+
+Unknown speaker 
+But the foundational capabilities, the thought process around what types of information do I need, what types of analytics do I need to apply, that is foundational to the success of you and your careers in the future. 
+
+Unknown speaker 
+So while we talk about the risk and finance base and capabilities that we provide, bank operate, or within the consumer bank, or within Robertson offering the client bank, or investment bank, those are all utilities, capabilities being applied to a specific set of problems. 
+
+Unknown speaker 
+I would say that once you can articulate the problem, the techniques that need to be applied to solve those problems are foundational. With that, I'll open it up to questions. I know some of you are probably ready to leave. 
+
+Unknown speaker 
+So, what if we get the whole sentence came up there, and I've got a couple questions I can ask from online. Just ask, you asked a great question. The way that you think about companies, and their ability to thrive and survive, is oftentimes they have to come up with the right use case. 
+
+Unknown speaker 
+Right, if you're a transportation company. and you happen to make a course of buggies, you are smart enough to engage in combustion engines and emerging technologies without the transformation of what they may cause. 
+
+Unknown speaker 
+So I don't think it's the existential nature of the product that creates a success. I think it's how you think about yourself as a company. And in this instance, SunTrust defines itself as a publisher of the product. 
+
+Unknown speaker 
+And our job is to reduce your financial stress by allowing you to wait for the actual operation. And if we think about that, then the products that we bring to market are gonna be substantially different. 
+
+Unknown speaker 
+Because we're gonna be there at the point of transaction. We're gonna not only make it easier to transact, we're gonna let you know the transaction you made is actually a good one on the other side, right? 
+
+Unknown speaker 
+So I think more broadly speaking than just the bank, that's how you generally differentiate the successful companies who've been here for a long time versus those that died, right? When I say we need to show top 10s at the end of the survive, I think I'll show the 300 we did. 
+
+Unknown speaker 
+Sorry, go ahead. I just wanted to pull a couple of questions from online so everybody is participating here. One question is, so in this class we, I kind of take the easy way out and I say volatility is risk. 
+
+Unknown speaker 
+But what are other ways, what are other sorts of risks or how do you evaluate risks? And you're the head risk guy, so what's your answer? Well, so first of all, I would say volatility is opportunity. 
+
+Unknown speaker 
+Yes, it is risk. But that's the opposite end of it, right? So it's the other side of the point. Risk is opportunity. Managing risk creates opportunity. The company that can bank you when no one else will bank you, if there's an opportunity to be made, those are the banks that will be profitable. 
+
+Unknown speaker 
+So it's about using advanced analytics and information to manage the risk, not eliminate it, right? You have to manage it, of course. But there's lots of times of risk. You manage all kinds of risk. If, may I add, the biggest risk, usually the folks who begin their career in data science make is data is a good one. 
+
+Unknown speaker 
+That is because nobody has the perfect data. You collect a lot of data, but that is the same. Companies measure what they want to see, and they make all set out of those. If I was a data scientist in 2008, many of you were probably little kids back then. 
+
+Unknown speaker 
+Was there anything such a thing as data science in people? Yeah, maybe. We all had something else. I'd say if I did analytics in 2008 and in Sony, and you come to me and ask. what kind of cameras I need to sell. 
+
+Unknown speaker 
+So I do a lot of algorithms, run models, and say, OK, you need to sell high -definition cameras. 2008 is when iPhone came out. You need to do high -definition cameras, put a lot of money in this geography and all that. 
+
+Unknown speaker 
+Across the street from Sony, there was another company, Zero Market Cap, like a startup. They were making crappy cameras where you could put it on your belt, pull a book, better what you want. Like, they're crappy cameras. 
+
+Unknown speaker 
+And you could put it on your social network. What company is that? No amount of data out of machine learning can turn Sony to a GoPro, right? So we also have to think about strategy as the whole arching thing. 
+
+Unknown speaker 
+The human mind can bring in a lot more things and make decisions. Data is an aid to all of us. So if you bring both of those, I think the risk is going with one or the other, bringing them together. That's what I'm saying. 
+
+Unknown speaker 
+In fact, if I could add to that, the biggest challenge you're going to face in your career is access to the information you need to do the analysis. It's not the analytics that needs, not the software. 
+
+Unknown speaker 
+It's not that. It's going to be, do you have access to the information you need to build the model? And when you build the model, can you get that information in a timely enough way to make a difference? 
+
+Unknown speaker 
+It's all fine and good if I have a perfect vision of you every month, once a month. But if you want to make a loan three days after I've got that perfect vision of you, it's useless. I need to know everything about you when you want to do something. 
+
+Unknown speaker 
+And that's going to be checked. So I'll answer. I'm the trader in the room. So when you tell me there's more volatility, what I'll tell you is all the things is the difference of opinion. So what is your core thesis? 
+
+Unknown speaker 
+What are the issues? analytics and data that you're using to know that court thesis is proving to be right or wrong and how do you cut your losses right so increased volatility creates that opportunity but also makes you really think long and hard about the parameters that you're willing to take risk in and how to get out of the position the number one problem with the trader that I will have for the last 25 years the next thing is traders who start to deviate their thesis from their position why they own something starts to change that shouldn't happen you should reset and then a land of high vol if you just put a trade on and it moves against you immediately you did a lot of work to come up with putting the trade on you gotta be willing to throw in the garbage you start over I think we need to close now however I believe they're available you Still for a few more minutes, so let's thank them and then if you have more questions, please come up here 
