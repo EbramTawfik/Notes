@@ -55,3 +55,43 @@ so each of these you know we'll call build tree in turn so what will happen is w
 's kind of a mistake so the shape of 0 is the number of samples so we have to make room for our left tree and then we start the right tree after that so if this is 42 then the right tree starts in the 43rd row
 
 ![6](./images/6.png)
+
+
+## Missing part
+
+
+
+
+
+**Introduction**
+"I want to wrap up with the strengths and weaknesses of decision tree learners let me check for questions here real quick never mind ok ok glad to have you all participating by the way in this late evening time ok strengths and weaknesses of decision tree learners so whenever you're there you should look at a few things let me actually build this list while I'm talking about it"
+
+**Cost of Learning**
+"a cost of learning um if you compare for instance a decision you know what's the expense of creating a decision tree compared say to creating a KNN learner so we went through you know this fairly complex algorithm about how to build a decision tree and as you can see it can be expensive K and N and K nearest neighbors is simple at a learning time you just take the data and plop it into RAM and you consult it later when you're doing queries so in terms of cost of learning decision trees lose two K nearest neighbor I would say also that regret linear regression learners they're somewhere in between to build a parametric model using linear regression takes a little bit longer than it does to just save things to memory like KN but doesn't take quite as long as as it does to build a decision tree and for building a decision forest you know you got to multiply that by however many trees you're going to have in your forest"
+
+**Cost of Query**
+"next is a cost of query so among these three algorithms K nearest neighbor linear regression and decision trees I want you to think for a moment and ask you a question which is the fastest KN n linear regression or decision tree we you know in other words we've got our X factors and we want to say hey what's the predicted value what's the predicted Y using this data I'll pause for a second let you consider that and then give you the answer linear regression is a fastest all you've got to do if you have a linear regression model it's just a set of parameters you just you know x1 times parameter 1 X 2 times parameter to add them all together boom that's the answer it's blazingly fast so in many cases linear regression learners are don't have such a high quality in terms of you know what's the prediction versus the actual result but they are blazingly fast to learn and blazingly fast a query KNN is the worst of them all because when you're querying a KNN learner you have to compute the distance from your query to all of your individual data points then sort them and find the find the closest k data points it's extremely expensive to query a k k nearest neighbor ler decision trees again are somewhere in between the beauty of them is because they are binary trees for say a thousand elements on average you only have to ask I think a I know pet calculated it for me um whatever whatever log base two of a thousand is uh I don't have a log base two here I think it's a what is it Pat I think it's about ten anyways so if you build a tree with a thousand samples to query it you would most have to ask ten binary questions and that's really fast so again decision trees are somewhere there in between"
+
+**Benefits of Decision Trees**
+"now there are some strong benefits of decision trees that I want to mention here one is you don't have to normalize your data so I believe in one of the online lectures I hope if we don't all have to add one we talked about this problem of let's suppose one of your factors ranges from zero to a thousand and another factor ranges from say zero to one it turns out that if you build a cane or neighbor type model from that data the the factor that ranges from zero to a thousand ends up overwhelming the other factors and turns out to just be the most important factor even though it may not really be the most important factor so typically with K and n for k and n learners you have to do something to normalize your data so that each dimension essentially has the same range so typically you take the mean of all the data for a factor 1 and normalize it to that mean and standard deviation you don't have to do that for decision trees they automatically determine what appropriate what appropriate thresholds are as they build the tree let's see um just trying to think of the other benefits of decision trees I'm sure um the ones I mentioned the other day will occur to me as soon as we finish this some soon as this lecture but I'll add them to the I lied them to this presentation later on"
+
+**Conclusion and Wrap-Up**
+"but anyways that concludes my lecture to you on how to build a tree I'll do one more check on Piazza to see for getting more questions and then I'll wrap it up Pat adds a link to scikit-learn and pandas oh I believe he's pointing to something that lets you visualize a tree once you've created it that's nice ah and thank you pat has provided log base two of several numbers for me thanks ok getting to this last question the reason we don't have to normalize the data is each variable is treated the same weight and it's based on correlation or entropy to decide the best split yeah because mmm yeah good point we're essentially looking at correlation to decide which factor to use and then yeah we use the median to decide the split value so there's no additional benefit in normalizing it first if in the case of KNN if you didn't normalize it like I said that particular factor that varied over a wide range will become the most important one okay doing one more check for questions and then I'm going to wrap up okay thank you everybody for your attention I am going to go ahead and close up the presentation and yes I will I will post these slides to the wiki this is kind of fun okay anyways let me stop that and I'll stop the broadcast bye-bye have a great evening and see you in TV land"
+
+
+
+
+
+Here's a summary of the main points you covered:
+
+Strengths of decision trees:
+1. No need to normalize data.
+2. Automatically determine appropriate thresholds.
+3. Fast learning and querying compared to some algorithms.
+
+Weaknesses of decision trees:
+1. Costlier learning compared to simpler algorithms like KNN.
+2. Slower querying compared to linear regression.
+3. May not always provide the highest prediction accuracy.
+
+Your lecture seems comprehensive, covering both theoretical aspects and practical implications. You've also engaged with your audience by considering questions and providing explanations. Overall, it appears to be a well-rounded presentation on decision tree learners.
