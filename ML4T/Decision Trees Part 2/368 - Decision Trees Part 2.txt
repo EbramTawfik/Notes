@@ -1,0 +1,496 @@
+
+
+Unknown speaker 
+Hi everybody, welcome. Sorry for my delay in getting started. I make some of these videos from my basement and I got down here to discover some of my technology was missing because of a certain child of mine. 
+
+Unknown speaker 
+So anyways, I had to find that and plug it all in. Ready to go. Okay, I will check periodically on Piazza to see if we've got any questions. One thing I would appreciate is if somebody who is currently watching could post a question on Piazza indicating that you can hear me. 
+
+Unknown speaker 
+I'm going to start blazing forward anyways, but it would be good to get that feedback. So thanks. And I'm going to check on Piazza right now. Okay. Okay, somebody says they can hear. Thank you. All right, I'm going to now step through some PowerPoint slides. 
+
+Unknown speaker 
+Okay, let's see what happens when I go full screen on this. Okay, I'm going to change things. Give me just a moment here. Okay. Okay. Put together a couple of PowerPoint slides. I'll step you through. 
+
+Unknown speaker 
+So if you remember the last lecture we talked about, if you had a decision tree, how you might use it. So in this lecture we're going to talk about, okay, how do we build that decision tree in the first place? 
+
+Unknown speaker 
+So let's pause for a second and think about what are the things that make up a decision tree. And a big picture, remember here, we're trying to build a model that from some factors or features or attributes, things we can measure about a system, what is going to happen later. 
+
+Unknown speaker 
+And so, The factors or attributes are our Xs, and we might have many of them. We might have up to N of these factors. Now associated with each group of factors are a label, Y. So our data consists of the values of the factors and the values of the labels. 
+
+Unknown speaker 
+Think about it like a big matrix where the columns are the Xs, and then that last Y and the rows are individual samples of data. So each row might represent a day for a price of a stock, or each row might represent a day of weather. 
+
+Unknown speaker 
+Then using that data, we build a decision tree, and the decision tree consists of decision nodes. Each node represents a binary decision. Now we can build decision trees that aren't necessarily binary. 
+
+Unknown speaker 
+They might have more than two outgoing edges, but for simplicity, and actually it turns out for efficiency, it turns out that building binary trees is the best way to go. So we're only gonna have two potential outputs of each decision node. 
+
+Unknown speaker 
+There's then the outgoing edges that lead to additional decision nodes, and there are two kinds of special nodes. There is the root node, which I forgot to mention here, and also leaves. So when you finally reach a leaf at the very end, that's the value that you're trying to predict. 
+
+Unknown speaker 
+The root is the first node at the very top that you start at when you're trying to make a decision. And we build these decision trees from data examples, and again, we have each row in our data is a set of Xs and a Y. 
+
+Unknown speaker 
+Now I'm gonna double check that you all are able to see my PowerPoint slide. I don't want to get all the way through this and discover that people aren't seeing the slides, so I'm going to go take a quick check at Piazza. 
+
+Unknown speaker 
+Ah, okay, people must see the PowerPoint because they're asking if they can have it. And the answer is yes, you'll be able to have it. I'll come back a little bit later to answer some of the other questions that are popping up. 
+
+Unknown speaker 
+Great, thank you very much for answering. Okay, here's an example decision tree. We've identified the root here up at the top. So whenever we want to query our model to see what the value, what the predicted value is, we start here at the root and each decision node asks a binary question is this factor x11 less than or equal to 9 .9. 
+
+Unknown speaker 
+If it is, yes, we go down this left edge and we come to another question about that same factor, x11. And if it's less than or equal to 9 .25, we go to the left. If it's not, we go down to the right. 
+
+Unknown speaker 
+And here we see a new factor that we're asking questions about x2. If it's less than or equal to 6 .48, boom, we go down here, we arrive at a leaf and the value is 6. Now, a couple of things I want to point out. 
+
+Unknown speaker 
+This is an example tree. I'm going to actually show you in a few minutes how we built this exact tree and it's using that wine data that I introduced the other day. So x11, for instance, is a percentage of alcohol. 
+
+Unknown speaker 
+I forgot what x2 is, but thing to note here is this particular tree was only built using two factors. And in some cases, the same factor, well, in all cases, the same factor appears multiple times through the tree. 
+
+Unknown speaker 
+So, for instance, factor 11 appears here and here. So if we go down this branch, we end up asking two questions about factor 11. If we get on this branch, again, we end up asking two questions about factor 11. 
+
+Unknown speaker 
+So we can repeat factors. Sometimes not all factors are included in the tree. And sometimes some factors appear more than others. And it turns out that that's often related to how predictive the individual factors are. 
+
+Unknown speaker 
+Now, this is one way to view a tree. We can also view it in a different way in a tabular view. And this data right here represents the same tree. but in a tabular view. And this is the way I want you to build your decision tree for the next assignment. 
+
+Unknown speaker 
+I want you to use a NumPy array. And I want you to consider these four columns. The first column is for that particular node, which factor are we considering? The next column is what is the split value? 
+
+Unknown speaker 
+In other words, which value do we decide to make a good on a left branch or a right branch? And then these two other columns tell you where in my matrix here does the next part of the tree begin. So here we're saying the left tree starts in the next row and the right tree starts at the eighth row. 
+
+Unknown speaker 
+Now, leaves are special entries. And so if we have... here in the first column indication that it's a leaf, the next column split val, instead of it representing a value to split on, it represents the value of the leaf. 
+
+Unknown speaker 
+And it doesn't really matter what's in the left or right columns here for a leaf because we're not going down further. One more thing I wanna say, yes, in this example, we have sort of text in this column, but NumPy arrays can only be numbers. 
+
+Unknown speaker 
+This is just for sort of clarity. So instead of saying x11 here, you would put the number 11. And instead of putting a leaf here, you would put some special number that signifies to you that this is a leaf. 
+
+Unknown speaker 
+And again, these are dual representations. They represent exactly the same information. The root node is always the very first row in this in this in the array. And then you can see here where the left and right sub trees are. 
+
+Unknown speaker 
+So that's how we represent a decision tree, or at least my recommendation on how you want to represent it for your project. Now, those who have sort of an object oriented bent and wanna do things in an object oriented way, you can do that in Python. 
+
+Unknown speaker 
+But let me suggest again, first do it this way, get it working. And if you wanna go forward with the object oriented approach, that's fine, but get it working like this first. Now I'm gonna take a quick look back to Piazza, see if we have any questions, and then I'll go on with the presentation. 
+
+Unknown speaker 
+Okay, people see the slides. Abedah asks, question, building binary trees is best in efficiency in terms of building the tree you mean. Why is it? Why would a higher branching number be worse? So I meant actually that if the tree is binary, it is likely a little bit easier to process. 
+
+Unknown speaker 
+Keep in mind each question, so think about efficiency in terms of a CPU. If our questions are simple comparisons, that's something that modern day processors can do incredibly fast. So if it's a binary tree, they only have to do a single comparison at each node to decide what to do next. 
+
+Unknown speaker 
+Now there's probably, you can probably dig up papers that might contradict what I'm saying, so I'm not going to assert it too strongly. But I will say they're definitely easier to build. And it's my intuition that they're probably fast as well. 
+
+Unknown speaker 
+But yeah, sure, maybe higher branching factor could perform better. The video of the slides is too blurry to read sometimes. Okay, I understand. I'm gonna share the slides and also the PowerPoint spreadsheet that I'm gonna use shortly. 
+
+Unknown speaker 
+I'll put that up on the website so you'll be able to see the PowerPoint as well. Somebody is enjoying Porto. It's Patrick, hi Patrick. So keep in mind, everybody can see my screen right now, but I'm with you Pat. 
+
+Unknown speaker 
+Glad you're enjoying it. Oh, and by the way, he's checking out, he's doing an ops test ground truth on the upcoming problem. In numbering nodes, I see you're going by depth instead of a breadth. Indeed, it doesn't matter. 
+
+Unknown speaker 
+Actually, I'm gonna get to that in a little bit and you'll see why they have the numbers that they do. So ask that question again if you don't understand it or if I don't make it clear coming up. Okay, now let me go on with my PowerPoint presentation. 
+
+Unknown speaker 
+Okay, here is the algorithm for building a decision tree. This is the algorithm initially proposed by JR Quinlan and there's a link to this paper actually on the project Wiki site if you're interested. 
+
+Unknown speaker 
+It's actually a very... good paper in the sense it's well written, it's not filled with jargon, it's easy to understand the motivation for how decision trees are built and so on. Key thing, so I know that most people in OMS come from a computer science background, so they're probably familiar with recursion. 
+
+Unknown speaker 
+Some of the people taking the course on campus are from other disciplines that actually hadn't necessarily seen recursion before, but this is a recursive algorithm and in other words the algorithm or the function called build tree actually calls itself. 
+
+Unknown speaker 
+And an important consideration in any recursive algorithm is you have to be sure it's going to terminate because otherwise it'll call itself over and over and over again going to essentially infinite depths and never stop. 
+
+Unknown speaker 
+So the very first thing that we do is a couple checks to see if we've met a stopping criteria. Now as you, by the way, I want to emphasize that this is not the final totally complete description of how to build a tree. 
+
+Unknown speaker 
+This is kind of a outline and you're probably going to find that you need to add a few more details. Okay, but this is a, this will give you a good start. Anyways, the first things we check are stopping criteria. 
+
+Unknown speaker 
+So when we get called, you know, when this function build tree gets called with data, which is the data we're going to use to build the tree. And by the way, this is structured as an indie array where each column represents a factor and the very last column represents the label or the y value. 
+
+Unknown speaker 
+So we take that data in and if the number of rows, in other words, shape of zero, that's the number of rows. If there's only one row, that means we're being given data, essentially one sample of data. 
+
+Unknown speaker 
+So if we're asked to build a tree out of one sample of data, well, the answer is it's a leaf and the value of that leaf is the y value of that data. And I'm using the same columns here that we talked about before in our column or data structure. 
+
+Unknown speaker 
+The next two items don't really matter. So we create a single row that is, again, we designated it's a leaf. The label is y and we don't care about the other two items. So that's one stopping criteria. 
+
+Unknown speaker 
+Another is what if we get called with some data and all of the labels are the same. Well, obviously there's no point in creating a more complex, more complex, more complex, more complex, more complex, more complex, more complex. 
+
+Unknown speaker 
+more detailed tree from this data because we know what the answer is gonna be, we know it's gonna be just why. So again, we can create a leaf and return it. So those are our stopping criteria. Now, if neither one of those conditions are met, then we have real data that we can build a tree with. 
+
+Unknown speaker 
+So first step here is determine the best feature to split on. So as an example, if we're getting called for the first time to build a tree, say using the wine data, this question is essentially, what is that first question that we're gonna use to build our root node? 
+
+Unknown speaker 
+Now, it turns out that each subtree is formally a tree as well. It has a root, it has leaves, it has directed edges and so on. So we can imagine each subtree as a tree by itself, but the very first... 
+
+Unknown speaker 
+The very first time we do this, we're looking at the root node. I'll talk in a minute about how do we determine that best feature. There's a number of different ways to do it, and it merits its own slide for discussing. 
+
+Unknown speaker 
+OK. Now that we know which feature we're going to use, we need to determine what particular value are we going to split on. And the standard way to do this is to look at our data, look at that column I. 
+
+Unknown speaker 
+Remember, that's the feature we decided to split on. And we look across all of our samples, and we take the median. That is, the median is the value that divides the data in half. In other words, half the data is going to be less than the median, half the data is going to be greater than the median. 
+
+Unknown speaker 
+There are special edge cases that people probably ask about. What if the same value is repeated 10 times in the middle? So you're going to have a sort of lopsided split of the data. Yeah, that's true. 
+
+Unknown speaker 
+No big deal. OK, so we know our split valve. Now we need to gather together the data that makes up that we're going to use to build the left side of our tree and gather together the data that we're going to use to build the right side of our tree. 
+
+Unknown speaker 
+And here's how we do it. And this is showing some of the real power of Python. So again, we're going to call our own tree building function here, built tree. And the left tree is going to be built from data that from the data that is less than or equal to the split valve. 
+
+Unknown speaker 
+And so this expression is called comprehension. And you can specify, OK, look through my data. find all of the elements where this column is less than splitval, grab those columns out of data, and we will use that to build our left branch. 
+
+Unknown speaker 
+Same thing for the right side, except we're using those rows that are greater than splitval. So each of these, you know, we'll call build tree in turn. So what will happen is we'll recurse down the left side of the tree, and we'll go down and calculate this left tree, and boom, it'll return, and we'll have the value here, left tree, which is an indie array. 
+
+Unknown speaker 
+Similarly, for the right side, we'll have right tree. So now we have two sides of our tree, left tree and the right tree. We still need the root, and here's how we compose the root. First element here is what's the feature we're going to split on? 
+
+Unknown speaker 
+We determined that's I, right? The next column is what's the value we're going to split on? That's split val. It turns out that in our formulation here, the left tree always begins at the next row. One thing I want to mention that I didn't mention when I was talking about our data structure, is this left and right, these left and right columns, it turns out that it's easiest if you think about them as being relative. 
+
+Unknown speaker 
+So in other words, this is saying that the left tree begins in the next row. So wherever we are in this, whatever row we're at in the matrix, we're saying the left tree starts at the very next row. Where does the right tree start? 
+
+Unknown speaker 
+Well, we have to make room for our left tree. So we check to see how many, you know what it occurs to me that this should be shape of zero. In fact, I'm going to just fix that right now. Because that's how many rows are there in the left tree. 
+
+Unknown speaker 
+So I got that wrong. Okay. So this is saying, okay, we've got to make room for our left tree. I'm sorry. Yeah, we have to make room in our left tree. And then the next row after that is where our right tree begins. 
+
+Unknown speaker 
+Then we append those all together. We append our root, our left tree, and our right tree. Boom, that's our whole tree. The end. Okay, I'm sure there's probably some questions percolating there now. So I'm going to go back to Piazzan and check and see if we have any questions. 
+
+Unknown speaker 
+Thank you. Again, Abadda with another excellent question. Are we using median to make it as close to being log -based to height as possible? Yes, that's right. So we're put another way. We're trying to keep the tree balanced. 
+
+Unknown speaker 
+So if at each level we split the data exactly in half, then the level's below, we'll split it in half and so on. And as we go on down, at each level, we'll be splitting the data appropriately so that the trees will, or the branches will remain balanced. 
+
+Unknown speaker 
+Now, you can't always do that perfectly, but yeah, that's the general idea. Where is the root in the node in the code? Where is the root in the code? Ah, OK. Yes. So when I was giving this presentation yesterday on campus, I defined the root. 
+
+Unknown speaker 
+I think up here. It turns out that you have, as soon as you determine which feature to use and which split val, you already have all the information you need to define the root. It's, you know, the first column's gonna be the factor. 
+
+Unknown speaker 
+The second column is gonna be the split val. The next one is always gonna be one because the left tree always starts to the left. And you don't know until this line until you do this computation, how large the left tree is. 
+
+Unknown speaker 
+You could determine it by essentially executing this, but you don't know how many rows are in the left tree until you do this because the data size may be a little bit different. Okay, so that is how to build a tree using Quinlan's approach. 
+
+Unknown speaker 
+Now, let's talk a little bit about how do you determine the best feature? So, in general, what we wanna do is we wanna start with the feature that segregates the data the best. So imagine for a moment that we're doing classification. 
+
+Unknown speaker 
+In other words, we're trying to decide is it a buy or a sell for a particular stock. We would like to find that first feature, that root feature that splits it into the most similar groups. In other words, one group should be mostly buys and the other side should be mostly sells. 
+
+Unknown speaker 
+So which factor can help us make that split most effectively? Then we go to the next problem of, okay, Now I've got a group that has mostly buys. How do I distinguish those few cells from the other buys? 
+
+Unknown speaker 
+And hopefully there's another feature at that level that'll help us make that distinction. So at each level, we want to somehow choose the feature that does this separation most effectively. And one way of thinking about that or one term folks use to refer to it is information gain. 
+
+Unknown speaker 
+So which factor provides the most information about our data? And there's a number of different ways to evaluate that or estimate it. I believe the original Quinlan paper uses an approach called entropy, even if they don't use entropy, that still is I think nowadays widely regarded as the most effective method of selection. 
+
+Unknown speaker 
+Entropy is just a way to measure, you know, once you've segregated your data into groups, to essentially measure the diversity or randomness of each group. So as an example, if each side, you know, had 50% buys and 50% cells, then we didn't really gain any information because it still is kind of, you know, randomly distributed. 
+
+Unknown speaker 
+However, if one side is all buys and one side is all cells, that was the biggest information gain we could possibly get. And there are ways to measure entropy even for non -classification examples, you know, where our data, instead of it just being labeled a buy or a sell is a regression sort of problem. 
+
+Unknown speaker 
+Now, don't fear, I'm not gonna make you calculate entropy. We're gonna use, for this project, we're gonna use correlation. And it turns out that correlation actually for regression problems is very closely related or correlated with entropy. 
+
+Unknown speaker 
+So what we can do is we can look at each factor in our data and see how well correlated it is with our labels and the factor that is most strongly correlated is gonna help us make that split most effectively. 
+
+Unknown speaker 
+There's yet another method called the Gini index that is essentially another measure of diversity that people use as well. Anyways, to summarize, I think entropy is sort of the de facto standard, works very well. 
+
+Unknown speaker 
+If you were to download and use the decision tree library in the future, you would find that they use entropy. I think you can choose between entropy and genie index. I want to emphasize though for this project, you're not allowed to use the sci -pi library. 
+
+Unknown speaker 
+Sorry, you have to write your own. Okay, I'm gonna now show you, I'm gonna give you an example of doing this with real data. Let me check and see if we've got any questions for I do that. In the build tree algorithm, what does the append work? 
+
+Unknown speaker 
+So for indie arrays, so look up the sorry, the documentation for NumPy and in particular indie arrays and you'll see what append does. Basic idea is it It takes root, it creates a new array out of these three arrays, puts root at the top, next left tree, finally right tree. 
+
+Unknown speaker 
+You may need to provide an additional argument, essentially telling it along which dimension should these arrays be appended together. The default I believe is axis zero, which is rows. So you probably don't have to do it in this case. 
+
+Unknown speaker 
+Anyways, that's what a PIN does. It makes a new in the array out of your component in the arrays. Okay, let me now give you a concrete example. Okay, this is also the example, by the way, the graphical tree that I showed you. 
+
+Unknown speaker 
+This is the same data and the same tree. And that data, by the way, is, I picked, I started with just eight samples of data because obviously, I'm not gonna sit here and do a 1600 node tree. So I randomly selected eight rows out of the actual wine data. 
+
+Unknown speaker 
+And then I picked arbitrarily three columns or three factors for it to build this tree out of. But keep in mind, for the real data, you've got 11 factors. So the data that you're gonna be building your trees with, you're gonna have potentially 11 factors. 
+
+Unknown speaker 
+And anyways, factor 11, by the way, is alcohol content. And I don't recall what factor two and 10 are. But anyhow, each row here, represents one sample of, you know, a person scored a glass of wine. In this case, they scored it four out of ten. 
+
+Unknown speaker 
+And the quantitative measures for that glass of wine were these three values. You know, this represents another glass of wine and potentially a different person who tasted it and they're scoring. Okay, so our first question here, okay, we're going to build a tree. 
+
+Unknown speaker 
+And by the way, over here, I've got space set aside that we're going to fill in. This is going to be our indie array that represents our tree. Our first question here is, which factor should we split on? 
+
+Unknown speaker 
+What's going to be our root node? And another way of putting that is, what is the most information -providing factor? So one way to do that is to use correlation. So each along the top here, each of these values represents the correlation of this column of data with y, with our labels. 
+
+Unknown speaker 
+And I just use the Excel correlation function here. So correlation of this column with that column. Now, you'll notice that this one is negative. It still is valuable information. All that it means is, as this factor increases, y decreases and vice versa. 
+
+Unknown speaker 
+But it still is providing us information about y. Now, if you look at these three, we see that x11, factor 11, has the highest correlation. So we're going to choose that to make our root node to do that first split. 
+
+Unknown speaker 
+And by the way, you know, when I share this spreadsheet with you, all these tabs along the bottom, you can think of sort of like different pages in a PowerPoint presentation. Okay, should add another row up there. 
+
+Unknown speaker 
+Okay, so we've started to fill in our data structure here representing our tree. The dogs are barking. I don't know what they're barking at. Anyways, so we know we're going to use factor 11. Our next question is, what should the split value be? 
+
+Unknown speaker 
+And remember, we talked about using a using median. So easiest way to compute median is first we sort our data. So I've sorted now all of these rows according to this column. It turns out that you don't explicitly have to do this in your program because you can do that comprehension method I mentioned a moment ago. 
+
+Unknown speaker 
+But anyways, if you sort, it becomes clearly evident what the median value is. You just want the particular value that will split the data in half. So we go from 9 .8 to 10 .0. So our split value is 9 .9. 
+
+Unknown speaker 
+Okay, I need to take just a moment to make sure I've got electricity from my laptop because I'm running a little bit low on battery power. So give me just a second. Apologize for the delay. Okay. We have power. 
+
+Unknown speaker 
+All right. So I'm indicating now the data that's going to make up our left subtree here in red and the right subtree there in green. Like I said, we already know where our left subtree is going to start to the very next row. 
+
+Unknown speaker 
+So it's going to fill up this part of our this part of our data structure. I move the right subtree down a little bit so we have some room to think up here. Now we're calculating the correlation with this subtree. 
+
+Unknown speaker 
+So for instance, this now represents the correlation of the data in our left subtree with y and so on. So we're not looking at the whole the whole data set anymore. We're just looking at the left subtree. 
+
+Unknown speaker 
+So we've recursed down into calculating or computing the left subtree again. Interestingly enough, this same factor X 11 has the strongest correlation. So we're going to use that again to split on. And it turns out it's already sorted according to that factor. 
+
+Unknown speaker 
+So it's going to be between these two values. So it'll be 9 .25 will be our split valve because we're going to be between these two values. because that's the median here. So now we have, we've split the data into now into we're gonna compute a left sub tree and a left right sub tree. 
+
+Unknown speaker 
+And again, we need to calculate in each case what is the correlation of each column with our labels Y. And by the way, we've added another row here which represents that decision node. We're gonna split the data on factor 11 again and we're gonna use 9 .25. 
+
+Unknown speaker 
+Now, something to observe here is when you get down to the point where you've only got two data elements, it's very likely that you're gonna see correlations of one and negative one for each factor. And there's a question of, okay, in general, if the, if they have the same value, how do you decide which one to split on? 
+
+Unknown speaker 
+There's multiple correct answers there. One is select randomly. Another is deterministically choose the first one or deterministically choose the last one, whatever. I recommend that you go with a deterministic approach because we're going to have plenty of randomness in this data and in these trees anyways. 
+
+Unknown speaker 
+It's not really necessary to arbitrarily add randomness here. And you'll see in a moment some ways that we inject randomness into this. Okay, so we've selected our root node. We're now building the left subtree using that root node. 
+
+Unknown speaker 
+So this now represents the overall left subtree. We're now going to look at building the left subtree of the left subtree. And I'm going to arbitrarily choose factor two here as our split value. And the median here turns out to be 7 .48. 
+
+Unknown speaker 
+And now we have all the information we need to add our two leaf nodes. So if x2 is less than or equal to 7 .48, well, that's this leaf. And we know the value is 3. Boom, we filled that in. Otherwise we'll go to the right. 
+
+Unknown speaker 
+And it's this leaf, value is 4. We similarly pop back up now and do the same thing with the right tree. I should say the left right. tree and now we've completed the whole left subtree. Now this is an error that should be too. 
+
+Unknown speaker 
+Okay. One thing I want to point out here, let me make sure I'm consistent here. Yeah. The numbers I'm filling in here to point down to the essentially the rows at which the next subtrees begin are relative. 
+
+Unknown speaker 
+So this four means, for instance, that the right subtree begins four rows down. So one, two, three, four, it's starting here. And this two, for instance, means the right leaf is two rows below, one, two. 
+
+Unknown speaker 
+So these values are always relative. The reason for that is it makes keeping a little bit easier when you're traversing the tree to do a query. It also makes a little bit easier when you're building the tree. 
+
+Unknown speaker 
+You could still make them absolute references. It's up to you, but you'd have to pass around some more information to keep track of where you are in the tree. Doing it this way, you don't ever really have to know where you are in the tree as you're executing the algorithm. 
+
+Unknown speaker 
+Okay, so now we've built, we've fleshed out the left hand, complete left hand subtree. Then we start working on the right subtree. And let me just skip to the end. It is a long and boring story to go through the whole thing. 
+
+Unknown speaker 
+But here now finally is our entire data structure describing the tree. So that's how you build a decision tree from sample data. It's one way. I'm gonna give you another way in just a moment, but let me now go check and see what questions we've got. 
+
+Unknown speaker 
+Okay, no new questions. Let me reload here just to be sure. Okay, let me now show you a different way to build a tree. So let me, before I show you that, let me ask you to think about something for a while. 
+
+Unknown speaker 
+I want you to go, we'll take a look at this original definition or description of how the tree is built. to build a tree, which of these steps in this algorithm do you think are expensive? Obviously, some are more expensive than others. 
+
+Unknown speaker 
+But in particular, which one is probably the most expensive? I'll be quiet for a moment while you ponder that. And I'm having a sip of wine myself. It makes the lecture better. OK. Certainly, one of the most expensive things to do is determining this best feature to split on. 
+
+Unknown speaker 
+Why? Well, in the method I presented, if we're using correlation, calculating the correlation, say for 1600 rows. Well, NumPy can do it quickly, I admit it, but it still, of all the things we might do, is one of the more expensive. 
+
+Unknown speaker 
+And we have to do the correlation for each column of data before we can decide what to split on. So if there's one way that we could, one thing that we could do to speed up our algorithm the most, it would probably be to make that part faster. 
+
+Unknown speaker 
+Another one is computing the median. Now, in the example I gave, I showed that you should first sort the data and then find the middle values, and that'll help you compute the median. It turns out there's faster algorithms now that actually can compute the median in order in time. 
+
+Unknown speaker 
+You don't actually have to do the full sort. So median is order in, but it's a big in, so it can take a while. But anyways, long story short, if we could figure out a way to do these two steps faster, that would overall help our algorithm be a lot faster. 
+
+Unknown speaker 
+And that's exactly where random trees come in. So let me skip to random trees. So, oh, I need to fix this. Okay, this is an algorithm by Adele Cutler. She was a PhD student of Breiman. who was at UC Berkeley. 
+
+Unknown speaker 
+And he was the, he took JR Quinlan's ideas of creating decision trees, but expanded the idea greatly with random trees and random forests. And Ms. Cutler, who's now a professor in Utah, produced I think one of the best papers describing their methodology. 
+
+Unknown speaker 
+And she's carried it forward in a number of different ways. But anyways, the general idea is this, rather than burn all of that time, trying to decide what the best feature is to split on, let's choose it randomly. 
+
+Unknown speaker 
+Clearly, picking a random number, pick a random number from zero to 10 is a lot faster than doing the correlation with a random state. It's easy to balance thatgentle moist. And it shows our 10 columns of 1600 pieces of data. 
+
+Unknown speaker 
+So that speeds things up significantly. Now you might naturally ask, yeah, it probably does make it faster, but doesn't that screw up your tree? So postpone that question for a second and I'll answer it in a moment. 
+
+Unknown speaker 
+The initial answer is yes, it does impair the quality of the decision tree. But there's something we can do to work around that. I'll get to that in a moment. But the other thing she does is rather than compute the median and having to sort or run the select algorithm, you just choose a random row, two random rows, grab the feature value out of those rows and take their mean or just divide them by two. 
+
+Unknown speaker 
+And that's guaranteed to give you a split value that is somewhere, not at the edges of the data, it's somewhere in the middle. It might be towards an edge, but it's definitely not gonna be at a very edge. 
+
+Unknown speaker 
+So these two random selections here make the tree building algorithm monstrously faster. You still then have to go through the rest of the algorithm like I described before, but these two random selections make it much faster and much easier. 
+
+Unknown speaker 
+Okay, now back to this earlier question of, well, doesn't that impair the quality of my tree? The answer is yes, if you have only one tree but something we're gonna get to shortly, either later this week or early next week. 
+
+Unknown speaker 
+is something called bagging. And in general, the idea here is it's better to have a learner that is composed of many learners. Another term for that is ensemble learners than just to have a single learner. 
+
+Unknown speaker 
+So if you have a single tree and you build it carefully using this Quintolin method, yes it can do very good, but if you have a learner that's built of multiple trees even if they're created randomly its performance can actually supersede that of the best individual tree. 
+
+Unknown speaker 
+And again we'll get into more detail on that a little bit later but essentially a random forest is a group of trees where each tree is computed somewhat randomly. Now I want to mention something about this randomness. 
+
+Unknown speaker 
+There's several different ways that you can cause this forest to be random. One of them is each tree is computed with these random numbers here. Another is that the data that you construct the tree from could be selected randomly. 
+
+Unknown speaker 
+You're given a whole set of data from which to create a learner. What you can do is sub -sample, randomly select not all of that data, but some sub -sample of that data, create a tree, resample. Again, it's with replacement. 
+
+Unknown speaker 
+You pick another group of data, build another tree, and for each tree you build, you grab some random assortment of that data. Even if you're building the Quinlan type tree that isn't random at all, each tree that you build is built from a different selection of the data, so it's going to be a bit different. 
+
+Unknown speaker 
+It turns out that these differences are important. If all of your learners are identical, there's really no benefit to having multiple learners. You want essentially uncorrelated learners or diversity among your learners. 
+
+Unknown speaker 
+That's why these random approaches end up, when you combine them into an ensemble learner, give you a really valuable system. I'm going to check one more time for questions, and then I want to wrap up with strengths and weaknesses of decision tree learners. 
+
+Unknown speaker 
+Let me check for questions here real quick. Never mind. Okay. Glad to have you here. have you all participating by the way at this late evening time. Okay, strengths and weaknesses of decision tree learners. 
+
+Unknown speaker 
+So whenever you're, you should look at a few things. Let me actually build this list while I'm talking about it. Cost of learning. If you compare for instance, decision, you know, what's the expense of creating a decision tree compared to say to creating a K &N learner? 
+
+Unknown speaker 
+So we went through, you know, this fairly complex algorithm about how to build a decision tree. And as you can see, it can be expensive. K &N, K nearest neighbors is simple at a learning time. You just take the data and. 
+
+Unknown speaker 
+plop it into RAM and you consult it later when you're doing queries. So in terms of cost of learning, decision trees lose to K nearest neighbor. I would say also that linear regression learners, they're somewhere in between. 
+
+Unknown speaker 
+To build a parametric model using linear regression takes a little bit longer than it does to just save things to memory like K and N, but doesn't take quite as long as it does to build a decision tree. 
+
+Unknown speaker 
+And for building a decision forest, you know, you got to multiply that by however many trees you're going to have in your forest. Next is cost of query. So among these three algorithms, K nearest neighbor, linear regression and decision trees, I want you to think for a moment and ask you a question, which is the fastest? 
+
+Unknown speaker 
+K and N, linear regression or decision tree? You know, in other words, we've got our X factors and we want to say, hey, what's the predicted value? What's the predicted Y using this data? I'll pause for a second, let you consider that and then give you the answer. 
+
+Unknown speaker 
+Linear regression is the fastest. All you've got to do, if you have a linear regression model, it's just a set of parameters. You just, you know, X1 times parameter one, X2 times parameter two, add them all together. 
+
+Unknown speaker 
+Boom, that's the answer. It's blazingly fast. So in many cases, linear regression learners don't have such a high quality in terms of, you know, what's the prediction versus the actual result, but they are blazingly fast to learn and blazingly fast to learn. 
+
+Unknown speaker 
+to query. KNN is the worst of them all because when you're querying a KNN learner you have to compute the distance from your query to all of your individual data points then sort them and find the find the closest K data points. 
+
+Unknown speaker 
+It's extremely expensive to query a KNN learner. Decision trees again are somewhere in between. The beauty of them is because they are binary trees for say a thousand elements on average you only have to ask I think I know Pat calculated it for me. 
+
+Unknown speaker 
+Whatever log base two over thousand is, I don't have a log base two here. I think it's what is it Pat? I think it's about 10. Anyways, so if you build a tree with 1 ,000 samples to query it, you would most have to ask 10 binary questions. 
+
+Unknown speaker 
+And that's really fast. So again, decision trees are somewhere there in between. Now, there are some strong benefits of decision trees that I want to mention here. One is you don't have to normalize your data. 
+
+Unknown speaker 
+So I believe in one of the online lectures, I hope if we don't, I'll have to add one. We talk about this problem of, let's suppose one of your factors ranges from 0 to 1 ,000 and another factor ranges from say 0 to 1. 
+
+Unknown speaker 
+It turns out that if you build a K -NERS neighbor type model from that data, the factor that ranges from 0 to 1 ,000 ends up overwhelming the other factors. It turns out to just be the most important factor, even though it may not really be the most important factor. 
+
+Unknown speaker 
+So typically with K and N, for K and N learners, you have to do something to normalize your data so that each dimension essentially has the same range. So typically you take the mean of all the data for factor 1 and normalize it to that mean and standard deviation. 
+
+Unknown speaker 
+You don't have to do that for decision trees. They automatically determine what appropriate thresholds are as they build the tree. Let's see. Just trying to think of the other benefits of decision trees. 
+
+Unknown speaker 
+I'm sure the ones I mentioned the other day will occur to me as soon as we finish this. as soon as this lecture, but I'll add them to this presentation later on. But anyways, that concludes my lecture to you on how to build a tree. 
+
+Unknown speaker 
+I'll do one more check on Piazza to see if we've got any more questions, and then I'll wrap it up. Pat adds a link to Psykit Learn and Pandas. I believe he's pointing to something that lets you visualize a tree once you've created it. 
+
+Unknown speaker 
+That's nice. Ah, and thank you, Pat, has provided log base two of several numbers for me. Thanks. Okay, getting to this last question. The reason we don't have to normalize the data is each variable is treated the same weight and it's based on correlation or entropy to decide the best split. 
+
+Unknown speaker 
+Yeah because, yeah, good point. We're essentially looking at correlation to decide which factor to use and then, yeah, we use the median to decide the split value. So there's no additional benefit in normalizing it first. 
+
+Unknown speaker 
+If in the case of KNN, if you didn't normalize it, like I said, that particular factor that varied over a wide range will become the most important one. Okay, doing one more check for questions and then I'm going to wrap up. 
+
+Unknown speaker 
+Okay, thank you everybody for your attention. I am going to go ahead and close up the presentation and yes, I will post these slides to the wiki. This is kind of fun. Okay, anyways, let me stop that and I'll stop the broadcast. 
+
+Unknown speaker 
+Bye -bye, have a great evening and see you in TV land. 
