@@ -281,7 +281,7 @@ Just keep in mind that you might want to use relative numbers for references to 
 
 **Performance Analysis and Conclusion**
 
-First of all, first question. Which learning method of the three that I'm going to list do you think is fastest? Canaries, neighbor, decision trees or linear regression? Way in the back there. No. Well, okay.
+First of all, first question. Which learning method of the three that I'm going to list do you think is fastest? KNN, neighbor, decision trees or linear regression? Way in the back there. No. Well, okay.
 
 I didn't give you enough information. The question that would be reasonable to ask me is, well, do you mean the learning part or the querying part? So let's for now say I'm asking you about the querying part.
 
