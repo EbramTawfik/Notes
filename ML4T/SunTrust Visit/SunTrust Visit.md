@@ -353,3 +353,89 @@ It's fundamental to a society that wants to make progress. Whether the bank of t
 
 **The Speaker's Vision**
 By the way, just like Bob's team is hiding, my team is hiding. That's me. Thank you.
+
+
+
+Title: Insights from John Marmalino: Risk and Finance Data Analytics in Banking
+
+---
+
+Hi, my name is John Marmalino. I represent the Risk and Finance Data Analytics Office. So I unfortunately don't have a slide or interesting presentation to show you. 
+
+---
+
+Managing Data Foundation and Analytics Capabilities
+
+But what my area does is it manages data foundation and analytics capabilities that some trust uses to manage its risk and its financial performance. That has a fairly wide distribution of use cases where machine learning can come into play.
+
+---
+
+Challenges in Financial Products Space
+
+So one microcosm of my space is financial products. So within the financial product space, we are monitoring for money laundering, human trafficking, terrorist financing, and then fraud, identity theft.
+
+---
+
+Adapting to Changing Threats
+
+Each one of those traditionally has presented different challenges for banks. To some extent, the old way of managing these things were to create traps for behaviors. So look for new accounts, look for accounts that were open out of state, look for accounts with multiple cash deposits, look for accounts that have frequently changed addresses.
+
+---
+
+The Role of Machine Learning in Banking
+
+But the problem with any of those methods is those traps pretty quickly become obsolete. Criminals and the people who are intending to do harm to us are pretty quick at adapting and finding those traps. Machine learning is truly an area where banks are starting to move into the forefront of machine learning, to create opportunities to bring lots of data together in a way that can be utilized to manage active threats and an ever changing method of committing fraud or laundering money or financing terrorism.
+
+---
+
+Utilizing Machine Learning Models
+
+But within our space, we have opportunities to develop machine learning models can deal with almost every aspect of it. So one of the, one of them, I'm gonna go very micro. I know these guys say very high level, I'm gonna go very micro.
+
+---
+
+Addressing Third Party Check Fraud
+
+Common problem that the Fed takes is third party check fraud. So what that means is you as a SunTrust client are presented with a check from outside of SunTrust. So it's not a SunTrust check, it's could be Bank of America, we'd make it China, it could be anybody.
+
+---
+
+Determining Fraud Probability
+
+To do that, we need to bring together a vast amount of information. We need to understand who you are, what is your routine types of activities? Is this outside of the norm for you? Are you likely to be committing fraud at SunTrust?
+
+---
+
+Adapting to Client Needs
+
+The future of banking will be, you have been risk rated as a client every single day, and every time you do something through the bank, or really anything that we capture or we monitor, updates your risk profile.
+
+---
+
+Closing Remarks and Q&A
+
+With that, I'll open it up to questions. I know some of you are probably ready to leave. So, what if we get the whole sentence came up there, and I've got a couple questions I can ask from online. Just ask, you asked a great question.
+
+--- 
+
+Insights on Managing Risks and Opportunities
+
+Well, so first of all, I would say volatility is opportunity. Yes, it is risk. But that's the opposite end of it, right? So it's the other side of the point. Risk is opportunity. Managing risk creates opportunity.
+
+---
+
+Navigating Data Challenges
+
+In fact, if I could add to that, the biggest challenge you're going to face in your career is access to the information you need to do the analysis. It's not the analytics that needs, not the software. It's not that. It's going to be, do you have access to the information you need to build the model? And when you build the model, can you get that information in a timely enough way to make a difference?
+
+---
+
+Closing Thoughts on Strategy and Adaptation
+
+So we also have to think about strategy as the whole arching thing. The human mind can bring in a lot more things and make decisions. Data is an aid to all of us. So if you bring both of those, I think the risk is going with one or the other, bringing them together. That's what I'm saying.
+
+---
+
+Appreciation and Further Engagement
+
+I think we need to close now however I believe they're available you Still for a few more minutes, so let's thank them and then if you have more questions, please come up here.
