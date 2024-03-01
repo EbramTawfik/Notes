@@ -38,6 +38,9 @@ I think this one is the most correct and will be covering that in this lesson.
 #### Other Reasonable Answers
 But some of these other answers could be reasonable as well, so don't feel bad if we scored you wrong.
 
+
+![](./images/2.png)
+
 ## Why company value matters
 
 
@@ -69,7 +72,7 @@ Finally is market cap. This is based on the value of the stock on the market and
 #### Relating the Concepts
 This relates to what's the value of the sum of the assets? And this one relates to, well, if I own a share of stock, how much money am I going to get over the future? And what's that worth overall in the future going forward?
 
-
+![](./images/3.png)
 
 ## The Balch Bond
 
@@ -91,10 +94,9 @@ So, the answer is a little bit subjective, depending on how much you trust me ve
 
 Now among these two, I personally would value myself as number two, but it's probably more correct to say that the US government promise to give you a dollar in a year is the second most valuable. And then of course, I am number three. This exercise helps us understand the time value of money and how different entities' promises can be valued differently based on trust and credibility.
 
-
+![](./images/4.png)
 ## The value of a future dollar
 
-#### The Value of a Future Dollar
 It should be obvious now that the value of a dollar delivered in the future, even if it comes from the US government, is worth less than a real dollar right now. A real dollar right now is worth $1. If I promise to give you a dollar in the future, it's not worth as much. So how should we estimate or think about the value of dollars delivered in the future?
 
 #### Trust and Risk
@@ -123,6 +125,8 @@ Okay, consider now the Balch Bond. So it's hard for me to sell you this asset ri
 So let's consider this in a chart form. So how much is $1 worth if I promise to give it to you today. Well, in that case, this i is equal to 0, so the present value is equal to the future value of all this divided by 1. So in all cases, if the number of years we're going to wait for the delivery of that dollar is 0, the value is $1. But what if we talk about promising you that dollar in the future. If we look at this for the US bond, in 1 year we see it's worth $0.99. If we carry that forward, it's sort of this exponentially decreasing value like that. If you look at the Balch Bond, which is, of course, not as worthwhile as the US government, you see one that decreases at an even faster rate. So in other words, at each year in the future, this $1 is worth less. 
 
 In other words, if I promise to give you $1 in two years, it's worth less than if I promise to give you $1 in a year, and it's worth even less than if I promise to give you $1 right now. These values are different depending on what the interest rate is. For the higher interest rate assets, they decrease further into the future. In other words, a dollar delivered in the future is worth less now than the lower interest rate assets. This is due to the time value of money, which states that money available at the present time is worth more than the same amount in the future due to its potential earning capacity. This core principle of finance holds that provided money can earn interest, any amount of money is worth more the sooner it is received. This is why interest is paid or charged: money deposited in a bank account, for example, will earn interest, and money loaned to a bank or other entity will accrue interest. The bank is willing to pay for the use of the money deposited, and conversely, needs to charge interest to cover the cost of the money loaned out.
+
+![](./images/5.png)
 
 ## Intrinsic value
 
@@ -161,13 +165,15 @@ What we've just described, where future value is the dividend we're going to pay
 #### The Intrinsic Value
 In other words, if we're going to pay that future value or dividend every year or every quarter going into the future, what's the value of the company on that basis, this is intrinsic value. And in the example of the company we were talking about, that creates a $1 every year. It's the value of the $1 in one year from now, next year, next year, next year, next year, continuing ad infinitum into the future. And that's 20 bucks.
 
+![](./images/6.png)
+
 ## Intrinsic value quiz 
 
  Let's check your knowledge now. Consider a company that pays $2 per year in dividends, and a discount rate of 4%. What is the intrinsic value of this company?
 
 #### The answer
 The answer if you recall is that the present value is equal to the future value divided by the discount rate. So we've got $2 divided by 4%, or $50. Answer is $50.
-
+![](./images/7.png)
 
 ## Book value
 
@@ -186,6 +192,8 @@ So, let’s consider what’s the book value for an example company. Let’s say
 #### Calculating Book Value
 If we follow this rule that book value’s total assets, so total assets are this $40 million plus the $15 million or $55 million, minus intangible assets so we just don’t count these intangible assets. And liabilities. So all together we’ve got our total assets minus intangible assets, which is $40 million, and liabilities minus this $10 million, so in this case this company’s book value is $30 million.
 
+![](./images/8.png)
+
 ## Market capitalization
 
 #### Estimating Company Value
@@ -199,6 +207,8 @@ This is a simple calculation. Market Capitalization is just equal to the number 
 #### Understanding Market Capitalization
 
 So, in other words, you can look at the stock market and see what the current price is and see how many shares are owned by people. And it's just one times the other and that's the value of the company in terms of market capitalization.
+
+![](./images/9.png)
 
 ## Why information affects stock price
 
@@ -231,6 +241,7 @@ Let's consider one last scenario were we have many islands with many companies o
 
 So that's how news can effect the prices of the stock. Primarily because they reduce the expectation of future dividends. We've seen how that can affect the intrinsic value and accordingly, why people would want to pay less for that stock.
 
+![](./images/10.png)
 
 ## Compute company value 
 
@@ -243,12 +254,15 @@ Finally, I want you to compute the market capitalization, assuming there's one m
 #### Answer
 Okay, for book value, brand name doesn't count because that's an intangible asset. So we've got 10 airplanes at $10 million each, that's $100 million. And we've got a $20 million loan liability. That means the book value for this company is $80 million. Intrinsic value, we calculated that before. It's just $1 million divided by 5%. The intrinsic value then is $20 million. Finally, market capitalization, remember that's just the number of shares outstanding times the stock price and in this case, that's $75 million.
 
+![](./images/11.png)
+
 ## Would you buy this stock 
 So let's go back to that original question. Assuming this company has a book value of $80 million, an intrinsic value of $20 million, and a market cap of $75 million. And by the way, this means that you can buy the entire company for $75 million. Our question is, would you buy this stock? And more specifically, would you buy this whole company for $75 million. Yes or no, would you buy this stock?
 
 #### Answer
 So maybe you felt like it was a tricky question because the intrinsic value is so low. It's not tricky. Here's why. You should absolutely buy the company. You should buy the whole company for $75 million. And then you should break it apart and sell all of its individual assets for $80 million. And your net return is an immediate $5 million. This is why stocks very, very rarely go below their book value. Because if they ever go very much below their book value, a predatory buyer will buy the entire company. They'll buy all the stock. Break it up and sell it for pieces. I know that's kind of depressing, but that's the way it is.
 
+![](./images/12.png)
 ## Summary
 
 
@@ -279,3 +293,5 @@ And similarly book value provides a sort of lowest price, when stock price begin
 #### Conclusion
 
 Anyhow, that's company valuation. And I look forward to seeing you at the next lesson. Bye bye.
+
+![](./images/13.png)
