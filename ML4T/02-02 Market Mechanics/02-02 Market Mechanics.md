@@ -46,6 +46,7 @@ Let's take a look at a couple example orders. Here's one. Buy IBM, 100 shares, l
 
 So let's look at what happens when these orders reach the exchange.
 
+![2](./images/2.png)
 
 ## The order book
 
@@ -76,12 +77,16 @@ Suppose now we get a market order to buy 100 shares of stock. Here's our new ord
 
 So, that means now we've only got 900 left here, we take that 100, give that to the client who put in the order and this is the state now of our order book after that transaction.
 
+
+![3](./images/3.png)
+
 ## Up or down 
 Consider this order book now for a moment. Look at how many shares we have for sale and how many shares people want to buy. Do you think the price of this stock, in the next few minutes, assuming this order book, is the price going to go up or down? Check the box that you think is correct.
 
 ### Stock Price Movement
 
 The correct answer is that the stock is probably going to go down in price, because there's much more selling pressure.
+
 
 ### Market Orders
 
@@ -95,6 +100,10 @@ Consider on the other hand if someone put in a market order to buy 500 shares, w
 
 I'll explain that a little bit more as we provide some specific examples on what happens to the order book as different orders come in.
 
+![4](./images/4.png)
+
+
+
 ## How orders affect the order book
 
 
@@ -103,19 +112,20 @@ Okay, so to understand better how the order book works and how exchanges work, l
 ### Market Order Example
 
 A market order comes in to buy 100 shares at market. So again, we see that there's 1,000 shares that people are willing to sell. And the exchange has to give the best price to the client, and so we give the client 100 shares at this price. So what happens, the order comes in. 100 shares go away. And now the order book has changed just so that there's 900 shares available here now instead of 1,000. And the execution price is $100.
-
+![5-1](./images/5-1.png)
 ### Limit Order Example
 
 Let's consider now a limit order. Someone wants to buy again 100 shares at a limit of 100.02. So, again looking at the order book, again, we can satisfy that order and, again, at $100. So we're saying that we want to pay no more then $100.02. So again, we can execute at 100, and now this goes down to 800 shares instead of 900 being available. And the execution price for this transaction again, is $100. And note also that that's less than that limit price of $100.02.
-
+![5-2](./images/5-2.png)
 ### Market Order to Sell
 
 Let's look now at one last order, a market order, where someone wants to sell 175 shares. So that comes in. And we have 100 shares available at 99.95, so those get sold. And there's none left there at that price. So a 100 shares get executed at 99.95. So to get this 75 more shares, we need to go deeper into the book. So we'll take these 50, 0 left there. We still need 25 more shares to meet this order for 175. So we go even deeper into the book and take some of these.
-
+![4](./images/5-3.png)
 ### After Transactions
 
 So after all these transactions, the order book has been changed quite substantially. And this client gets a 100 shares at 99.95, 50 at 99.90, and 25 at 99.05. So all together, there's some average price at which this was executed for that client. Note now that as time has gone on, the executed prices have been decreasing. Clearly we're seeing that's a consequence of there's much more sell pressure than buy pressure.
-
+![4](./images/5-4.png)
+![4](./images/5-5.png)
 ### How Exchanges Use Order Books
 
 So that's how the order book works and how exchanges use order books to facilitate transactions between their clients. This is what an order book looks like in real life. Here in the middle, we have prices. And on either side here, we see the order sizes. We're seeing here, sell orders and how large they are, and buy orders and how large they are.
@@ -131,13 +141,13 @@ Here we see a price chart showing how the prices are going up and down as these 
 ### Live Order Book
 
 So that's a live order book. This is using the trading platform called Think or Swim.
-
+![4](./images/5-6.png)
 ## How orders get to the exchange
 
 ### Order Routing
 
 We've talked about what orders are and we've talked about what happens to them when they get to the exchange. Let's talk now about how do the orders get to the exchange from you. Well, here you are with your laptop connected to the internet and you've just entered an order to buy some stock. Your buy order goes over the internet to your broker. Your broker in turn is connected to several exchanges and the broker determines where to route your order based on information it knows about the exchanges.
-
+![](./images/6-1.png)
 ### Exchanges and Order Books
 
 Let's suppose the exchanges we're looking at are New York Stock Exchange, NASDAQ and BATS. For the stocks you want to buy, each one of these exchanges has its own order book. Your broker has a computer located at each exchange and it queries the computer to say, hey, look at the order book and tell me the prices there.
@@ -153,7 +163,7 @@ Now it turns out that because this is happening constantly all the time, there's
 ### Internal Exchange Scenario
 
 Let's consider another scenario. Suppose there's another client of this same brokerage, Joe and that Joe wants to sell some stock. Well, the brokerage can observe, hey, I've got some clients who want to sell, some clients who want to buy. I can just make that exchange internally and I don't even need to go to the exchanges. This can be advantageous for the broker, because a broker doesn't have to pay now fees to the exchanges for this transaction to occur.
-
+![](./images/6-2.png)
 ### Legal Requirements
 
 However, according to the law, both the seller and the buyer have to get prices that are at least as good as they would've gotten if they had gone to an exchange. And eventually, at the end of the day, this transaction has to be registered with one of the exchanges. Usually, it's recorded at the exchange where that particular stock is homed.
@@ -162,7 +172,7 @@ However, according to the law, both the seller and the buyer have to get prices 
 ### Different Brokers and Dark Pools
 
 Let's consider one more example. In this case, Lisa also wants to sell some stock, but she uses a different broker than you do. There's one more kind of entity out there called a Dark Pool that acts as an intermediary between brokerages and exchanges.
-
+![](./images/6-3.png)
 ### Role of Dark Pools
 
 The Dark Pool is looking at the order books of the various exchanges and they're often making predictions about which direction stocks are going to go. They actually pay the brokers for the privilege to look at the orders before they go to the exchanges. And if they see an advantageous trade, they'll go ahead and take it.
@@ -188,7 +198,7 @@ Now, let's take a look at how hedge funds can exploit inefficiencies in this sys
 ### Order Routing and Execution
 
 Okay, let's suppose you live in Seattle and you want to make an order. You look at the prices on your computer. You see what you think looks like the prices are going to go up. So you enter a buy order. Now your order travels all the way across the country. And because you use ETrade it stops in Atlanta, and then it hops to New York City. Let's now zoom in and see what's happening at the Exchange in New York City.
-
+![](./images/7-1.png)
 ### Co-located Computers and Hedge Funds
 
 So, we've zoomed into the New York Stock Exchange, and the order book there is visible to you over in Seattle, but also to computers that are co-located. So, let's suppose our hedge fund has a co-located computer. And it's observing the order book as well. Now here's the advantage that this co-located hedge fund has. Its computer is located maybe a 100 meters away from the main exchange computer that holds the order book.
@@ -213,6 +223,7 @@ The hedge fund is exploiting essentially all these people remotely located aroun
 
 Here's one more. I call this one the geographic arbitrage exploit. Suppose we have exchanges located some distance away and because they're located distantly prices may drift a little bit up or down.
 
+![](./images/7-2.png)
 ### Hedge Fund's Strategy
 
 Now a hedge fund might place their own servers at each of these Exchanges and connect them with an ultra high speed dedicated connection. And they're observing the order book, the prices at both these locations all the time and comparing notes.
@@ -244,12 +255,14 @@ Here are some examples:
 - **Stop gain**: Similarly, when the stock reaches a certain higher price, I want you to sell it.
 - **Trailing stop**: This is a combination of stop loss but also an automatically changing value for when that criteria is met. So for instance, you might have this trailing stop remain say, $0.10 behind the price. So as the price goes up, the value at which you would want to sell the stock goes up along with the price, but when it drops down below, then that stop loss is triggered.
 
+![](./images/8.png)
+
 ### Selling Short
 
 Probably the most important and most impactful kind of order the brokers implement for you is something called selling short. What selling short allows you to do is take a negative position on a stock, in other words, you sell a stock short if you believe its price is going to go down. Keep in mind here we're selling stock we don't even own. So how is that possible? Well, again, it's possible because the broker facilitates it for you. I'll explain how in just a minute.
 
 
-## Mechanics of short selling_ Entry
+## Mechanics of short selling: Entry
 
 ### Mechanics of Short Selling
 
@@ -267,6 +280,8 @@ Let's suppose Lisa thinks that IBM is going to go up and she wants to buy IBM. S
 
 So let me recap that. You want to sell IBM short. Joe has 100 shares of IBM. Lisa wants to buy IBM. So you borrow those 100 shares from Joe. You immediately turn around and sell them to Lisa, and you get $10,000. The result of this transaction, after everything settles, is you have $10,000 in your account but you owe Joe 100 shares of stock. And of course, Lisa has 100 shares of stock and so on.
 
+![](./images/9.png)
+
 ### Problem
 
 Now the problem sort of arises here that Joe may decide he wants his 100 shares back. What you'll have to do is go buy them from someone and then give them back to Joe. But let's deal with that a little bit later.
@@ -282,6 +297,7 @@ In this scenario, you made a profit. Here's how:
 That's correct! In the scenario of short selling, if the stock price drops from $100 to $90, you would indeed make a profit. Here's how it works:
 
 For each $1 the stock drops in price, you make $100 because you've shorted 100 shares. So, when the stock price drops $10 (from $100 to $90), you multiply the $10 drop by the 100 shares you've shorted. 
+![](./images/10.png)
 
 So, your net return or profit would be:
 
@@ -290,7 +306,7 @@ $$ \$10 \times 100 \text{ shares} = \$1000 $$
 This means you made a profit of \$1000 from this short selling transaction. Well done! Remember, this is a simplified scenario and actual trading would involve transaction costs and potential interest on the borrowed shares. Also, short selling can be risky if the stock price increases instead of decreases. Always consider these factors when trading.
 
 
-## Mechanics of short selling_ Exit
+## Mechanics of short selling: Exit
 
 
 ### Recap of Short Selling
@@ -300,7 +316,7 @@ All right, let's recap what happened. You borrowed 100 shares from Joe and sold 
 ### Price Drop and Exit Strategy
 
 Let's suppose that since that time, IBM has dropped in price and now it's selling at $90. You can make a profit from that, and you want to go ahead and exit.
-
+![](./images/11.png)
 ### Buying Back the Shares
 
 So you approach Lisa and say, hey, can I buy those 100 shares back? And she says, no, I want to keep IBM. Well, that's a little bit of a problem, but fortunately, there's lots of people who have shares of IBM and would be willing to sell them to you. So Lisa's now out of the picture and not part of this transaction anymore.
@@ -339,6 +355,8 @@ So again, you buy those shares from Nate then you return them to Joe. But this t
 ### Net Result
 
 So the net result after all this is said and done is that you're out $5,000. So if you bet wrong when you short a stock and the price goes up, you lose money, and it can be significant.
+
+![](./images/12.png)
 
 ### Recap
 
