@@ -25,6 +25,8 @@ As an illustration of how hedge funds use CAPM, let's consider a two stock scena
 
 They've looked at another stock, B, which they predict to go down 1% whichever way the market goes, it'll go 1% below it. And the beta for stock B is 2.0. So this introduces for the first time this idea of a long short portfolio. In other words, we think that stock A's going to go up, so we should long it. And we think stock B's going to go down, so we should short it. And there's some strong advantages to this long short approach that'll begin to emerge as we go through this lesson.
 
+
+
 #### Scenarios and Predictions
 
 So we're going to talk a look at a couple scenarios with these two stocks to see how we should best allocate between the two. So looking back, this is what the S&P 500 has been doing. Remember stock A has a beta of one, so it follows what the S&P 500 does pretty closely. Stock B, on the other hand, has this beta of greater than one, or two. And so it's reacting much more wildly than stock A. Here's our first scenario.
@@ -39,6 +41,8 @@ So if we look at stock A, and remember we're using the CAPM, we should expect to
 
 Similarly for B, this element is removed because our return was zero and all we're left with is alpha. Now essentially our alpha here was negative and we made a negative bet, so our return is 0.5 or altogether $1.0 or 1% for our total investment.
 
+
+![](./images/2.png)
 ## Two stock scenario quiz 
 #### Question
 I'd like you to consider another scenario now. Instead of the market staying flat, what if the market goes up 10%? I want you, for stock A and stock B, to compute the expected return percentage-wise and then also in terms of dollars. And then compute the total for both down here at the bottom or, in other words, what's the return on your portfolio.
@@ -46,6 +50,30 @@ I'd like you to consider another scenario now. Instead of the market staying fla
 #### Answer
 
 Let's start by taking a look at stock A. So, market one up 10%, we predicted that A would go up one percent over the market and its beta is one. So, we should see a return of about 11%. So, we get 11% here and $5.50 here. B is a little bit more tricky. Remember, B has a beta of two. The market went up 10%, so B's going to go up 20% minus the one percent we thought it would do relative to the market. So for B, the stock price went up 19% but we had a negative bet there, so we get negative 19% here. So, we're going to lose $9.50 on that bet. Now, to compute the totals here, let's do the dollars first. So, we made $5.50 on stock A, but we lost $9.50 on stock B, so altogether, we lost $4. Now, when you calculate the total return here, you can't just add these two up and get negative eight, because remember, we only had .5 over allocation in each one of these. So, to get the total, you multiply this return by .5, that return by .5, and you get negative four. Yes, it's a little bit tricky. Let's run through one more example here just so we get it straight. Let's assume now that the market goes down 10%. How does this all work out? Stock A should only go down nine percent because we think it's going to perform one percent over the market and its beta is one. Stock B is going to go down 20% and minus that one percent that we think is going to go below the market. So let's talk B is going to go down 21%. So we're going to lose nine percent or $4.50 on stock A, but we're going to really kick butt on stock B. Stock B went down 21%, but remember we shorted it, so we're going to get all together $10.50. So all together we're going to win six dollars or six percent. What's the takeaway here? The takeaway is even if we have perfect alpha and perfect beta, if we're not careful about how we allocate our money, we can still lose. How can we fix this? The CAPM can help.
+
+#### Market up 10 % case:
+
+ra =>> 1 * 10 + 1 = 11 ==> .11 * 50 = 5.5
+rb =>> 2 * 10 - 1 = 19 =>> short = -19 ==> .19 * - 50 = -9.5 
+
+Total $ = 5.5 - 9.5 = -4
+
+Given each company has 0.5 allocation total % = 0.5 * 11 + .5 * (-19) = -4
+
+![](./images/3-1.png)
+
+#### Market down 10 % case:
+
+ra =>> 1 * -10 + 1 = -9 ==> -0.09 * 50 = -4.5
+rb =>> 2 * -10 - 1 = -21 =>> short = 21 ==> -.21 * -50 = 10.5 
+
+Total $ = -4.5 + 10.5 = 6
+
+Given each company has 0.5 allocation total % = 0.5 * (-9) + .5 * (21) = 6
+
+![](./images/3-2.png)
+
+![](./images/3-3.png)
 
 ## Two stock CAPM math
 
@@ -65,6 +93,8 @@ For our beta component, we end up with a beta for the portfolio of -.5. Our alph
 
 Let's double-check this by plugging in one of our earlier examples. Consider that example where the market went up 10%. So we've got -.5 times 10% + 1%. So in the case where the market goes up 10%, we expect a -4% return for our portfolio.
 
+![](./images/4-1.png)
+
 #### Information and Market Risk
 
 So if you step back a little bit, remember that we arrived at this 1% using information. So we have some information about these stocks that lead us to believe one would go up 1% over the market, another would go down 1% over the market. On the other hand, we don't really have any knowledge about what's going to happen for the market over all. So we have no control over this component.
@@ -73,7 +103,7 @@ So if you step back a little bit, remember that we arrived at this 1% using info
 
 Is there some way that we can remove this? Can we make this part equal to 0? If we can do that, then we essentially remove market risk from our portfolio. And we preserve this 1% over here. Well, the way to do that is to focus on this part. Remember, this is beta for the portfolio. Can we make beta for the portfolio = 0? Or in other words, can we find weights for A and B, such that their sum turns out to be 0? What are these two weights so that the overall portfolio beta is 0?
 
-
+![](./images/4-2.png)
 ## Allocations remove market risk 
 
 #### Question
@@ -81,7 +111,11 @@ Suppose we have two stocks, our stock A and our stock B. These are the same two 
 
 
 #### Answer
+
+
 Okay, so we want to find two weights, A and B, such that when you multiply them by their betas, the sum turns out to be 0. Now keep in mind that we're going to short B, so this one needs to be negative. And we're going to long A, so this one needs to be positive. Just keep that in mind as we go forward. So, let's solve for A initially here. We know that the weight of A should be equal to -2 times the weight of B. We also know that the sum of A and B, well, the sum of the absolute values of A and B, should be equal to 1. If we plug this minus 2 weight of B and for weight of A, we get this, or long story short, the absolute value of the weight of B equals 1/3. So, I know the weight of B has to be negative, so we get -1/3 for the weight of B. And coming all the way back up here, we know that the weight of A is equal to negative two times the weight of B. So, we get this. So finally, the answers are: 2/3 for the weight of A, and -1/3 for the weight of B.
+
+![](./images/5.png)
 
 ## How does it work
 
@@ -102,6 +136,8 @@ So because of all that work we did to figure out these values, we know already t
 
 Remember, we eliminated the return on the market. So, whichever way the market goes, we can expect to get 1% return. Now, need to add a lot of caveats here. These betas aren't necessarily fully guaranteed to continue into the future, and these alphas aren't guaranteed, either. These are just estimates that we computed based on information we thought we had, so this is not a guaranteed thing by any means, but it is a way to use long/short investing to reduce exposure to the market overall and to focus on those alpha components where we do have information.
 
+![](./images/6.png)
+
 ## CAPM for hedge funds summary
 #### Using CAPM in Hedge Funds
 
@@ -116,3 +152,5 @@ We can do the following. We can minimize market risk by finding a beta for our p
 So, CAPM can be a really valuable tool in terms of portfolio construction because it can enable you to build these portfolios that are less exposed to market risk. And this is where the whole idea of long short trading came about. You know, CAPM really enables you to refine that.
 
 All right, that is it for now. We'll see you again soon. Thank you.
+
+![](./images/7.png)
