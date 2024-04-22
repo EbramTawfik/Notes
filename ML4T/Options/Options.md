@@ -209,3 +209,67 @@ Second, options have expiration dates. This is big. You're adding a layer to the
 **Ownership**
 
 And then the third thing, of course, is you don't own the stock. Now that sounds kind of trivial, but there are implications to the fact that when you buy an option to buy the stock, you've not yet bought the stock. So the person who sold you that stock option still owns the stock until you choose to exercise it. And that means while the stock price is going up before you exercise the option, they have the voting rights that might come from that stock, not you. And they are collecting the dividends and any other benefits of ownership of the stock, not you.
+
+
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/11.png)
+
+
+#### Moneyness of Options
+
+Let's talk for a second about the "moneyness". This is one of those words that you don't tend to hear in casual conversation and I'm not totally sure it's proper English, but it is a common financial term.
+
+#### Option Pricing
+
+Why are some options so much more expensive than others? If you look back here at the option chain that we're studying, for example, down at the bottom of the page, we've got the 117-118 options that are only 20 cents, 23 cents per share. But then up at the top, the 102 strike price option is currently trading at nine dollars and five cents. So, if you were to buy that for your hundred shares you're controlling, that would cost you nine hundred and five dollars for one contract, whereas the 117 would only cost you twenty-three dollars for a contract on a hundred shares.
+
+
+#### Intrinsic Value
+
+Why is that? The answer is right now, as of the day that I did this, Apple is trading at 111.57. So, Apple is trading right there in the middle of the table between those 111 and 112 strike prices. If I were to buy that 110 call option that we keep looking at for two dollars and 73 cents a share, I could exercise that option right now, one moment after I buy it, for a profit of $1 and 57 cents a share. Because Apple today, right now, already is trading a dollar and 57 cents above that 110 strike price. So, the option is obviously not going to be priced less than that dollar and 57 cents a share that I could get if I bought the option, exercised it, and sold the stock immediately all in one go. That is what we call the intrinsic value.
+
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/12.png)
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/13.png)
+
+
+#### Intrinsic Value and Time Value
+
+The **intrinsic value** of the stock is the difference between an option's strike price and the current underlying spot price for an in-the-money option. All we mean by "in the money" is that it's an option that currently has a non-negative intrinsic value, so you could make money immediately by buying the option, exercising it, and then selling the stock.
+
+Something that doesn't have intrinsic value is called an **out-of-the-money** option, meaning currently you could not exercise that option at a profit because of where the stock price is right now. And then if you're right on the border between those two, you can be **at the money** or **near the money**.
+
+So, we said intrinsic value right now is a dollar fifty-seven cents a share for that 110 strike price because that's what we could get if we sold it right now immediately after buying it. But it's not priced at a dollar fifty-seven cents a share, it's 273. So, what is the rest of that price?
+
+The 110 costs 273 and has an intrinsic value of dollar 57. The 115 has an intrinsic value of zero because Apple is trading less than that right now, so it's not currently worth anything in the sense of exercising the option, but it still costs 53 cents a share or 53 dollars for the contract. So, there must be some other component to this, and the other component is what we call the **time value** of the option.
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/14.png)
+
+
+#### Time Value of the Option
+
+The other component is what we call the **time value** of the option. The more time there is between now and the option's expiration, the better the chance there is that the stock will reach the strike price before it expires, and so the higher the time value will be.
+
+We can say the excess premium cost, that's beyond whatever the intrinsic value of the option is, is attributed to its time to expiration. You can think of that as the amount of time that the stock has got to move the right way before the option expires. Of course, the further you are from the expiration date, the bigger that time value will be. And then as you get closer to the expiration date, the time value shrinks and shrinks, especially rapidly in the last few days and really the last few hours before the expiration, as it becomes nearly impossible that the stock will reach each strike price.
+
+#### Trading Options
+
+Now, you're not stuck with options once you buy them. These are not something that you buy and then there's no market for it to sell. It's second hand. These can be bought and sold just like stocks. So, if you change your mind on the option after you bought it, you can sell it on to someone else via an exchange like the Chicago Board of Exchange. But you'll probably lose money if the stock hasn't gone your way fast enough because of **time decay**.
+
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/15.png)
+
+#### Time Decay and Theta
+
+As you hold this option and the price is not moving or it's not moving in the correct direction, the time value of the option will be decreasing because there's less time before the expiration date for it to make that move that you need. An out-of-the-money option is also called **theta**. It's one of the Greeks that I said I wouldn't talk about much. There's a lot of Greek letters that are used to describe different secondary characteristics and derivatives and second derivatives of various factors of options related to stocks if you get really into trading.
+
+Theta or time decay is the rate at which an option is losing its time value, which is to say it's the first derivative of that time value over time. The time value changes more rapidly as the expiration date arrives and the time decay goes up. And then when you get to the expiration date, of course, time value approaches zero and all of the option prices will approach their intrinsic value because you would have to buy it, exercise it, and sell it immediately at that point. It's just about to expire. The last two weeks are when time decay goes the fastest.
+
+#### Trading Options and Time Decay
+
+People who want to actively trade options, as opposed to hoping to exercise them and get the stock, usually try to close out their open option positions at least two weeks before the expiration date. So, the smart money is really not in there at the last second trying to do option trades that are about to expire. They're buying those options a month or two months out and then selling them as you get to four, three, two weeks away from expiration on to somebody else who actually wants to make that bet about whether the stock will end up in the right place and they'll get to exercise the option.
+
+#### Black-Scholes Model
+
+If all of this part about the Greeks and time decay is really interesting to you, you may want to go look at the **Black-Scholes model**. While it's not machine learning related, it is one of the very common financial models that's used to decide what should the price of an option be at any given moment and a lot of people use deviations from that model to try to do arbitrage on options where they moved away from the expected price and you might expect some reversion to the mean.
