@@ -101,3 +101,73 @@ I am ignoring trading fees here, which I'll do throughout the lecture because th
 #### The Point of Buying the Option
 
 So, what's the point of buying the option? Why wouldn't I just buy the stock? It's a perfectly reasonable question to ask. Why would I buy an option when I could just buy the underlying stock directly?
+
+
+#### Advantages and Disadvantages
+
+There are some disadvantages that we'll talk about in a sec. So, what's the advantage? Why would I do this?
+
+
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/4.png)
+#### Specific Scenario
+
+It will help to look at a specific scenario. So, I'll look at Apple stock again and I'll use that same one ten strike price with a $2 and 73 cent value. On the day that I first prepared this presentation, Apple stock was trading at 111 57.
+
+#### Considering Options
+
+So, Apple on some day is 111 57 and we're considering what to do. We think that Apple stock will go up in the near future. We could buy a hundred shares of Apple stock today. It's a nice round lot, your broker will like you. That's how you minimize your commissions and that will cost us eleven thousand one hundred and fifty-seven dollars. That money disappears from our account, it's gone, and we get a hundred shares of Apple stock in exchange.
+
+#### Potential Profit
+
+Let's say that the price of Apple does go up like we hope and it rises to one hundred and twenty dollars a share sometime on or before the theoretical expiration date of the options that we're talking about. By this time, we just bought the stock. Then we could sell our stock for twelve thousand dollars. Even if we don't sell it, that's still the paper amount that we're worth and we can still calculate a paper gain. Then we have a profit on this particular trade of eight hundred and forty-three dollars minus trading expenses, which again I'm going to ignore. That's pretty good for holding the stock for something like two-three weeks.
+
+
+#### Option Contract
+
+Instead, we could have bought an option contract. The option contract we looked at was the one ten call and that would cost us two hundred and seventy-three dollars to buy. Now, in the same situation, if the Apple stock rises to one hundred and twenty dollars a share by the expiration date, then we could choose to exercise our stock option which allows us to buy a hundred shares of Apple stock at the 110 strike price that we agreed on when we bought the contract.
+
+#### Immediate Sale
+
+So, buying that stock on that day cost us eleven thousand dollars and then we can immediately sell the stock the same day at the open market price for twelve thousand dollars. So doing that, our profit is only seven hundred and twenty-seven dollars. It's a little bit less, but we got to participate in most of the upside move in the stock.
+
+#### Benefits of Options
+
+You can already see one of the benefits that we obtained by using the option instead of buying the stock, and that is we only tied up two hundred and seventy-three dollars in our account and the rest of the cash was still there in the account available to use. Compared with if we had bought the stock, we would actually have to tie up the full eleven thousand one hundred and fifty-seven dollars and it would not be available to do anything else with during that time.
+
+#### Leverage Aspect of Options
+
+So this is the leverage aspect of options and one reason that we like them because you can control more money using less money.
+
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/5.png)
+
+
+#### Considering the Downside
+
+The other case to consider is what if the stock doesn't go the way we expect. So, let's run through that same exercise again. Apple stock today is one hundred and eleven fifty seven. We could buy a hundred shares for the same cost as we talked about before. Now, we're saying, what if Apple stock falls to some amount, let's say a hundred dollars a share by December sixteenth. Whether we sell it or not, we still have the same paper loss.
+
+#### Potential Loss
+
+So, we can treat it as a sale. Now, our stock is only worth ten thousand dollars. That means we've got a current loss of eleven hundred and fifty-seven dollars. That's a pretty big loss for just a few weeks. Apple stock price may not actually move this much, but it's an interesting and illustrative example.
+
+#### Option in Case of Loss
+
+Now, what would happen if we bought the option? If we buy that 110 call for two hundred and seventy-three dollars and then we assume again that Apple falls to a hundred dollars a share and it stayed there until the option expires, we simply don't exercise the stock option. Remember, this is an option. That's the entire point. We're buying the right but not the obligation to buy the stock.
+
+#### Minimizing Damage
+
+So, we don't have to use it if we don't want to. And if we're below our breakeven price, we won't. We'll just let the option expire and at least it won't do any further damage to us. So, in that case, our loss is just the two hundred and seventy-three dollars that we spent buying the call option. No matter how low Apple stock price falls.
+
+#### Extreme Scenario
+
+If you want to make the numbers even more extreme, imagine that something terrible happens and Apple goes out of business. Then, if you bought the stock, you lose every single dollar that you had in it. If you bought an option, you lose exactly the premium that you paid for the option. And it doesn't matter what happens to the stock after that.
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/6.png)
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/7.png)
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/8.png)
+
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/9.png)
