@@ -21,4 +21,4 @@ These strategies let you take a specific position in the market based on a very 
 
 We won't get into any topics like that, but hopefully, this will give you a good quick broad cover of the basics and you'll walk away from it at least knowing what exchange-traded options are and how you might want to consider approaching it from a machine learning perspective to see if you could include it into your bag of tricks. Alright, I'll get started and I hope you find this useful.
 
-![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Optins/images/1.png)
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/1.png)
