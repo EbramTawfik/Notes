@@ -167,7 +167,45 @@ If you want to make the numbers even more extreme, imagine that something terrib
 
 ![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/7.png)
 
+
+
+#### Reasons to Like Options
+
+So, these are some of the reasons that we like options. First, you cannot lose more than the premium that you paid for that option upfront. No matter how far it moves against you, you can't possibly come out worse than losing the premium you pay for it.
+
+#### Leverage and Potential
+
+Second, we like it because of leverage. We still get most of the upside potential if the stock goes the right way, not quite all, but most. And in exchange, we've capped our downside to the premium and we've tied up a lot less money in our account.
+
+#### Diversification
+
+So, we could go out and take more bets and diversify our opinion about the market in more directions.
+
+#### Not All Good
+
+Now, it's obviously not all good. If it were just this, then you would say, "Well, so why should I ever buy a stock instead of just always trading in options?" And there are some people who do that.
+
 ![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/8.png)
 
 
 ![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/9.png)
+
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/10.png)
+
+
+### Downsides to Options
+
+There are downsides to options. A couple of them are:
+
+**Lost Premium**
+
+First, the premium is lost money. It's gone. You pay it immediately to another person when you acquire the option contract, and you don't get it back no matter what happens to the stock.
+
+**Expiration Dates**
+
+Second, options have expiration dates. This is big. You're adding a layer to the bet that you're making in the stock market. If I just go buy some stock, I'm betting that that stock will go up eventually. I'd like it to go up sooner rather than later, but it's okay if it doesn't. I can just hang on to the stock and forget about it, and someday in the future when the market goes back up, I can sell the stock at a profit. Yes, I've tied up money for longer, yes, I couldn't close out the position maybe when I wanted to because it was in the red, but I never have to sell it. I can just hold on and hope for the best. With an option, you can't do that. Options have a built-in time bomb. You're now taking a bet that the stock will move in a specific direction by a specific amount or more and in a specific, usually pretty short, time period. So there's a lot of benefits, but you're also now making a much more specific bet that's more likely to be wrong because you've got timing and all these other elements that you don't have if you just buy the stock.
+
+**Ownership**
+
+And then the third thing, of course, is you don't own the stock. Now that sounds kind of trivial, but there are implications to the fact that when you buy an option to buy the stock, you've not yet bought the stock. So the person who sold you that stock option still owns the stock until you choose to exercise it. And that means while the stock price is going up before you exercise the option, they have the voting rights that might come from that stock, not you. And they are collecting the dividends and any other benefits of ownership of the stock, not you.
