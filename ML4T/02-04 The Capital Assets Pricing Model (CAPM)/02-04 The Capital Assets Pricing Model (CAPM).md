@@ -39,7 +39,7 @@ We do allow that you might short some stocks. So for instance, let's suppose you
 
 So now that we've defined what a portfolio is, let's think for a moment about what will the returns on a portfolio look like. So, it's a simple equation, really. It's the sum for each asset of the weight of that asset in the portfolio, times the return for that day, of the asset. We just add all those up, one by one, and boom, that's the return on the portfolio for that day.
 
-![](./images/2.png)
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/02-05%20How%20hedge%20funds%20use%20the%20CAPM/images/2.png)
 
 ## Portfolio return
 
@@ -50,7 +50,7 @@ Okay, let's suppose you've got two stocks in your portfolio. Stock A and Stock B
 So remember from our equation on the previous page that the return on the portfolio is the sum of each return times the respective weight added together. So the weight for Stock A is 0.75 times 1%, and the weight for Stock B is negative 25%. The return was negative 2% for that stock also. So because we shorted B and it went down, we got a positive component there, or 0.5. And our long on A adds up to 0.75 so our total is 1.25.
 
 
-![](./images/3.png)
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/02-05%20How%20hedge%20funds%20use%20the%20CAPM/images/3.png)
 
 
 ## The market portfolio
@@ -69,7 +69,7 @@ Now within each of these oceans if you like, there are a number of sectors. For 
 
 Now just recapping before we depart, when we talk about the market portfolio in this class, we are almost always talking about the S&P 500. And that market portfolio consists of 500 stocks, the largest stocks in the U.S. that are traded publicly, with a weighting set like this. One thing to keep in mind is some stocks have surprisingly large weightings. For instance, Apple and Exxon each are about 5% of the S&P 500. So those two stocks have a strong effect on what happens to this index. There are smaller stocks that comprise say only a tenth of a percent of the overall effect on this market.
 
-![](./images/4.png)
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/02-05%20How%20hedge%20funds%20use%20the%20CAPM/images/4.png)
 
 ## The CAPM equation
 
@@ -99,7 +99,7 @@ Now, this is an after-the-fact calculation. In other words, just because histori
 
 So, that's the key to the capital assets pricing model and where beta and alpha come from.
 
-![](./images/5.png)
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/02-05%20How%20hedge%20funds%20use%20the%20CAPM/images/5.png)
 
 
 ## Compare alpha and beta 
@@ -109,7 +109,7 @@ Consider these two scatter plots. This one is for stock XYZ versus S&P 500. This
 #### Answer
 So recall that beta is the slope of the line and alpha is where it hits the y-intercept there. So, higher alpha. Well ABC is intersecting the y-axis there much further up than XYZ so ABC's got higher alpha. In terms of beta, look, the slope of ABC is much higher than XYZ so ABC also wins on the higher beta question.
 
-![](./images/6.png)
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/02-05%20How%20hedge%20funds%20use%20the%20CAPM/images/6.png)
 
 ## CAPM vs active management
 
@@ -155,7 +155,7 @@ Anyways, if you believe the capital assets pricing model, in other words, this a
 If you believe active managers, that they can find alpha, then you should consider being an active investor.
 
 
-![](./images/7.png)
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/02-05%20How%20hedge%20funds%20use%20the%20CAPM/images/7.png)
 
 ## CAPM for portfolios
 
@@ -195,7 +195,7 @@ The active portfolio manager will say, okay, yes, I agree that the beta componen
 
 So the active portfolio manager is going to have this formulation of what they could expect in return each day compared to the CAPM, which is a little bit simpler.
 
-![](./images/8.png)
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/02-05%20How%20hedge%20funds%20use%20the%20CAPM/images/8.png)
 
 ## Implications of CAPM quiz
 #### Question
@@ -204,7 +204,7 @@ So for upward markets, we want larger beta because that means we'll go up even m
 #### Answer
 So for upward markets, we want larger beta because that means we'll go up even more than the market if beta is greater than 1. If we have a smaller beta, that means we're not getting the full advantage of the market going up. In downward markets, we want smaller beta. So for instance, if the market goes down 1% and our beta is much less than one, that means our portfolio will go down less than 1%. So on a downward market, the smaller the beta the better.
 
-![](./images/9.png)
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/02-05%20How%20hedge%20funds%20use%20the%20CAPM/images/9.png)
 
 ## Implications of CAPM
 
@@ -228,7 +228,7 @@ The only problem with that is the efficient markets hypothesis. We haven't cover
 
 So, all these things taken together say that you can't beat the market. If the capital assets pricing model is true, we can't beat the market. Now, I don't believe that, and this whole course is about ways that you can potentially beat the market. So, we're going to get to those eventually, but we had to present the capital assets pricing model as a framework in which to consider all these other things.
 
-![](./images/10.png)
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/02-05%20How%20hedge%20funds%20use%20the%20CAPM/images/10.png)
 
 ## Arbitrage Pricing Theory
 
@@ -258,4 +258,4 @@ We're not going to use APT in this class, but since we've been going forward wit
 
 Okay, that's it for the capital assets pricing model. I'll see you again soon.
 
-![](./images/11.png)
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/02-05%20How%20hedge%20funds%20use%20the%20CAPM/images/11.png)
