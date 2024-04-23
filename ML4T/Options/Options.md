@@ -273,3 +273,17 @@ People who want to actively trade options, as opposed to hoping to exercise them
 #### Black-Scholes Model
 
 If all of this part about the Greeks and time decay is really interesting to you, you may want to go look at the **Black-Scholes model**. While it's not machine learning related, it is one of the very common financial models that's used to decide what should the price of an option be at any given moment and a lot of people use deviations from that model to try to do arbitrage on options where they moved away from the expected price and you might expect some reversion to the mean.
+
+
+
+#### Assumptions and Relaxations
+
+So far, the discussion has been based on the assumption that you are buying a **call option**. A call option is equivalent to a long position. It's going to profit if the underlying stock goes up. You have been buying it, which means you're buying the right to buy the stock.
+
+#### Other Types of Options
+
+But there are several other basic things you can do with options, even before we get to the complex strategies. As I introduce each one, I want to show you a common profit and loss curve that we look at in options.
+
+#### Profit and Loss Curve
+
+This curve makes it very easy, once you get accustomed to looking at it, to understand exactly what an option strategy is doing and particularly to understand exactly when it will make money and when it will lose money. It's a really helpful visualization tool in the world of options trading.
