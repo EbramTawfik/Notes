@@ -341,3 +341,83 @@ Our cost curve is going to be almost exactly the opposite. If the stock closes a
 #### Earning Profits
 
 Then for every dollar that the stock falls below that, we'll earn a dollar profit per share that's covered by our option contract. There's one important difference to note though, and that is with a put option, we actually have an axis over here to run into. So, our maximum loss is still limited to our premium but our maximum profit is no longer unlimited because the lowest that the stock could go is zero dollars a share. So there is going to be some limit which will essentially be the strike price minus the premium that will be our maximum profit because again we can't hope for the stock to do worse than go to zero, stop trading in the company go out of business and that will limit the maximum profit we could make.
+
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/18.png)
+
+#### The Basics of Writing Options
+
+There are a couple of other things that you can do even with basic options. Everything so far has assumed that we're buying an option, but if we're buying options, someone must be selling options. There's no reason that we could not be the person selling the option instead of buying it. Typically in options, this is called writing the options contract.
+
+#### Understanding the Cost Curves
+
+Let's look at what happens to the cost curves if we write options instead of buying options. To explain writing a call for a moment, it is the exact opposite in the other way between a call and a put. When I write an option contract, I am selling someone the option. Then, until the expiration date, they can force me to buy or sell them the stock at the strike price whether or not I want to and no matter what the price of the underlying stock is on that day.
+
+#### Writing a Call Option
+
+For example, with a call, I am selling someone a call option. I collect that premium payment immediately and I get to keep it no matter what. But then, until the expiration date, they can buy my stock away from me at the strike price no matter what. Now, in the best case, they won't exercise that option. I got their premium, I keep it, and I keep my stock. But of course, the downside is I might be forced to make a very unprofitable trade at some point prior to the expiration date if things don't work out well.
+
+#### Profit and Loss Curve
+
+Here, you might expect that the profit and loss curve will end up upside down of where the buy call curve was, and you'd be pretty much exactly right. If we write a call, we flip that cost curve over. The first thing that happens is we now collect the premium for writing this call option, and that's cash in our pocket. So, as long as the stock expires below the strike price, meaning it would be unprofitable to exercise the option for the person who bought it from us, we have a profit equal to that premium we collected, and they will let the option expire. Once we get up to the strike price, then the person who bought the option is earning a dollar for dollar because now they will exercise the option since it's above the strike price and they're gaining a little bit back dollar for dollar and we're now losing dollar for dollar because they're going to exercise that call and take our stock away from us at a disadvantageous price. But we're still sort of okay until the stock price gets to the strike price plus the premium and then at that point we are actually overall losing money on having written this option because now the person at the other end is going to exercise it, take it away from us at a very disadvantageous price compared to the current price of the stock and our premium we collected was not enough to make up the difference. Writing calls which by the way are called naked calls if this is your sole position and you're just doing it without any other strategy attached to it and that's meant to suggest that it's probably a bad idea. And here's why our maximum profit is now limited to the premium there's no way we can make more money than the premium now that could be okay if the odds of that happening are very very high but here's the slightly scary part of it our maximum loss is now unlimited this axis down here doesn't really count for putting a floor because it is just the profit and loss axis we're not saying the stock price goes to zero this is our loss so now the stock price could theoretically go up without any limit and the more it goes up the more money we lose so we have to manage a strategy like this very carefully to ensure that we don't lose essentially some arbitrary unlimited amount of money.
+
+
+
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/19.png)
+
+
+#### The Potential of Writing Put Options
+
+Writing a put actually does not have that same unlimited loss potential because we'll flip the cost curve back the other way. So, it'll be left to right opposite of writing a call and it will be top to bottom opposite of buying a put. If we write a put, we've now got a floor under the stock which can't go down any lower than zero. So when we write a put, we give someone else the option to sell us the stock at the strike price should they choose to do so.
+
+#### The Goal of Writing Put Options
+
+So now we want the price of the stock to go down because we don't want the person to choose to sell us the stock because if they do that, it will mean they're winning and we're losing. So as long as it stays above the strike price, then we've got the premium that we charged in our pocket as profit and that is our maximum profit.
+
+#### Understanding Profit and Loss with Put Options
+
+Once the stock falls below the strike price, we start losing money dollar for dollar. We break even when it's the strike price minus the premium and then we start actually losing money. The trade at least has a floor at some point if the stock hits zero and we can no longer lose any money beyond that point. So our maximum loss here will be the strike minus the premium if the stock goes all the way to zero.
+
+#### The Good News About Writing Options
+
+The good news about writing options is 90 percent of stock options that are bought are not exercised. So while it may seem strange to take these trades where you've got potentially large losses and small fixed profits that are your premiums, you have to realize that the odds of these situations happening are not equal. Most options expire unexercised which means most of the time with writing an option, you'll put that premium in your pocket and that's the end of the deal.
+
+#### The Risk of Writing Options
+
+The option will never be exercised but you really got to watch out for that small percentage of the time when it is exercised because you could lose your shirt. Now this is just the four basic things you can do with a single options contract. You can buy a call, you can write a call, you can buy a put, you can write a put.
+
+
+
+
+But the real power of options is not in doing these naked calls or naked puts or even just buying or selling puts. It’s putting these things together with some other strategy to let you take a more complex position or to hedge your bets or to make a very precise bet on what you think is going to happen in the market. Now I want to talk about just a couple of those before I wrap up.
+
+
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/20.png)
+
+
+#### Covered Call Strategy 
+
+One of the most basic strategies that's considered one of the most safe things you can do with options and in fact many brokers will allow you to do it even in a cash account when you haven't been approved for margin is the covered call. The covered call is a very simple strategy that combines one option position with a position in the underlying stock. So to enter a covered composition what you would do is buy a stock and then write a call on that same stock. So you're giving someone else the privilege to be able to buy away from you a stock that you do actually own. We should look at the possible outcomes of this to understand the purpose of the strategy.
+
+
+#### The Outcomes of a Covered Call Strategy
+
+There are three basic possibilities. 
+
+##### Stock Ends Up Above the Strike Price
+
+The first is that the stock ends up above the strike price before the expiration date. This is not really ideal but it's not so bad. If that happens, then our stock will be called away, meaning that the person on the other end of that call option will exercise it and buy our stock from us below the current market price. 
+
+##### Selling the Stock
+
+So we'll be obligated to sell our stock at the strike price, which means we miss out on any of the profit above that strike price if the stock continues to move because now we don't own it, the other person owns it. 
+
+##### Profit and Loss
+
+So our total profit in that case is the strike price minus the original purchase price of the stock plus the premium that we collected when we wrote that call. This is not the end of the world. We still made money, but we didn't make as much money as we would have if we had just bought the stock and not written the call because then we would have gotten to fully participate in that profit if the stock moved up. 
+
+##### The Problem with Covered Call Strategy
+
+The other problem is, of course, we don't have the stock anymore, and so if we really wanted to be in that stock, we think it's going to continue up, now we have to go buy it again.
