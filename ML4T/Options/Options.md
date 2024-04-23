@@ -406,7 +406,7 @@ One of the most basic strategies that's considered one of the most safe things y
 
 There are three basic possibilities. 
 
-##### Stock Ends Up Above the Strike Price
+#### Stock Ends Up Above the Strike Price
 
 The first is that the stock ends up above the strike price before the expiration date. This is not really ideal but it's not so bad. If that happens, then our stock will be called away, meaning that the person on the other end of that call option will exercise it and buy our stock from us below the current market price. 
 
@@ -421,3 +421,28 @@ So our total profit in that case is the strike price minus the original purchase
 ##### The Problem with Covered Call Strategy
 
 The other problem is, of course, we don't have the stock anymore, and so if we really wanted to be in that stock, we think it's going to continue up, now we have to go buy it again.
+
+
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/21.png)
+
+
+#### The Second Outcome: Stock Goes Up But Not Enough
+
+The second outcome is that the stock could go up, but not up enough to hit the strike price of the option that we wrote. This is actually the perfect thing that we want to happen. Because now, the option will not be exercised because we're below the strike price and the person on the other end would lose money by exercising the option. 
+
+##### The Perfect Position
+
+We're in the perfect position now because the stock went up so we've gained money on our position in the stock and we still have the stock and can write another call or anything else that we want. We collected a premium that has accelerated our return on the stock that ended up not costing us anything. 
+
+##### Calculating Profits
+
+So our profits so far on this stock that we still own is the current price of the stock minus the purchase price that we paid for the stock plus the premium that we collected for selling the option that was never used. 
+
+##### The Ideal Situation
+
+This is where you would love to be with a covered call. You'd like to be in this middle range where you never actually have to sell the stock. So you end up making the full same amount of money as if you had just bought the stock and done nothing with options, holding the stock the whole time that goes up. 
+
+##### Juicing the Returns
+
+Except periodically, you're juicing those returns and getting more money than you would otherwise because you're writing calls and collecting premium that's just extra money to you. And then hopefully, it's not exercised and the stock keeps going up slowly, never hitting those strike prices, and the premiums are just extra money that you put in your pocket the whole time.
