@@ -194,7 +194,7 @@ Now, it's obviously not all good. If it were just this, then you would say, "Wel
 ![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/10.png)
 
 
-### Downsides to Options
+#### Downsides to Options
 
 There are downsides to options. A couple of them are:
 
@@ -287,3 +287,35 @@ But there are several other basic things you can do with options, even before we
 #### Profit and Loss Curve
 
 This curve makes it very easy, once you get accustomed to looking at it, to understand exactly what an option strategy is doing and particularly to understand exactly when it will make money and when it will lose money. It's a really helpful visualization tool in the world of options trading.
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/16.png)
+
+
+
+#### Profit and Loss Curve for Call Options
+
+When you buy a call option, you're paying some premium upfront. This is money that you're in the hole immediately as soon as you buy the option. Then you need for the stock to rise to some amount above the strike price that represents that extra premium that you paid before you've actually broken even and recovered all of the money that you spent plus been able to sell the stock and get back to zero.
+
+If we look at the Profit & Loss (P&L) curve for a standard buy call, we start over here at the left end with the spot price well below the strike price. So, in other words, the stock price going down doesn't matter how much it just went down quite a bit below the strike price and no matter how far down it goes, you've lost a dollar amount that exactly correlates to the premium that you paid. This is the risk you take when buying a call option. The maximum loss is the premium paid for the option, regardless of how much the stock price falls. 
+
+On the other hand, the potential profit is theoretically unlimited, as the stock price could continue to rise. However, you need the stock price to rise above the strike price plus the premium paid to start making a profit. This is why the P&L curve for a long call option slopes upwards to the right (representing increasing stock prices) and is flat to the left (representing decreasing stock prices). The point where the curve shifts from flat to sloping upwards is the break-even point, which is at the strike price plus the premium paid.That’s going to be the case until I get to the strike price.
+
+
+#### Reaching the Strike Price
+
+As soon as I hit the strike price, I'm still losing money, but I'll start losing less because once I hit that strike price, I will exercise the option. I'll make at least a little bit of money exercising it, buying the stock at the cheaper price that I have, and then selling it at a market price. In fact, that'll leave one dollar for one dollar for every dollar that we go above the strike price.
+
+#### Profit and Loss
+
+I'll make a dollar per share of profit, not counting that premium. This is just a simple linear relationship, and then once I have exceeded the strike price by the premium, I finally reach my actual P&L break-even point where now I've been made whole on this entire trade. I've got back to zero, and I haven't lost any money, and as I continue to rise above that, I'm actually finally in a truly profitable position having bought this call option.
+
+#### Exploring Other Options
+
+But buying calls is far from the only thing you can do, and kind of the further away we get from it, the more interesting it will be. So, I want to talk about some of the other things that we can do with options. As I go through each one, I'll also note just as a point of interest what is the maximum profit and the maximum loss that we could experience for each strategy.
+
+#### Final Thoughts
+
+That's one useful thing to think about, and here on the bike, all it's very simple, but do notice the maximum loss I could possibly experience is my premium amount which we had said before. The maximum profit from buying a call is theoretically unlimited because there's no amount where the spot price of the underlying stock would have to stop going up. It could go up any amount, and I profit dollar-for-dollar along with it with this position once I exceed my break-even point.
+
+
+
