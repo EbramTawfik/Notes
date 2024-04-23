@@ -319,3 +319,25 @@ That's one useful thing to think about, and here on the bike, all it's very simp
 
 
 
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/17.png)
+
+
+#### The Basics of Put Options
+
+The other basic type of exchange traded stock option that you need to know about is the put option. The put option is essentially the opposite of a call option. You'll buy it just the same and you'll pay a premium when you buy it just the same. But now, instead of buying the option to buy the stock, you're buying the option to sell the stock.
+
+#### Exercising the Put Option
+
+You don't have to own the stock to be able to do this because you're probably going to have a margin account if you are playing with options anyway. You can short the stock as part of your exercising of it and then immediately buy it back to close out the position.
+
+#### Profit and Loss with Put Options
+
+So, if we look at a buy put, we would expect the P&L curve to be opposite in some sense, and indeed it is. Because now, we're making a bet that the stock will go down and we'll be able to sell it or short sell it at the strike price and then immediately buy it back to close the option position and the stock position at whatever the price is on that day. So, we'll be able to sell it for more and then immediately buy it back for less and pocket the difference.
+
+#### Understanding the Cost Curve
+
+Our cost curve is going to be almost exactly the opposite. If the stock closes above the strike price, we will experience our maximum loss which will be the premium that we paid for this put option. If we get down to the strike price, then we'll start recovering some of our money again. One dollar for one dollar, every dollar that the underlying spot price goes below the strike price will earn back a dollar of our premium that we spent until we finally get up to a true breakeven point where we've recovered the full premium.
+
+#### Earning Profits
+
+Then for every dollar that the stock falls below that, we'll earn a dollar profit per share that's covered by our option contract. There's one important difference to note though, and that is with a put option, we actually have an axis over here to run into. So, our maximum loss is still limited to our premium but our maximum profit is no longer unlimited because the lowest that the stock could go is zero dollars a share. So there is going to be some limit which will essentially be the strike price minus the premium that will be our maximum profit because again we can't hope for the stock to do worse than go to zero, stop trading in the company go out of business and that will limit the maximum profit we could make.
