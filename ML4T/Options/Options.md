@@ -512,3 +512,88 @@ Because I collect the premium for those two 110s in the middle and I only pay th
 #### Profit and Loss Curve
 
 Let's look at the profit and loss curve for the butterfly to understand what it's doing and why this is an interesting idea.
+
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/24.png)
+
+
+#### Why is it Called the Butterfly?
+
+The butterfly strategy is named as such because the profit and loss graph of this strategy looks like a butterfly. 
+
+#### Understanding the Numbers
+
+The basic idea of the butterfly is that we're going to gain money if the stock price doesn't move very far away from where it is now. That's the bet that we're making, and we're going to lose money if the stock price moves significantly in either direction. So we're hoping for a period of low volatility.
+
+#### The Profit and Loss Axis
+
+Please notice that the profit and loss axis on the left is inverted simply because it makes the butterfly look more like a butterfly. But don't let that fool you. 
+
+#### The Different Points on the Graph
+
+We should see why the different points on this graph work out the way they do. Intuitively, it makes sense given the position that we took that we would have our maximum profit exactly at that central strike price of the two options that we wrote. That's our target price that we hope the stock will stay near. And then our profit is going to taper off in both directions until we reach some maximum loss because we've created a fully offset position with two rights and two buys.
+
+#### The Loss and Gain Potential
+
+So once we get to an extreme of the stock price going up a lot or down a lot, those two rights and those two buys are going to gain or lose value in lockstep which will put a cap on our loss. And that's a good thing. It means we have limited risk here. So you'll notice our loss and our gain potential are about the same. That's not an accident. That's why we do this strategy.
+
+#### Starting from the Left Side of the Graph
+
+Starting from the left side of the graph, we are looking at a loss of minus two hundred and twenty-three dollars. Everything we did was calls so this makes sense. If the stock price goes way, way, way down then we're going to lose our 223 dollar net premium that we paid to enter this total position after we added up the premium of all of our options that we entered into.
+
+
+#### The Butterfly Strategy: Profit and Loss
+
+Once we reach the point where the stock price is exactly $105, that 105 call that we bought is going to start to be worth something. Below this, everything was worthless. Our rights that we wrote won't get called away, but we've already collected the premium and we've factored that into this total $223 it costs to get into the position. 
+
+#### Breaking Even
+
+So as soon as we hit $105, our 105 starts gaining dollar-for-dollar and beginning to offset the loss of that premium. Now our 110 is still worth nothing which is good because those were rights and our 115 that we bought is also worth nothing. Once we get up to this point right here, then that 105 call is worth exactly $223 because per share we're at $107.23 or $2.23 higher than the 105 call. Our 110 and 115 are still worthless so at this point if we exercise the 105 we gain $223 that exactly offsets our $223 premium and we break even on this butterfly position.
+
+#### Maximum Profit
+
+As the price continues to increase from there, the 105 continues to gain in value and so does our total profit until we reach this point exactly at that central 110 strike price. That's where we would optimally love to be. At that point, that 105 call is worth exactly five dollars a share or five hundred dollars total and our 110 and 115 are both still worthless. So we've now got a net profit after paying our premium of two hundred and seventy seven dollars per option contract for the stock price doing absolutely nothing which is something that would be hard to achieve without an option strategy like this.
+
+#### Starting to Lose Money
+
+Now we start losing money as the price goes up. So our 110s now unfortunately are worth something to the person we sold them to and so they're going to be exercised and we're going to start losing money. This is the risk of the butterfly strategy. It's important to understand these risks and potential downsides before implementing any investment strategy.
+
+
+Once we reach the point where the stock price is exactly $105, our 105 call will offset one of those 110s dollar-for-dollar and cancel it out. But the other 110 is now going to start actually costing us money dollar for dollar as the stock price continues to increase until we get up to this point here which is our second breakeven point. 
+
+At this point, \$112.77, that 105 call is worth exactly \$777 because per share we're at \$112.77 or \$2.77 higher than the 105 call. Our 110 and 115 are still worthless so at this point if we exercise the 105 we gain \$223 that exactly offsets our $223 premium and we break even again. 
+
+Now if the stock price goes above that then we're actually losing money because we haven't recovered our premium. Once we get up to $115 which is this other point here where the graph flatlines, now our 115 call that we bought has kicked in and it is gaining value now dollar for dollar as the price of the stock continues to rise. 
+
+So once we get here, the 105 and the 115 are both in the money and are fully offsetting those two 110s that are losing. So every time the stock price changes a dollar, we earn a dollar on the 105, we earn a dollar on the 115, and we lose two dollars on the 110 meaning that we go straight sideways and our loss is capped. This is the risk of the butterfly strategy. It's important to understand these risks and potential downsides before implementing any investment strategy.
+
+
+
+#### The Butterfly Strategy: Adjustments and Analysis
+
+This is just one example of what you can do with a more complex option strategy where we've mixed together four calls (two buys and two writes) with cleverly offset prices to construct an exact profit and loss curve that we're comfortable with when we think that the stock is going to go sideways. 
+
+#### Adjustments to the Butterfly
+
+We can make adjustments to this any way we want. If we want a wider butterfly, we can give ourselves more room for the stock to move a little bit and spread out this butterfly by buying calls that are further away from those central writes. But we'll end up paying more in premiums to do it. So the wider that butterfly gets, the more premium we're going to lose. 
+
+#### Unbalancing the Calls
+
+We can also do something like unbalance the calls. On the left-hand side, instead of a 105, I could do like a 100 but still keep the other side at 115. That lets me favor the stock moving in one direction over another. So just widen the butterfly in one direction. That's going to produce kind of a funny shape in the graph where one wing is higher than the other. Traders actually call that a broken wing butterfly because again, that's kind of what the P&L chart looks like. 
+
+#### Analyzing Option Strategies
+
+This is how everyone analyzes option strategies. I hope you can take this as at least a basic understanding of what exchange-traded options are, what you can do with them mechanically, sort of how they work, and how you pay or collect premiums, what the implications of that are. 
+
+#### Moneyness, Intrinsic Value, and Time Value
+
+And then what moneyness is, the intrinsic value versus the time value, and the time decay that means you don't want to be holding these options when they enter those last two weeks before expiration unless you really, really know what you're doing. This is all the time I can reasonably spend on this today. I'm sorry we didn't get into even more advanced concepts. I know some people would like that. But I hope this gives you a good start.
+
+
+#### More Complex Strategies: Butterflies, Broken Wing Butterflies, Iron Condors
+
+This is just a little bit of a look into the more complex strategies. Butterflies, broken wing butterflies, iron condors, and all the different things that people do to express an exact opinion about the stock market through the very flexible instrument that is exchange-traded options. 
+
+These strategies allow traders to take advantage of various market conditions and to express complex market views that would be difficult to express with simple long or short positions. 
+
+I hope you've gotten something out of this lecture. Enjoy the rest of the class and feel free to ask if you have any questions or need further clarification on any of these concepts. I'm here to help! 😊
