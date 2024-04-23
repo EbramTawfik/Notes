@@ -470,3 +470,45 @@ But in the meantime, during the downturn, these premium payments we're collectin
 ##### The Upside and Downside
 
 But if it goes up less than that, then you collect money, make money on the stock, and keep the stock. And if it goes down, then you've partially offset losses that you would have experienced anyway. This is the essence of a covered call strategy. It allows you to potentially profit in a variety of market conditions and provides some level of protection against losses. However, it's important to remember that no strategy is without risk, and it's crucial to understand these risks before implementing any investment strategy.
+
+
+#### Advanced Options Strategy: The Butterfly
+
+The final part of this basic overview of options is the introduction of a more advanced example of a complex option strategy. The key takeaway is that options have more moving parts than stocks. There are more choices you have, there are more combinations you can make, and so it gives you more flexibility to construct a more complex position than you could with just stocks. This will be a good example of that.
+
+#### The Thought Experiment
+
+The thought experiment here is, you know what to do in the stock market if you think that a stock will go up, you buy it. If you think that a stock will go down, you sell it if you're holding it or maybe you even short it if you feel very strongly about it. But what if you have some good reason to believe that the stock is going to trade sideways for quite a while? You think it's entering a calm period where nothing interesting is going to happen with the company and the stock is just going to flatline and go straight, maybe with a little bit of noise, but not too much. What do you do to profit from that?
+
+#### The Problem with Sideways Market
+
+If you're limited to just buying and selling stocks, the answer is basically you don't profit from that. A sideways market is kind of the death of stock trading because there's no volatility, there's not a lot of opportunity to find those peaks and troughs and buy and sell and make money.
+
+#### The Power of Options
+
+But with options, you can construct a position that will specifically target maximum profit if the price of the underlying stock does not change at all. And that's kind of a cool example of the power of things you can do with options. So let's build one of these. There are a lot of varieties of option strategies now, all have really fanciful names given to them by options traders. The one we're going to talk about is called the butterfly.
+
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/23.png)
+
+
+
+#### The Butterfly Strategy
+
+The butterfly is a strategy that's specifically designed to profit when a stock or the market is going sideways. 
+
+#### Constructing a Butterfly
+
+For a butterfly, let's use the prices that we had before. If you want to look back at the options chain, we said Apple was trading at 111 dollars. So what we would like to do is write two calls as close to the current price of the stock as we can and then we want to bracket that by buying a call below that and buying a call above that. 
+
+#### Example
+
+In this case, what I might do is I might buy a 105 call and a 115 call as my bracketing pair and then in the middle, write two 110 calls. The cost of these is going to partially offset one another, making the butterfly cheaper than you might expect it to be for taking a position in four options. 
+
+#### Cost of the Butterfly
+
+Because I collect the premium for those two 110s in the middle and I only pay the premium for the two on the outside that I'm buying. In this case, I'm going to pay 716 for that 105 and I'm going to pay 53 cents a share for that 115 but I'm going to collect two times 273 in the middle. So this whole position is going to cost me $2 and 23 cents a share to enter the butterfly or 223 dollars because as usual, I'm controlling 100 shares of stock underneath this. 
+
+#### Profit and Loss Curve
+
+Let's look at the profit and loss curve for the butterfly to understand what it's doing and why this is an interesting idea.
