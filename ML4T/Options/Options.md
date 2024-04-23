@@ -446,3 +446,27 @@ This is where you would love to be with a covered call. You'd like to be in this
 ##### Juicing the Returns
 
 Except periodically, you're juicing those returns and getting more money than you would otherwise because you're writing calls and collecting premium that's just extra money to you. And then hopefully, it's not exercised and the stock keeps going up slowly, never hitting those strike prices, and the premiums are just extra money that you put in your pocket the whole time.
+
+
+![](https://raw.githubusercontent.com/EbramTawfik/Notes/main/ML4T/Options/images/22.png)
+
+
+#### The Third Outcome: Stock Goes Down
+
+The third outcome is that the stock goes down. If the stock goes down, the covered call still helps. It really only becomes a hindrance if the stock goes way, way, way up and we miss out on that stock move. 
+
+##### The Option Won't Be Exercised
+
+If it goes down, the option won't be exercised and we'll still have the stock. Of course, we lost money because our stock went down, but our loss to date is the current price minus the purchase price of the stock plus the premium, just like the last case. 
+
+##### The Role of the Premium
+
+Realize what that premium is doing here. That has partially offset the loss that we would have had anyway from holding this stock during a downturn. So by writing these covered calls, we've gotten to hold the stock through a downturn and we can wait for it to go back up and recover our money. 
+
+##### Offsetting the Losses
+
+But in the meantime, during the downturn, these premium payments we're collecting are helping to offset the losses. So a covered call can be a pretty good idea. You miss out on a little bit of upside potential if the stock takes off and goes through the roof and gets called away. 
+
+##### The Upside and Downside
+
+But if it goes up less than that, then you collect money, make money on the stock, and keep the stock. And if it goes down, then you've partially offset losses that you would have experienced anyway. This is the essence of a covered call strategy. It allows you to potentially profit in a variety of market conditions and provides some level of protection against losses. However, it's important to remember that no strategy is without risk, and it's crucial to understand these risks before implementing any investment strategy.
