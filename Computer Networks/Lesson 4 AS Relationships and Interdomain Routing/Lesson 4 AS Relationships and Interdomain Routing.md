@@ -107,3 +107,42 @@ Got it! Here’s the combined, detailed summary for **Slide 2**, with all the in
      - **RIP (Routing Information Protocol)**
      - **E-IGRP (Enhanced Interior Gateway Routing Protocol)**
    - These protocols optimize traffic flow within an AS, often by calculating the shortest or most efficient paths.
+
+---
+
+### **Slide 3: Autonomous Systems (AS) Business Relationships**
+
+1. **Provider-Customer Relationship (Transit)**:
+   - In a **Provider-Customer** relationship, the **provider AS** forwards the customer's traffic to other destinations within its own routing table (and vice versa).
+   - The relationship is based on a **financial settlement** where the customer pays the provider.
+   - This allows the customer to reach a wider portion of the Internet, utilizing the provider’s network for global or regional connectivity.
+
+2. **Peering Relationship**:
+   - In a **peering relationship**, two ASes share access to **subsets of each other's routing tables**. The routes shared are typically limited to **each AS’s customer networks**.
+   - Peering is **settlement-free**, meaning no money is exchanged between the ASes for traffic forwarding.
+   - **Tier-1 ISPs** often form peering relationships with other Tier-1 ISPs, but they typically do so only if the two ISPs are of **similar size** and handle **similar traffic volumes**.
+   - Smaller ISPs also engage in peering relationships, especially if they exchange a substantial amount of traffic between each other. By doing so, they **avoid transit costs** they would otherwise pay to larger ISPs.
+   - Peering agreements hold as long as the **traffic exchanged** is **not highly asymmetric**, meaning one network does not significantly send more traffic than it receives.
+
+![](./images/3.png)
+### **Diagram Summary: Autonomous Systems Business Relationships**:
+
+- The diagram illustrates various **transit** and **peering relationships** between multiple ASes.
+   - **Transit (Provider-Customer)** relationships:
+     - ISP **P** acts as a transit provider for other networks (e.g., Content Provider **Cp** and smaller ISPs).
+     - ISP **X** is both a customer and a provider, as it connects to ISP **P** (for transit) and offers transit services to smaller ISPs (e.g., **Cx 1**, **Cx 2**, **Cx 3**).
+     - ISP **Y** and ISP **Z** have transit relationships with other networks (e.g., **Cy**, **Cz**).
+   - **Peering relationships**:
+     - ISPs **X**, **Y**, and **Z** have peering agreements between them, allowing them to exchange traffic directly.
+
+
+3. **Provider Revenue Models**:
+   - **Providers** have financial incentives to forward as much customer traffic as possible because they generate revenue from their customers.
+   - Providers charge customers based on two main pricing models:
+     - **Fixed Pricing**: Customers pay a fixed rate, assuming their bandwidth usage stays within a predefined range.
+     - **Usage-Based Pricing**: Providers charge based on **bandwidth usage**. Bandwidth usage is typically calculated using periodic measurements (e.g., every five minutes), and the **95th percentile** of these measurements is used to determine the final cost.
+   - Routing policies may be adjusted to **increase customer traffic** to the provider, allowing the provider to **maximize revenue**.
+
+---
+
+
