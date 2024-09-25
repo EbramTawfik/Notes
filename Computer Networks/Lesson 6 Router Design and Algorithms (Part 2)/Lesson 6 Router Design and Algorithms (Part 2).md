@@ -506,3 +506,42 @@ When the bucket reaches its maximum capacity, additional tokens are dropped. Thi
 
 ### Notes:
 - **Token Bucket Policing** is a slight variation of this mechanism. Instead of queues for each flow, a single queue is used for all traffic. If a packet arrives and the token bucket does not have sufficient tokens, the packet is dropped immediately rather than delayed. This approach simplifies management but may result in packet loss during congestion or bursty traffic conditions.
+
+Here is a detailed explanation for your slide including the two diagrams on the leaky bucket mechanism:
+
+---
+
+**Slide 11: Traffic Scheduling: Leaky Bucket**
+
+---
+
+**Diagram 1: Traffic Rate vs. Time for Policing and Shaping**  
+- The diagram shows how traffic rates fluctuate over time, and the effect of policing and shaping on the traffic output.
+- **Policing**: When the traffic exceeds the configured rate, excess traffic is dropped. This creates a saw-toothed pattern where traffic surges are cut off when they surpass the threshold.
+- **Shaping**: Instead of dropping excess traffic, a queue or buffer is used to smoothen the output. Traffic that exceeds the rate limit is delayed, resulting in a much smoother traffic flow after a spike.
+
+**Diagram 2: Leaky Bucket Analogy**  
+- The leaky bucket algorithm is illustrated using a water analogy.
+- **Faucet**: Represents the unregulated flow of incoming packets.
+- **Leaky Bucket**: Water fills the bucket (the buffer), and leaks out at a constant rate (the regulated flow of packets). If the bucket (buffer) is full, any additional incoming water (packets) will overflow and be lost (dropped).
+- This diagram helps to explain how the leaky bucket algorithm regulates traffic flow by enforcing a constant rate for packet transmission, regardless of the incoming rate.
+
+---
+
+### Explanation:
+
+**What is Traffic Policing and Shaping?**  
+Traffic policing and shaping are two mechanisms used to control the rate at which packets are sent through a network link. Both are used to enforce network policies regarding data transmission rates, ensuring the network operates within set traffic limits.
+
+- **Traffic Policing**: This mechanism monitors traffic flows and compares them against a configured rate limit. If the traffic rate exceeds this limit, excess packets are either dropped or re-marked (policed). The result is an irregular, sawtooth-shaped traffic output, as traffic peaks are chopped off.
+  
+- **Traffic Shaping**: Traffic shaping, on the other hand, tries to smooth out the traffic flow by using a buffer to store excess packets temporarily. These packets are then transmitted when the traffic rate falls below the configured limit. This results in a smoother traffic pattern over time.
+
+**Leaky Bucket Algorithm**  
+- The leaky bucket algorithm provides a way to control traffic rates in both policing and shaping.
+  - In policing, packets are dropped if they exceed the bucket's capacity, thus enforcing a strict rate limit.
+  - In shaping, packets exceeding the bucket's capacity are stored and later transmitted when there is room, thereby smoothing out bursts of traffic.
+
+The algorithm ensures that the rate of packet transmission remains constant, regardless of the arrival rate of packets, just as a bucket with a small hole leaks water at a steady pace, regardless of how quickly it is filled.
+
+**Conclusion**: The leaky bucket algorithm is a simple yet powerful mechanism used in networks to control packet flows, providing a method for both traffic shaping (smoothing) and traffic policing (limiting).
