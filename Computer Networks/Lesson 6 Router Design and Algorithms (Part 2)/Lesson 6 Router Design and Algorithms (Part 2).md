@@ -269,3 +269,240 @@ This slide introduces a **Take-a-Ticket Scheduling Mechanism**, which is used to
 #### Key Takeaways:
 - The **Take-a-Ticket** mechanism allows for fair scheduling of connections but can suffer from **HOL blocking**, where input queues are delayed due to the blocking of the first input.
 - The goal is to maximize parallel connections while avoiding delays that reduce efficiency.
+
+
+
+
+
+### Slide 7: Parallel Iterative Matching to Avoid Head-of-Line Blocking
+
+#### Explanation:
+
+This slide introduces **Parallel Iterative Matching**, a scheduling mechanism designed to avoid **Head-of-Line (HOL) blocking** in an **N x N crossbar switch** system. The focus is on efficiently managing the connections between input and output lines to maximize data transmission without having the head of the queue block other packets.
+
+1. **Head-of-Line Blocking Recap:**
+   - HOL blocking occurs when the first packet in a queue blocks the entire queue from making progress, even if subsequent packets could be sent to other outputs. This reduces efficiency.
+
+#### Parallel Iterative Matching:
+
+2. **How It Works:**
+   - The **parallel iterative matching** mechanism addresses this issue by breaking down the input queues into **virtual queues**, one for each output link. This enables better control over which packets are sent, avoiding unnecessary blocking.
+
+3. **Steps in Each Round:**
+
+   - **Request Phase:**
+     - All input lines (A, B, C) send requests in parallel to the output lines (1, 2, 3, 4) they want to connect with.
+     - Example: In the first round, input A requests connections to output lines 1, 2, and 3. Similarly, inputs B and C make their requests.
+
+   - **Grant Phase:**
+     - Each output line that receives multiple requests randomly selects one input to grant a connection to.
+     - Example: Output line 1 selects input B (over A), while output line 2 selects input A (over B).
+
+   - **Accept Phase:**
+     - Inputs that receive multiple grants from different outputs randomly choose which output they will connect to.
+     - Example: Input A, having received grants from output lines 1 and 2, chooses to connect with output line 2. Inputs B and C proceed to connect with output lines 1 and 4, respectively.
+
+4. **Multiple Rounds:**
+   - The algorithm runs iteratively over multiple rounds to ensure all inputs get a chance to connect with the desired outputs.
+  
+  ![](./images/10.png)
+   - **Round 1:** Input A connects with output line 2, input B connects with output line 1, and input C connects with output line 4.
+
+![](./images/11.png)
+   - **Round 2:** Inputs send their next requests and the process repeats. Input A connects with output line 1, and the algorithm continues to avoid conflicts.
+  
+  ![](./images/12.png)
+   - **Round 3:** The process concludes with input A connecting to its final requested output.
+
+#### Images 1, 2, and 3: **Parallel Iterative Matching (Rounds 1 to 3)**
+   - Each image represents a step in the matching process, showing the transition from the **Request**, to **Grant**, and finally **Accept** phases across three rounds. Input lines A, B, and C are shown making connections with output lines 1, 2, 3, and 4 based on the iterative matching scheme.
+
+#### Key Points:
+- **Random Selection:** The randomness in both the **Grant** and **Accept** phases ensures fairness and helps avoid bottlenecks.
+- **Avoiding HOL Blocking:** By having **virtual queues** for each output line, the mechanism ensures that the head of the queue doesn’t block the rest of the packets, significantly improving efficiency.
+- **Iterative Nature:** Multiple rounds allow for optimal usage of the crossbar switch, with minimal delays due to blocking.
+
+This approach is more efficient than simpler scheduling mechanisms like the **Take-a-Ticket** algorithm because it avoids scenarios where queues are stalled by a single connection.
+
+
+
+
+### Slide 8: Scheduling Introduction
+
+#### Explanation:
+
+Scheduling is a critical function in routers, especially in busy networks. Routers handle not just data packets, but also management queries and routing updates. The goal of scheduling is to ensure that certain types of traffic receive different services based on their priority or service requirements. As networks operate at very high speeds (e.g., 40 gigabits per second or more), scheduling decisions must be made in **real-time**, within the small window of inter-packet times.
+
+#### Key Concepts:
+
+1. **FIFO with Tail Drop:**
+   - **FIFO (First-In, First-Out):** This is the simplest method of scheduling, where packets are processed in the order they arrive.
+   - **Tail Drop:** When the output buffer (queue) is full, any incoming packets are dropped. This is fast, but it can result in the loss of important packets if the buffer fills up, causing **tail-drop**.
+   - **Trade-Off:** While FIFO with tail-drop provides fast and simple scheduling, it does not account for the importance or priority of the packets being dropped.
+
+2. **Need for Quality of Service (QoS):**
+   - **QoS Guarantees:** More advanced scheduling methods (e.g., **priority**, **round-robin**) are needed to provide **Quality of Service (QoS)** guarantees. These methods ensure that certain packet flows (streams of packets traveling the same route) receive appropriate resources like bandwidth and minimal delay.
+   - **Packet Flows:** A packet flow is a group of packets that share the same characteristics (e.g., source and destination) and require the same level of service throughout the network.
+
+#### Reasons for More Complex Scheduling:
+
+3. **Router Support for Congestion:**
+   - As network traffic grows, routers must handle **congestion** more effectively. Congestion occurs when packet flows overwhelm the router’s capacity. While **TCP** has built-in congestion control mechanisms, routers can play a vital role in improving throughput by managing congestion more effectively.
+
+4. **Fair Sharing of Links Among Competing Flows:**
+   - During periods of congestion, some packet flows can dominate the router’s buffers (queues), leading to **unfair resource allocation**. For instance, if one flow occupies the buffer and uses up all the available bandwidth, other flows are starved, causing delays and reduced performance for important connections.
+   - **FIFO Limitation:** In FIFO with tail-drop, this blocking can cause critical packet flows (such as video or voice traffic) to be delayed or dropped, resulting in poor user experience.
+
+5. **Providing QoS Guarantees to Flows:**
+   - **Bandwidth Guarantees:** Routers need to provide **bandwidth guarantees** to critical packet flows, such as those for live video streaming or VoIP calls, where delays or packet loss can result in a poor experience.
+   - **Delay Guarantees:** In some applications (such as real-time video streaming), minimizing delays is essential. Scheduling algorithms that ensure low latency and minimal jitter are important for these types of flows.
+   
+#### Summary:
+
+- Routers use scheduling algorithms to make decisions about how to allocate resources (such as bandwidth and queue space) in real-time.
+- While **FIFO with tail-drop** is a simple and fast scheduling method, it is inadequate for handling congestion, ensuring fair resource sharing, and providing **Quality of Service (QoS)** guarantees.
+- More advanced scheduling methods (e.g., **priority scheduling**, **round-robin**, etc.) are required to support the increasing demands of modern networks.
+
+#### Key Takeaway:
+
+As network traffic grows and link speeds increase, finding **efficient scheduling algorithms** that provide guarantees for **bandwidth** and **delay** is crucial to maintain network performance, especially for critical applications like video streaming and voice calls.
+
+
+
+### Slide 9: Deficit Round Robin
+
+#### Explanation:
+
+This slide introduces **Deficit Round Robin (DRR)**, a scheduling algorithm designed to provide fairness in bandwidth allocation while addressing some of the complexities found in other methods like **bit-by-bit round-robin**. DRR allows routers to enforce **bandwidth reservations** for different flows, ensuring that each flow gets its fair share of network resources.
+
+1. **Bit-by-Bit Round Robin:**
+   - In an ideal case, we would allocate bandwidth equally by transmitting **one bit** from each active flow in a round-robin manner. However, since we cannot split packets into bits, we instead calculate the **finish round** for each packet based on its size and transmit it when its turn arrives.
+   - **Fair Queuing:** This method guarantees fairness by choosing the packet with the **smallest finish round** to transmit next.
+
+#### Key Concepts:
+![](./images/13.png)
+### Image 1: DRR Round 1
+- **Queue States:** There are six flows (F= 1017, F= 1021, F= 1015, F= 1007, F= 1013, F= 1009, F= 1002), and the router is operating in round **R(t) = 1000**. The numbers next to the flows indicate their finishing times.
+- **Goal:** In DRR, we aim to send packets based on available bandwidth and fairness, indicated by the finishing times (F). 
+- **Action:** The router picks the packet with the lowest finishing time (F=1002) for transmission.
+![](./images/14.png)
+
+
+### Image 2: DRR Round 2
+- **New Round:** After round 1, the round time is incremented to **R(t) = 1002**.
+- **Queue Update:** The flow with F=1002 was sent in round 1, so it’s no longer visible. The router now evaluates the remaining flows. The flow with **F=1007** has the next lowest finishing time, and hence the router will pick this packet next for transmission.
+
+![](./images/15.png)
+
+
+
+### Image 3: DRR Round 3
+- **New Round:** The round time increases to **R(t) = 1007**.
+- **Queue Update:** After sending the packet with F=1007 in round 2, the next packet with the lowest finishing time is **F=1009**. This packet is chosen for transmission in this round.
+
+
+![](./images/16.png)
+### Image 4: DRR Round 4
+- **New Round:** The round time is now **R(t) = 1009**.
+- **Queue Update:** The packet with finishing time **F=1013** is chosen for transmission as it has the next lowest finishing time.
+
+1. **Finishing Time (F):**
+   - Each packet is assigned a **finish round** number (`F`), which determines when it will be transmitted. The packet with the smallest `F` is selected first.
+   - **Example:** In the diagram, packets with finish times like `F=1002`, `F=1007`, `F=1009`, etc., are shown. The packet with `F=1002` will be transmitted first since it has the earliest finish time.
+
+2. **Packet-Level Fair Queuing:**
+   - By sending packets with the **smallest finish round** in each round, the system ensures fairness. However, this requires maintaining a **priority queue**, which can introduce complexity and time overhead.
+
+![](./images/17.png)
+![](./images/18.png)
+Similarly, the first packets of F3 and F4 will be sent with D3 = 400 and D4 = 320 after the first iteration. For the second iteration, the D1+ Q1 = 800, meaning there are sufficient funds to send the second and third packets through. Since there are no remaining packets, D1 will be set to 0 instead of 30 (the actual remaining amount).
+4. **DRR (Deficit Round Robin):**
+   - **Simple Constant-Time Scheduling:** DRR simplifies packet scheduling by assigning a **quantum size (Qi)** to each flow, representing the share of bandwidth allocated to that flow in each round.
+   - Each flow also has a **deficit counter (Di)**, which accumulates leftover bandwidth from previous rounds. If a packet cannot be transmitted because it exceeds the flow’s current bandwidth (`Qi + Di`), the deficit is carried over to the next round.
+   - **Fairness with Reduced Complexity:** DRR ensures fairness without the need for a priority queue, as it operates in **constant time**, making it efficient for high-speed networks.
+
+#### DRR Example:
+
+5. **Round-Robin Scheduling:**
+   - The algorithm starts by serving packets from each flow in a **round-robin** manner. Each flow is allocated a **quantum size** of 500.
+     - **F1:** The first packet has a size of 200, so it is sent, but the second packet (750) cannot be sent in this round due to insufficient bandwidth. The leftover bandwidth (300) is carried over as a **deficit (D1)**.
+     - **F2:** The first packet of size 500 is sent, leaving no deficit.
+     - **F3 and F4:** Similar calculations occur, with the remaining bandwidth carried forward if necessary.
+
+6. **Accumulating Deficit:**
+   - In subsequent rounds, the deficit counter (Di) is added to the quantum size, allowing packets to be sent if there is enough accumulated bandwidth.
+     - For example, in the next round, **F1** has enough accumulated bandwidth (D1 + Q1 = 800) to send its remaining packet.
+
+#### Diagrams:
+
+1. **Image 1 to 4: Deficit Round Robin Scheduling:**
+   - These images depict the scheduling process, showing packets waiting in queues along with their assigned **finish times (F)**.
+   - In each step, the packet with the smallest finish time is transmitted, ensuring fairness while maintaining simplicity in scheduling.
+
+#### Advantages of DRR:
+
+- **Fair Bandwidth Allocation:** DRR ensures that all flows receive their fair share of bandwidth over time, even if some packets are larger than others.
+- **Simple to Implement:** DRR operates in constant time, making it more suitable for high-speed networks compared to other more complex algorithms like fair queuing.
+- **Efficient Handling of Variable Packet Sizes:** By using a quantum size and deficit counter, DRR can handle variable-sized packets efficiently without the need for complex packet splitting.
+
+#### Key Takeaway:
+- **Deficit Round Robin (DRR)** provides a balance between **fairness** and **efficiency**, offering a practical scheduling algorithm that works well in environments with variable packet sizes and high-speed requirements.
+
+
+
+The **Token Bucket Policing** technique works by regulating the flow of traffic in a network, ensuring that the traffic conforms to a predefined rate while also allowing bursts of data up to a certain size.
+
+Here’s a breakdown of how the image illustrates the concept:
+
+1. **Token Bucket**: 
+   - Tokens represent the permission to send packets. They accumulate in the bucket at a rate of **R tokens per second**.
+   - Each token allows for sending a single bit of data.
+   - The bucket can hold up to **B tokens**. This determines the **maximum burst size**.
+
+2. **Input**: 
+   - When a packet arrives, the system checks whether there are enough tokens in the bucket to cover the packet size (each token corresponds to one bit).
+   
+3. **Test**:
+   - If there are enough tokens, the packet is allowed to pass through and is sent to the output.
+   - If not, the packet is either queued in the **Data Buffer** (as in **shaping**) or dropped (as in **policing**).
+   
+4. **Tokens Arriving at Rate R**:
+   - The system replenishes tokens at the rate of **R bits per second**, meaning the flow can send packets at an average rate of **R bps** as long as it has tokens available.
+   
+5. **Burst Limitation**:
+   - The **B** tokens in the bucket represent the maximum burst size allowed. A flow can send packets up to the burst size at a higher rate, but once the bucket is empty, the flow can only send packets at the average rate **R**.
+
+6. **Data Buffer (for Shaping)**:
+   - In shaping, if there are no tokens, packets wait in a queue until tokens are available. In policing, packets are dropped instead of waiting.
+
+### Summary:
+- This mechanism limits both the **average rate** (R bps) and the **burst size** (B bits).
+- It is widely used in networking to ensure **fair bandwidth usage** and **prevent one flow from hogging bandwidth**.
+
+
+
+
+
+
+### **Slide 10: Token Bucket Policing**
+
+
+### Explanation:
+![](./images/19.png)
+There are situations where we need to enforce bandwidth guarantees for certain types of flows without placing them in separate queues. For instance, you may want to restrict news traffic on a network to no more than a specific bandwidth (e.g., X Mbps), but all traffic is still routed through the same queue.
+
+Token Bucket Shaping is a technique used to achieve this by controlling two key parameters:
+1. **Average Rate**: The constant rate at which traffic is allowed to pass through (e.g., 100 Kbps).
+2. **Maximum Burst Size**: The maximum amount of traffic that can pass in a single burst (e.g., a flow can send up to 4 KB at full speed).
+
+The Token Bucket mechanism operates on the idea that each flow is assigned a bucket, which fills up with tokens at a rate of **R** bits per second. The bucket has a capacity limit of **B** tokens. If a packet arrives and there are enough tokens (equal to or greater than the packet size in bits), the packet is allowed through. Otherwise, the packet must wait until the bucket refills with enough tokens.
+
+When the bucket reaches its maximum capacity, additional tokens are dropped. This means the traffic flow is constrained to a maximum burst of **B** bits.
+
+### Diagram Comments:
+- The diagram shows the token bucket process, with tokens arriving at a rate of **R** bits per second and filling a bucket that has a maximum burst size **B**.
+- When a packet arrives at the input, it is only allowed through if the bucket contains enough tokens to match the packet size. If not, it will wait or be dropped depending on the implementation.
+- The output is the flow after the token test. 
+
+### Notes:
+- **Token Bucket Policing** is a slight variation of this mechanism. Instead of queues for each flow, a single queue is used for all traffic. If a packet arrives and the token bucket does not have sufficient tokens, the packet is dropped immediately rather than delayed. This approach simplifies management but may result in packet loss during congestion or bursty traffic conditions.
