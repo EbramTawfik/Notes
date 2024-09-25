@@ -202,3 +202,70 @@ This slide discusses the **Grid of Tries** approach, which aims to strike a bala
 
 #### Key Takeaway:
 - The **Grid of Tries** offers a middle ground between **set-pruning** and **backtracking** by precomputing **switch pointers** to speed up the search process without incurring excessive memory costs.
+
+
+
+### Slide 6: Take-a-Ticket Scheduling Mechanism
+
+#### Explanation:
+
+This slide introduces a **Take-a-Ticket Scheduling Mechanism**, which is used to schedule input lines (or requests) to output lines (or resources). The algorithm works in multiple rounds and allows inputs to connect with outputs based on a ticket-granting system. The goal is to ensure that all inputs get served fairly and efficiently while trying to avoid blocking issues like **Head-of-Line (HOL) blocking**.
+
+1. **Basic Structure:**
+   - **N x N crossbar switch:** 
+     - The switch connects multiple input lines (like A, B, C) to output lines (1, 2, 3, 4). Each input line wants to send packets to different output lines.
+     - The crossbar allows only one input to connect with one output at a time, and the goal is to schedule these connections efficiently.
+![](./images/6.png)
+#### Round 1:
+
+2. **Request Phase:**
+   - Each input line (A, B, C) sends a **request** to the output lines they want to connect to.
+     - Example: In this case, input A requests tickets for outputs 3, 2, and 1 (in that order), input B also requests for 3, 2, and 1, while input C requests tickets for 4, 3, and 1.
+  
+3. **Ticket Grant Phase:**
+   - Output lines receive the requests and issue tickets back to the inputs based on availability.
+     - Example: Output 1 issues tickets **T1** to input A, **T2** to input B, and **T3** to input C.
+
+4. **Connect Phase:**
+   - Input A uses its ticket **T1** to connect to output line 1, and the connection is made for data transmission.
+![](./images/7.png)
+#### Round 2:
+
+5. **Request Phase:**
+   - After completing the first connection, input A makes a request for its next output line (output 2 in this case). Input B continues its requests as well.
+  
+6. **Ticket Grant Phase:**
+   - The ticket-granting process continues, and tickets **T1** and **T2** are issued to input A and B for their next connection requests.
+  
+7. **Connect Phase:**
+   - Input B now uses its previous ticket **T2** to connect to output line 1, while input A connects to output line 2.
+![](./images/8.png)
+#### Round 3:
+
+8. **Request Phase:**
+   - Inputs A, B, and C continue their requests for output lines.
+  
+9. **Ticket Grant Phase:**
+   - Tickets are granted for the next set of connections.
+
+10. **Connect Phase:**
+    - Inputs A and B connect to output lines 3 and 2 respectively, while input C connects to output line 1.
+
+#### Image 1, 2, 3: **Take-a-Ticket Scheduling Mechanism - Rounds 1 to 3**
+   - These images show the three rounds of the take-a-ticket scheduling process.
+   - Each image follows the flow from **Request**, to **Ticket Grant**, to **Connect** phases as inputs (A, B, C) make connections with outputs (1, 2, 3, 4).
+
+![](./images/9.png)
+#### Head-of-Line Blocking:
+
+11. **Head-of-Line (HOL) Blocking:**
+    - The final image demonstrates **Head-of-Line blocking**, a problem where the entire queue of an input line is blocked by the input at the front of the queue.
+    - In this case, inputs B and C are delayed because input A takes priority to connect with output line 1.
+    - This results in inefficient use of the crossbar switch, as the entire queue waits for the first connection to be completed.
+
+#### Image 4: **Head-of-Line Blocking**
+   - The grid demonstrates how input A takes priority, causing input B and C to wait. Over time, this leads to gaps (empty spots) in the schedule where no packets are sent, reducing overall efficiency.
+
+#### Key Takeaways:
+- The **Take-a-Ticket** mechanism allows for fair scheduling of connections but can suffer from **HOL blocking**, where input queues are delayed due to the blocking of the first input.
+- The goal is to maximize parallel connections while avoiding delays that reduce efficiency.
