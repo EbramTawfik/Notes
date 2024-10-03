@@ -75,7 +75,7 @@ Upon completion of Dijkstra's algorithm, all nodes in a network are assured of h
 **Explanation:** Dijkstra's algorithm ensures that each node in the network has the shortest path to the source node upon completion, given that the network's topology and link costs are known.
 
 ### Question 3
-Complete the following topology. Let node 6 be the root node. Use Dijkstra's algorithm to find the shortest path tree.
+Consider the following topology. Let b be the source node. Use Dijkstra’s algorithm to determine the cost of the least-cost path from node b to all other nodes in the network upon termination of the algorithm.
 
 ![Network Topology for Dijkstra's Algorithm](https://gatech.instructure.com/courses/393592/files/52452267/preview)
 
