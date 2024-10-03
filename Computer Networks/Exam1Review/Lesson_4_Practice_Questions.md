@@ -330,6 +330,7 @@ A Content Distribution Network (CDN) or an ISP can operate over multiple Autonom
 ### Question 5
 Consider the figure below that denotes ASes and their relationships.  
 **Note:** C1, C2, C3 are customers of ISP-X. ISP-P is a provider of ISP-X.  
+![](https://github.com/EbramTawfik/Notes/blob/main/Computer%20Networks/Exam1Review/images/Q-4-7-5.png?raw=true)
 ISP-X has the incentive to advertise routes for C3 to Y.
 - True
 - False
@@ -343,6 +344,7 @@ ISP-X has the incentive to advertise routes for C3 to Y.
 ### Question 6
 Consider the figure below that denotes ASes and their relationships.  
 **Note:** C1, C2, C3 are customers of ISP-X. ISP-P is a provider of ISP-X.  
+![](https://github.com/EbramTawfik/Notes/blob/main/Computer%20Networks/Exam1Review/images/Q-4-7-5.png?raw=true)
 ISP-X has the incentive to advertise the routes for P’s customers to Y and Z.
 - True
 - False
@@ -357,6 +359,8 @@ ISP-X has the incentive to advertise the routes for P’s customers to Y and Z.
 Consider the figure below:  
 **Note:** C1, C2, C3 are customers of ISP-X. ISP-P is a provider of ISP-X.  
 Assume that AS-X learns multiple routes for the same external destination W. These multiple routes are advertised from C3, from Y, and from P. How would AS-X rank these routes before deciding which one to import?
+
+![](https://github.com/EbramTawfik/Notes/blob/main/Computer%20Networks/Exam1Review/images/Q-4-7-5.png?raw=true)
 - Route learned from C3, route learned from Y, route learned from P
 - Route learned from Y, route learned from C3, route learned from P
 - Route learned from P, route learned from C3, route learned from Y
@@ -369,7 +373,8 @@ Assume that AS-X learns multiple routes for the same external destination W. The
 ---
 
 ### Question 8
-Consider the topology below and the types of BGP sessions the routers form.  
+Consider the topology below and the types of BGP sessions the routers form.
+![](https://github.com/EbramTawfik/Notes/blob/main/Computer%20Networks/Exam1Review/images/Q-4-7-8.png?raw=true)  
 Select the true statements.
 - R-A1 ↔ R-A3 : iBGP
 - R-B1 ↔ R-A3 : eBGP
@@ -384,6 +389,7 @@ Select the true statements.
 
 ### Question 9
 Assume that router R-D2 learns about a route to a destination in AS-A. How would router R-D2 disseminate this route to R-D3 and R-D1?
+![](https://github.com/EbramTawfik/Notes/blob/main/Computer%20Networks/Exam1Review/images/Q-4-7-8.png?raw=true) 
 - Using iBGP
 - Using eBGP
 - Using IGP
@@ -396,6 +402,7 @@ Assume that router R-D2 learns about a route to a destination in AS-A. How would
 
 ### Question 10
 Assume that router R-D2 learns about a route to an internal destination in AS-D. How would router R-D2 disseminate this route to R-D3 and R-D1?
+![](https://github.com/EbramTawfik/Notes/blob/main/Computer%20Networks/Exam1Review/images/Q-4-7-8.png?raw=true) 
 - Using iBGP
 - Using eBGP
 - Using IGP
@@ -408,6 +415,7 @@ Assume that router R-D2 learns about a route to an internal destination in AS-D.
 
 ### Question 11
 Assume that router R-B1 learns about a route to AS-C. How would router R-B1 disseminate this route to R-A3?
+![](https://github.com/EbramTawfik/Notes/blob/main/Computer%20Networks/Exam1Review/images/Q-4-7-8.png?raw=true) 
 - Using iBGP
 - Using eBGP
 - Using IGP
@@ -431,6 +439,7 @@ Since the BGP path selection process is fixed, an AS has no control over which r
 
 ### Question 13
 Assume that AS-B learns about an external destination both from AS-C and from AS-A. AS-B can show preference to use the route heard from AS-C by assigning a higher LocalPref value to that route.
+![](https://github.com/EbramTawfik/Notes/blob/main/Computer%20Networks/Exam1Review/images/Q-4-7-8.png?raw=true) 
 - True
 - False
 
@@ -442,6 +451,7 @@ Assume that AS-B learns about an external destination both from AS-C and from AS
 
 ### Question 14
 Assume that AS-B advertises the routes to its internal destination to AS-A using the routers R-B1 and R-B4. AS-B can communicate to AS-A that it prefers R-B1 as an entry point to the network by assigning lower MED values to these routes.
+![](https://github.com/EbramTawfik/Notes/blob/main/Computer%20Networks/Exam1Review/images/Q-4-7-8.png?raw=true) 
 - True
 - False
 
