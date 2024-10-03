@@ -55,7 +55,7 @@ Intradomain routing itself involves multiple administrative domains.
 ### Question 1
 In the previous example, node u was the source node, and distances were calculated from u to each other node. Consider the same example, but let x be the source node. Notice that node x has more direct neighbors than u does. Suppose x is executing the link-state algorithm as discussed, and has just finished the initialization step. Which of the following statements are true?
 
-![Link-State Routing Example](https://gatech.instructure.com/courses/393592/files/52452483/preview)
+![Link-State Routing Example](https://github.com/EbramTawfik/Notes/blob/main/Computer%20Networks/Exam1Review/images/Q-3-2-1.png?raw=true)
 
 - [ ] Node x will execute fewer iterations than node u did, as there were fewer "infinity distance nodes" after initialization.
 - [ ] Node x will execute the same number of iterations that node u did, as the number of immediate neighbors has no impact on the number of iterations the algorithm requires.
@@ -77,7 +77,7 @@ Upon completion of Dijkstra's algorithm, all nodes in a network are assured of h
 ### Question 3
 Consider the following topology. Let b be the source node. Use Dijkstra’s algorithm to determine the cost of the least-cost path from node b to all other nodes in the network upon termination of the algorithm.
 
-![Network Topology for Dijkstra's Algorithm](https://gatech.instructure.com/courses/393592/files/52452267/preview)
+![Network Topology for Dijkstra's Algorithm](https://github.com/EbramTawfik/Notes/blob/main/Computer%20Networks/Exam1Review/images/Q-3-2-3.png?raw=true)
 
 - Cost from node 6 to node 2: _____
 - Cost from node 6 to node 3: _____
