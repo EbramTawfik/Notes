@@ -1,0 +1,16 @@
+I am studying for a computer network exam and I have some practice questions and I want to answer according to content. I will send you the content and then need your help to create a study md with all questions and answer according to the content. I will send you lesson 2 slide by slide and don't create the questions till I say last slide
+
+
+Create study material cover all the content. Add all content details to the topics and include diagrams and examples and create md file for that. If you reference  images please make sure to include a good link.
+
+
+
+Now I will send study questions please answer in details and explanation in different md file.
+
+
+
+Now I send images for practice questions and I want you to created md file with all of them but please don't create the md till I tell you.
+
+
+Don't answer on the choice add Answer in separate line and explanation for the answer in separate line. include all questions and all groups 
+
