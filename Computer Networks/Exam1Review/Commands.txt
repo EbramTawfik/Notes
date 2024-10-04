@@ -12,5 +12,5 @@ Now I will send study questions please answer in details and explanation in diff
 Now I send images for practice questions and I want you to created md file with all of them but please don't create the md till I tell you.
 
 
-Don't answer on the choice add Answer in separate line and explanation for the answer in separate line. include all questions and all groups 
+Create the md file with this format Question, Choices if the question has choices , and explanation. Don't answer on the choice add Answer in separate line and explanation for the answer in separate line. include all questions and all groups 
 
