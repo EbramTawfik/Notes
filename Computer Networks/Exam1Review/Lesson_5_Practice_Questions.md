@@ -85,6 +85,8 @@ Determine the mask for the address 192.168.0.1/24.
 ### Question 1
 Consider the following unibit trie. Nodes in blue represent stored prefixes.
 ![](https://github.com/EbramTawfik/Notes/blob/main/Computer%20Networks/Exam1Review/images/Q-5-3-1.png?raw=true)
+
+
 For each prefix lookup, determine the node we return.
 1. 0*:
 2. 1*:
@@ -265,6 +267,8 @@ Given that the router uses longest prefix matching, determine the output link fo
 ### Question 10
 Consider the following unibit trie.
 ![](https://github.com/EbramTawfik/Notes/blob/main/Computer%20Networks/Exam1Review/images/Q-5-6-10.png?raw=true)
+
+
 What is the longest prefix match for 111?
 - A) P2
 - B) P4
@@ -276,6 +280,8 @@ What is the longest prefix match for 111?
 ### Question 11
 Consider the following unibit trie.
 ![](https://github.com/EbramTawfik/Notes/blob/main/Computer%20Networks/Exam1Review/images/Q-5-6-10.png?raw=true)
+
+
 What is the longest prefix match for 11011?
 - A) P2
 - B) P4
@@ -288,6 +294,8 @@ What is the longest prefix match for 11011?
 ### Question 12
 Consider the following unibit trie.
 ![](https://github.com/EbramTawfik/Notes/blob/main/Computer%20Networks/Exam1Review/images/Q-5-6-10.png?raw=true)
+
+
 What is the longest prefix match for 10?
 - A) P1
 - B) P4
