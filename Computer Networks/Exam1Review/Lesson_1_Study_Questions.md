@@ -101,8 +101,6 @@ The Spanning Tree Algorithm (STA) is a network protocol used by bridges and swit
 - **Path Selection:** Each bridge identifies the shortest path to the Root Bridge. It uses a combination of factors like path cost, bridge ID, and port ID to determine the best path.
 - **Port Roles:** Each bridge assigns roles to its ports (Root Port, Designated Port, or Blocked Port) to establish the tree structure and eliminate loops.
 - **Blocking and Forwarding:** Non-designated ports are put into a 'blocking' state to prevent loop formation, while designated ports are in a 'forwarding' state, allowing data traffic to pass.
-![Spanning Tree Example](https://www.cisco.com/c/dam/en/us/td/i/200001-300000/250001-260000/252001-253000/252001.jpg)
-
 ## 16. What is the purpose of the Spanning Tree Algorithm?
 The primary purpose of the Spanning Tree Algorithm is to prevent broadcast storms and loops in a network with redundant paths. By organizing the network into a loop-free tree structure, it ensures that frames do not circulate indefinitely, thus maintaining network stability and reliability. Additionally, it provides a mechanism for automatic network reconfiguration in case of link or bridge failures, enhancing network robustness.
 
