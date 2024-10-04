@@ -90,7 +90,6 @@ A bridge is a device that connects multiple network segments at the data link la
 - This way, the bridge learns which hosts are reachable through which ports, allowing it to selectively forward frames rather than broadcasting them to all ports.
 If the destination MAC address is not in the forwarding table, the bridge floods the frame to all ports except the one it arrived on.
 
-![Learning Bridge Example](https://www.cs.bu.edu/fac/gkollios/cs555/files/lect5_bridges.gif)
 
 ## 14. What is a distributed algorithm?
 A distributed algorithm is a procedure used to solve problems in a distributed system, where multiple interconnected devices or nodes work together to achieve a common goal. These algorithms operate based on local information and communication between nodes, without relying on a centralized control. Examples in networking include routing protocols like RIP, OSPF, and the Spanning Tree Protocol used by bridges.
