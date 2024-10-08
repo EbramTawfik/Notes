@@ -28,15 +28,33 @@ Which plane operates on a shorter timescale?
 
 ### Question 4
 Classify each function as an operation of either the data plane or control plane:
-1. Forwarding packets based on IP address – **Data Plane**
-2. Routing table updates – **Control Plane**
-3. Establishing BGP sessions – **Control Plane**
-4. Forwarding traffic at layer 2 – **Data Plane**
-5. Constructing the Forwarding Table – **Control Plane**
-6. Switching frames at the MAC layer – **Data Plane**
 
-**Answer:** See explanations next to each operation.
-**Explanation:** The data plane is responsible for actual packet forwarding, while the control plane handles routing decisions, protocol management, and table computations.
+1. **A. Computing paths based on a protocol** = **Control Plane**
+   - The control plane is responsible for making decisions about where packets should go. When computing paths using routing algorithms (like OSPF or BGP), it is determining the best route for data packets based on network conditions, which is a control plane function.
+
+2. **B. Forwarding packets at Layer 3** = **Data Plane**
+   - Layer 3 forwarding involves the actual movement of packets across a network, based on routing decisions made earlier. This is the responsibility of the data plane, as it deals with handling and forwarding packets from one node to another based on IP addresses.
+
+3. **C. Switching packets at Layer 2** = **Data Plane**
+   - Layer 2 switching refers to the process of forwarding data frames within the same network (using MAC addresses). This is purely a data plane operation because it involves physically forwarding the data based on predefined rules, without involving complex decision-making processes.
+
+4. **D. Running protocols to build a routing table** = **Control Plane**
+   - The control plane uses routing protocols like OSPF, RIP, or BGP to build and update routing tables, which determine the best paths for forwarding packets. Running these protocols is a decision-making task, so it belongs to the control plane.
+
+5. **E. Running the Spanning Tree protocol** = **Control Plane**
+   - The Spanning Tree Protocol (STP) prevents loops in a Layer 2 network by computing the most efficient loop-free path. Since it involves path selection and network topology decisions, it is part of the control plane.
+
+6. **F. Decrementing Time To Live (TTL)** = **Data Plane**
+   - TTL is a value in each IP packet that decreases by one at every router the packet passes through. This operation occurs as the packet is forwarded, which is a function of the data plane. No routing decision is being made here; it's a simple, mechanical part of the forwarding process.
+
+7. **G. Computing an IP header checksum** = **Data Plane**
+   - The checksum verifies the integrity of the IP header. It’s calculated as packets pass through routers and devices to ensure that the header hasn’t been corrupted. Since this is done in transit and involves forwarding, it’s a data plane function.
+
+8. **H. Running a protocol/logic to configure a middle box device for load balancing** = **Control Plane**
+   - Configuring or running the logic for a middlebox (e.g., a load balancer) involves decisions about how traffic should be distributed. The control plane handles this high-level logic because it requires making choices about which backend server should handle incoming requests.
+
+9. **I. Forwarding packets according to installed rules in a middlebox device** = **Data Plane**
+   - Middlebox devices (such as firewalls, NAT devices, or load balancers) often have predefined rules that dictate how packets should be forwarded. Once these rules are installed, the actual packet forwarding is handled by the data plane based on those rules.
 
 ### Question 5
 Which of the following types of switching can send multiple packets across the fabric in parallel?
