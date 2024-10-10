@@ -1,5 +1,5 @@
 # Computer Networks Practice Questions with Answers and Explanations
-
+## Lesson 1 Quiz: Introduction, History, and Internet Architecture
 ### Question 1
 **How did Licklider and his team in the early 1960s experiment with a precursor to the Internet?**
 
@@ -118,6 +118,8 @@
 
 **Explanation:** Hubs operate at the physical layer (L1), bridges operate at the data link layer (L2), and routers operate at the network layer (L3), each providing different network functions.
 
+
+## In Lesson QUestions
 ### Question 11
 **Some data link layer protocols, such as 802.11 (WiFi), implement some basic error correction as the physical medium used is easily prone to interference and noise (such as a nearby running microwave). Is this a violation of the end-to-end principle?**
 
