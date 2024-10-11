@@ -54,14 +54,20 @@ When the receiver adds all the received words, including the checksum, the resul
 ---
 
 ## Question 3
-**Q:** TCP utilizes the Additive Increase/Multiplicative Decrease (AIMD) policy for fairness. How do other policies like AIAD, MIMD, and MIAD differ from AIMD?
+**Q:** TCP utilizes the Additive Increase Multiplicative Decrease (AIMD) policy for fairness. Other possible policies for fairness in congestion control would be Additive Increase Additive Decrease (AIAD), Multiplicative Increase Additive Decrease (MIAD), and Multiplicative Increase Multiplicative Decrease (MIMD). Would these other policies converge? If so, how would their convergence behavior differ from AIMD?
 
-**A:** Other policies adjust the congestion window in different ways:
-- **AIAD (Additive Increase/Additive Decrease):** Increases and decreases the window linearly.
-- **MIAD (Multiplicative Increase/Additive Decrease):** Multiplies the window size during increase and decreases it linearly.
-- **MIMD (Multiplicative Increase/Multiplicative Decrease):** Uses multiplication for both increase and decrease.
+**A:** 
 
-**Explanation:** AIMD strikes a balance between aggressiveness in increasing the window size and caution in decreasing it, which contributes to network stability. The other policies either change the window size too aggressively or not aggressively enough, impacting fairness and network performance.
+- **Additive Increase Additive Decrease (AIAD)**: This policy increases the congestion window linearly and decreases it linearly. **AIAD** does not converge as well as AIMD because it is less responsive to congestion. In AIAD, both increases and decreases in the congestion window happen gradually, making it harder to respond effectively to congestion events. The throughput line will oscillate over the full bandwidth utilization line but won't converge efficiently.
+
+- **Multiplicative Increase Additive Decrease (MIAD)**: This policy increases the congestion window multiplicatively and decreases it additively. While **MIAD** may converge under certain conditions, it is not as stable as AIMD. The policy is more aggressive when increasing the congestion window and less aggressive when reducing it, making it slower to react to network congestion. However, it would still eventually converge, but in a less controlled manner compared to AIMD.
+
+- **Multiplicative Increase Multiplicative Decrease (MIMD)**: This policy increases and decreases the congestion window multiplicatively. **MIMD** is too aggressive in both increasing and decreasing the window size, leading to large oscillations in throughput. This policy may not converge efficiently because it makes large adjustments, making it unstable and more prone to rapid fluctuations in network conditions.
+
+### Conclusion:
+- **AIMD** converges more smoothly by balancing a linear increase with a sharp decrease, making it effective for congestion control.
+- **AIAD and MIMD** do not converge effectively and exhibit oscillatory behavior over the full bandwidth utilization.
+- **MIAD** can converge but is less stable and not as effective at congestion control as AIMD.
 
 ---
 
