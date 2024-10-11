@@ -116,7 +116,18 @@
 
 **A:** **False.** Hosts B and C can use the same destination port (123) to send data to Host A because the transport layer uses both source and destination ports to identify connections.
 
-**Explanation:** UDP connections are identified by the combination of source IP, source port, destination IP, and destination port, allowing multiple hosts to send data to the same port on the receiver.
+**Explanation:** Great question! Let's clarify this point.
+
+When it is said that "the identifier of a UDP socket is a tuple of destination IP address and port," this applies to how **incoming** data is demultiplexed at the **receiving side**. The receiver uses the destination IP and port to identify which socket should handle the incoming packet.
+
+However, in your example:
+
+- **Host A** listens on UDP port 123 (destination port).
+- **Hosts B and C** both send data to **Host A**'s port 123.
+
+In this case, even though **Host A** uses the destination port (123) to handle incoming packets, **Hosts B and C** can still send data to the same destination port because their packets are differentiated by their **source IP addresses and source ports**. While **Host A** only uses the destination IP and port to route packets to the correct application, **the network as a whole** (including the sender's side) uses a full 4-tuple (source IP, source port, destination IP, destination port) to uniquely identify the connection.
+
+At the **receiver's side**, the UDP socket is identified by the destination IP address and port, but when looking at a connection from an overall network perspective (both sender and receiver), a 4-tuple (source IP, source port, destination IP, destination port) differentiates the connection between different hosts. Hence, both Hosts B and C can use the same destination port but have unique source ports and IPs to differentiate their connections.
 
 ---
 
