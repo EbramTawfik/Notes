@@ -13,9 +13,43 @@
 ## Question 2
 **Q:** Why do UDP and TCP use 1’s complement for their checksums, and how does the receiver compute and detect errors using 1’s complement?
 
-**A:** The 1's complement method is used for its ability to detect common bit errors in transmitted data. The receiver checks for errors by summing the 16-bit words in the segment. If the result is all 1's, the data is considered error-free; otherwise, an error is detected.
+**A:** This content provides a detailed explanation of why **1's complement** is used in UDP and TCP checksums, along with examples and error detection methods. Here's a summarized version of the explanation:
 
-**Explanation:** 1's complement helps detect common errors, like flipped bits. The receiver adds the data, including the checksum. If the result is anything other than all 1's, it indicates an error occurred during transmission.
+### Why Use 1’s Complement for Checksums Instead of Just the Sum?
+
+The **1's complement** method is used in UDP and TCP because it provides a simple but effective way to detect errors in data transmission. It helps detect errors more reliably than just summing the data.
+
+### How Does the Receiver Compute and Detect Errors Using 1’s Complement?
+
+1. **Checksum Calculation**:
+   - The sender sums all 16-bit words of the data. If there’s an overflow, the extra bits are added back to the sum.
+   - The **1's complement** of this sum is then calculated by flipping all the bits (0s become 1s, and 1s become 0s).
+   - The 1’s complement value is sent with the data as the checksum.
+
+2. **Error Detection at the Receiver**:
+   - The receiver adds all 16-bit words of the received data (including the checksum).
+   - If no errors occurred, the result will be all 1s. If the result is anything else, an error is detected.
+
+### Example:
+
+- Two 16-bit words:
+  - `0110 0101 1100 0011`
+  - `1010 1001 0011 0101`
+- Sum: `1000 1111 1111 1000`
+- 1’s complement of the sum: `0111 0000 0000 0111`
+- The value is sent as the checksum.
+
+When the receiver adds all the received words, including the checksum, the result should be all 1s if no errors occurred.
+
+### Error Detection:
+
+- **1-bit Error**: A single-bit error changes the sum, and the 1’s complement result will not be all 1s, meaning the error is detected.
+- **2-bit Error**: If two bits are flipped in complementary positions (e.g., one bit changes from 1 to 0 and another from 0 to 1), the error might go undetected.
+
+### Conclusion:
+
+- **1-bit errors** are very likely to be detected using 1’s complement checksum.
+- **2-bit errors** can sometimes go undetected if they cancel each other out, but 1’s complement is still widely used due to its simplicity and effectiveness.
 
 ---
 
