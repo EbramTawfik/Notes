@@ -195,55 +195,34 @@ At the **receiver's side**, the UDP socket is identified by the destination IP a
 ---
 
 ## Question 21
-**Q:** TCP CUBIC increases the congestion window in every RTT. True or False?
+**Q:** Consider a TCP connection, and a diagram that shows how the congestion window progresses over time. From the diagram, we can identify the time periods of slow start when the congestion window increases by 1 every RTT. True or False?
 
-**A:** **False.** TCP CUBIC uses a cubic growth function that depends on the time since the last congestion event, not directly on RTT.
-
-**Explanation:** The cubic function allows for more flexible and aggressive window growth, especially in high-bandwidth networks, without being constrained by RTT.
+**A:** **True.** The diagram of a TCP connection would show a period of slow start, where the congestion window increases exponentially every RTT until it reaches the threshold for congestion avoidance.
 
 ---
 
 ## Question 22
 **Q:** TCP CUBIC was designed for better network utilization. True or False?
 
-**A:** **True.** TCP CUBIC is tailored for high-bandwidth, high-latency networks to make better use of available network capacity.
-
-**Explanation:** Its cubic window growth function enables faster recovery after congestion events, optimizing throughput in modern networks.
+**A:** **True.** TCP CUBIC aims to improve network performance, especially in high-bandwidth, high-latency networks.
 
 ---
 
 ## Question 23
-**Q:** TCP CUBIC congestion window growth function is designed to not overflow the receiver’s buffer. True or False?
+**Q:** TCP CUBIC congestion window growth function is designed to not overflow the receiver's buffer. True or False?
 
-**A:** **False.** TCP CUBIC focuses on optimizing network throughput and is not specifically designed to avoid overflowing the receiver’s buffer; that is managed by TCP's flow control mechanism.
-
-**Explanation:** Flow control ensures the receiver's buffer is not overwhelmed, while TCP CUBIC's growth function manages the sending rate to maximize network utilization.
+**A:** **False.** TCP CUBIC focuses on optimizing throughput based on network conditions, while flow control (not CUBIC itself) is responsible for preventing buffer overflow.
 
 ---
 
 ## Question 24
 **Q:** TCP CUBIC uses a cubic function to increase the congestion window. True or False?
 
-**A:** **True.** TCP CUBIC employs a cubic polynomial function to manage the growth of the congestion window over time.
-
-**Explanation:** This approach allows for more aggressive growth when far from the congestion point and more cautious growth near the previous maximum, balancing efficiency and stability.
+**A:** **True.** TCP CUBIC uses a cubic function for adjusting its congestion window to optimize network performance.
 
 ---
 
 ## Question 25
-**Q:** Explain how TCP throughput is calculated in a network with packet loss probability.
+**Q:** TCP CUBIC increases the congestion window in every RTT. True or False?
 
-**A:** TCP throughput can be approximated using the formula: 
-
-
-\[
-BW \approx \frac{C}{RTT \sqrt{p}}
-\]
-
-Where:
-- \( BW \) is the throughput,
-- \( RTT \) is the round-trip time,
-- \( p \) is the packet loss probability,
-- \( C \) is a constant that accounts for network parameters.
-
-**Explanation:** This model demonstrates that TCP throughput decreases with higher RTTs and packet loss probabilities, showing the impact of network conditions on data transmission rates.
+**A:** **False.** TCP CUBIC does not increase the congestion window strictly with every RTT. Instead, CUBIC uses a cubic function to adjust the congestion window size based on the time since the last congestion event. This cubic function allows the window to grow more rapidly when it is far from the congestion point and more slowly as it approaches the previous congestion window size, making the growth independent of RTT.
