@@ -197,8 +197,7 @@ At the **receiver's side**, the UDP socket is identified by the destination IP a
 ## Question 21
 **Q:** Consider a TCP connection, and a diagram that shows how the congestion window progresses over time. From the diagram, we can identify the time periods of slow start when the congestion window increases by 1 every RTT. True or False?
 
-**A:** **True.** The diagram of a TCP connection would show a period of slow start, where the congestion window increases exponentially every RTT until it reaches the threshold for congestion avoidance.
-
+**A:** **False.** During the slow start phase, the congestion window increases **exponentially** (doubles with each RTT), not by 1 every RTT. It only starts increasing linearly by 1 MSS per RTT after reaching the slow start threshold, which is when TCP transitions to the congestion avoidance phase.
 ---
 
 ## Question 22
