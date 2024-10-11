@@ -224,4 +224,52 @@ At the **receiver's side**, the UDP socket is identified by the destination IP a
 ## Question 25
 **Q:** TCP CUBIC increases the congestion window in every RTT. True or False?
 
-**A:** **False.** TCP CUBIC does not increase the congestion window strictly with every RTT. Instead, CUBIC uses a cubic function to adjust the congestion window size based on the time since the last congestion event. This cubic function allows the window to grow more rapidly when it is far from the congestion point and more slowly as it approaches the previous congestion window size, making the growth independent of RTT.
+**A:** **False.** TCP CUBIC does not increase the congestion window strictly with every RTT. Instead, CUBIC uses a **cubic function** to adjust the congestion window based on the time since the last congestion event. While the congestion window typically increases during each RTT, the rate of increase is not linear or uniform. The window may also **decrease** after detecting congestion, like packet loss.
+
+### Explanation:
+TCP CUBIC's growth function can be represented as:
+
+\[
+W(t) = C \times (t - K)^3 + W_{\text{max}}
+\]
+
+Where:
+- \(W(t)\) is the congestion window size at time \(t\),
+- \(C\) is a constant that controls the growth rate,
+- \(t\) is the time elapsed since the last congestion event,
+- \(K\) is the inflection point (time after the last congestion event where the window growth slows),
+- \(W_{\text{max}}\) is the previous maximum window size before the congestion event.
+
+### Example with Numbers:
+
+Let's say:
+- The maximum congestion window size before a packet loss was \(W_{\text{max}} = 100\) MSS (Maximum Segment Size).
+- The cubic function governs how the window grows after a packet loss.
+- \(C\) is a constant, say 0.4 (simplified for example purposes).
+- Initially, after packet loss, the congestion window is halved to \(W = 50\) MSS, following the congestion event.
+
+#### **Growth after Packet Loss:**
+
+1. **After 1 RTT** (after the congestion event):
+   - \( t = 1 \)
+   - Window size growth is slow since the window is still close to \(W_{\text{max}}\).
+   - CUBIC would slowly increase the congestion window to, say, \(W = 52\) MSS, showing cautious probing of the network.
+
+2. **After 5 RTTs**:
+   - \( t = 5 \)
+   - The cubic function starts to increase the window faster as the network is likely underutilized after the congestion event.
+   - At this point, \(W\) might reach \(W = 80\) MSS.
+
+3. **After 10 RTTs**:
+   - \( t = 10 \)
+   - Now far from the last congestion event, the window grows aggressively.
+   - The window might be \(W = 120\) MSS, surpassing the previous maximum of \(W_{\text{max}} = 100\).
+
+#### **Reduction during Congestion:**
+- If another packet loss occurs at this point (with \(W = 120\) MSS), TCP CUBIC would **reduce** the congestion window sharply (e.g., halving it), dropping it back to \(W = 60\) MSS. 
+- Afterward, it resumes growth using the cubic function to probe the available bandwidth again.
+
+### Key Takeaways:
+- TCP CUBIC increases the window **most of the time**, but the **rate of increase varies** based on the time since the last congestion event.
+- The window will **decrease** when congestion is detected (e.g., packet loss), after which the cubic function resumes window growth.
+- This dynamic adjustment allows TCP CUBIC to efficiently utilize high-bandwidth networks while reducing the risk of overloading the network after congestion.
