@@ -105,6 +105,8 @@ For a connection with a high RTT, CUBIC would still increase its window based on
 
 ### Conclusion:
 In TCP CUBIC, the congestion window growth is **independent of RTT** because it is driven by a time-based cubic function, not by the round-trip time. This feature improves fairness between connections with different RTTs and enables better utilization of network resources, especially in high-latency, high-bandwidth environments.
+
+
 ---
 # Lesson 2 Quiz: Transport and Applications Layers 
 
