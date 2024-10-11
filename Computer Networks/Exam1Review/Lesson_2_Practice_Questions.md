@@ -72,12 +72,39 @@ When the receiver adds all the received words, including the checksum, the resul
 ---
 
 ## Question 4
-**Q:** Explain how in TCP CUBIC the congestion window growth becomes independent of RTTs.
+**Q:** Explain how in TCP Cubic the congestion window growth becomes independent of RTTs.
 
-**A:** In TCP CUBIC, the congestion window growth is based on the time elapsed since the last loss event rather than the receipt of ACKs. The cubic function of time provides a growth mechanism that is not directly tied to the RTT, making TCP CUBIC more efficient in high-bandwidth, high-latency networks.
+**A:**
 
-**Explanation:** By focusing on elapsed time rather than round-trip times, TCP CUBIC ensures that connections with larger RTTs are not at a disadvantage, allowing for more equitable use of network resources.
+TCP CUBIC was designed to address the shortcomings of traditional TCP algorithms, such as TCP Reno, where the growth of the congestion window is tightly coupled with the round-trip time (RTT). This dependency often leads to unfairness in networks where flows with smaller RTTs are able to increase their congestion window faster than those with larger RTTs, leading to bandwidth imbalances.
 
+In TCP CUBIC, the congestion window growth is based on **elapsed time since the last congestion event** (e.g., packet loss) rather than being directly tied to RTT. The cubic function used in CUBIC is designed so that the growth rate of the congestion window is **independent of RTT**, allowing CUBIC to achieve better fairness between flows with different RTTs. 
+
+### How Does TCP CUBIC Achieve RTT Independence?
+
+TCP CUBIC's window growth is governed by the following cubic function:
+
+\[
+W(t) = C \times (t - K)^3 + W_{\text{max}}
+\]
+
+Where:
+- \(W(t)\) is the congestion window size at time \(t\),
+- \(C\) is a constant that controls the scaling of the window,
+- \(t\) is the elapsed time since the last congestion event,
+- \(K = \sqrt[3]{\frac{W_{\text{max}}}{C}}\) is the point where the window starts growing faster,
+- \(W_{\text{max}}\) is the maximum window size before the last congestion event.
+
+### Key Points:
+- **Time-based growth**: Instead of increasing the window by 1 MSS per RTT (as in TCP Reno), TCP CUBIC grows the window based on the time since the last congestion event. This allows flows to increase their window size more fairly, regardless of their RTT.
+- **Fairness**: Since CUBIC's window growth is determined by time rather than RTT, all flows, regardless of their RTT, will experience similar window growth rates over time, which helps improve fairness between short and long RTT flows.
+- **Fast and slow growth phases**: After a congestion event, CUBIC grows the window slowly when it's near the previous congestion window size (\(W_{\text{max}}\)) and more aggressively when far from it. This helps efficiently probe the network for available bandwidth without being overly dependent on RTT.
+
+### Example:
+For a connection with a high RTT, CUBIC would still increase its window based on the cubic function over time. In contrast, in traditional TCP algorithms (like Reno), the growth rate would be much slower for connections with high RTT, resulting in poor utilization of network resources. By using a time-based approach, CUBIC decouples window growth from the RTT, ensuring more equitable growth across connections with different RTTs.
+
+### Conclusion:
+In TCP CUBIC, the congestion window growth is **independent of RTT** because it is driven by a time-based cubic function, not by the round-trip time. This feature improves fairness between connections with different RTTs and enables better utilization of network resources, especially in high-latency, high-bandwidth environments.
 ---
 # Lesson 2 Quiz: Transport and Applications Layers 
 
