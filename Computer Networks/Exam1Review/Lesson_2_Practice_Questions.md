@@ -80,9 +80,9 @@
 ## Question 9
 **Q:** The identifier of a TCP socket is a tuple of source IP address and port. True or False?
 
-**A:** **True.** TCP sockets are identified by a four-tuple: source IP, source port, destination IP, and destination port.
+**A:** **False.** TCP sockets are identified by a four-tuple: source IP address, source port, destination IP address, and destination port.
 
-**Explanation:** This four-tuple provides a unique identifier for each connection, allowing multiple simultaneous connections to the same destination.
+**Explanation:** This four-tuple uniquely identifies each TCP connection, enabling the system to distinguish between multiple connections between the same pair of hosts, as they may involve different ports. This is especially important in TCP since it is connection-oriented and supports multiple simultaneous connections.
 
 ---
 
