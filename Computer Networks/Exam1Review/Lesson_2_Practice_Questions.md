@@ -1,6 +1,6 @@
 
 # Complete Practice Questions: Transport Layer and TCP 
-
+# In Lesson Questions
 ## Question 1
 **Q:** As we have seen, UDP and TCP use port numbers to identify the sending application and destination application. Why don’t UDP and TCP just use process IDs rather than define port numbers?
 
@@ -41,7 +41,7 @@
 ---
 # Lesson 2 Quiz: Transport and Applications Layers 
 
-## Question 5
+## Question 1
 **Q:** The transport layer protocols offer a logical connection between processes only if the hosts reside in the same network. True or False?
 
 **A:** **False.** The transport layer provides logical end-to-end connections regardless of whether hosts are on the same or different networks.
@@ -50,7 +50,7 @@
 
 ---
 
-## Question 6
+## Question 2
 **Q:** A sending host receives a message from the application layer and encapsulates it with the transport layer header before passing it down to the network layer. True or False?
 
 **A:** **True.** This process involves adding transport layer headers to create a segment that is then passed to the network layer.
@@ -59,7 +59,7 @@
 
 ---
 
-## Question 7
+## Question 3
 **Q:** An application running on a host can bind to multiple sockets simultaneously. True or False?
 
 **A:** **True.** Applications can bind to different ports to manage multiple network connections simultaneously.
@@ -68,7 +68,7 @@
 
 ---
 
-## Question 8
+## Question 4
 **Q:** The identifier of a UDP socket is a tuple of destination IP address and port. True or False?
 
 **A:** **True.** UDP sockets are identified using a combination of the destination IP address and the port number.
@@ -77,7 +77,7 @@
 
 ---
 
-## Question 9
+## Question 5
 **Q:** The identifier of a TCP socket is a tuple of source IP address and port. True or False?
 
 **A:** **False.** TCP sockets are identified by a four-tuple: source IP address, source port, destination IP address, and destination port.
@@ -86,7 +86,7 @@
 
 ---
 
-## Question 10
+## Question 6
 **Q:** UDP is considered more lightweight than TCP. True or False?
 
 **A:** **True.** UDP is a simpler protocol that does not include mechanisms for error correction, flow control, or congestion control, making it lightweight.
@@ -95,7 +95,7 @@
 
 ---
 
-## Question 11
+## Question 7
 **Q:** One of the functionalities that UDP offers is to increase or decrease the pace with which the sender sends data to the receiver. True or False?
 
 **A:** **False.** UDP does not provide mechanisms for flow control; it simply sends packets without regulating the transmission rate.
@@ -104,14 +104,14 @@
 
 ---
 
-## Question 12
+## Question 8
 **Q:** UDP offers basic error checking. True or False?
 
 **A:** **True.** UDP includes a checksum in its header, providing basic error checking for the data it transmits.
 
 **Explanation:** While UDP does not provide extensive error correction mechanisms like TCP, it still includes a simple checksum to detect errors in the transmitted data.
 
-## Question 13
+## Question 9
 **Q:** Assume Hosts A, B, and C. Host A has a UDP socket with port 123. Hosts B and C each send their own UDP segment to Host A. Hosts B and C cannot use the same destination port 123 for sending their UDP segment. True or False?
 
 **A:** **False.** Hosts B and C can use the same destination port (123) to send data to Host A because the transport layer uses both source and destination ports to identify connections.
@@ -131,7 +131,7 @@ At the **receiver's side**, the UDP socket is identified by the destination IP a
 
 ---
 
-## Question 14
+## Question 10
 **Q:** TCP offers in-order delivery of the packets, flow control, and congestion control. True or False?
 
 **A:** **True.** TCP provides mechanisms to ensure reliable, ordered delivery of packets, as well as flow and congestion control to manage data transmission effectively.
@@ -140,7 +140,7 @@ At the **receiver's side**, the UDP socket is identified by the destination IP a
 
 ---
 
-## Question 15
+## Question 11
 **Q:** TCP detects packet loss using timeouts and triple duplicate acknowledgments. True or False?
 
 **A:** **True.** TCP uses both timeouts and the detection of triple duplicate ACKs as signals to identify packet loss and trigger retransmissions.
@@ -149,7 +149,7 @@ At the **receiver's side**, the UDP socket is identified by the destination IP a
 
 ---
 
-## Question 16
+## Question 12
 **Q:** Flow control is a rate control mechanism to protect the receiver’s buffer from overflowing. True or False?
 
 **A:** **True.** Flow control ensures that the sender's transmission rate does not exceed the receiver's ability to process data, preventing buffer overflow.
@@ -158,7 +158,7 @@ At the **receiver's side**, the UDP socket is identified by the destination IP a
 
 ---
 
-## Question 17
+## Question 13
 **Q:** Congestion control is a rate control mechanism to protect the network from congestion. True or False?
 
 **A:** **True.** Congestion control adjusts the sender's transmission rate to prevent network congestion, packet loss, and excessive delays.
@@ -167,7 +167,7 @@ At the **receiver's side**, the UDP socket is identified by the destination IP a
 
 ---
 
-## Question 18
+## Question 14
 **Q:** In TCP, the number of unacknowledged segments that a sender can have is the minimum of the congestion window and the receive window. True or False?
 
 **A:** **True.** The sender limits the number of unacknowledged segments based on the smaller of the congestion window and the receiver's advertised window.
@@ -176,7 +176,7 @@ At the **receiver's side**, the UDP socket is identified by the destination IP a
 
 ---
 
-## Question 19
+## Question 15
 **Q:** Consider the TCP Reno, congestion window is cut in half in both of the following events: a) a timeout occurs, b) a triple duplicate acknowledgement occurs. True or False?
 
 **A:** **False.** In TCP Reno, the congestion window is cut in half only when a **triple duplicate acknowledgment** is received. When a **timeout** occurs, TCP Reno reduces the congestion window to its initial value (usually 1 Maximum Segment Size or MSS).
@@ -185,7 +185,7 @@ At the **receiver's side**, the UDP socket is identified by the destination IP a
 
 ---
 
-## Question 20
+## Question 16
 **Q:** Consider a TCP connection and a diagram showing the congestion as it progresses. From the diagram, when we observe the congestion window drop to its initial value, we infer that a packet loss occurred. True or False?
 
 **A:** **True.** A drop in the congestion window to its initial value indicates that the TCP sender detected a packet loss, possibly due to a timeout.
@@ -193,35 +193,35 @@ At the **receiver's side**, the UDP socket is identified by the destination IP a
 **Explanation:** TCP reduces the congestion window to the initial size to probe the network for available capacity after a loss event.
 
 ---
-## Question 21
+## Question 17
 **Q:** Consider a TCP connection, and a diagram that shows how the congestion window progresses over time. From the diagram, we can identify the time periods of slow start when the congestion window increases by 1 every RTT. True or False?
 
 **A:** **False.** During the slow start phase, the congestion window increases **exponentially** (doubles with each RTT), not by 1 every RTT. It only starts increasing linearly by 1 MSS per RTT after reaching the slow start threshold, which is when TCP transitions to the congestion avoidance phase.
 
 ---
 
-## Question 22
+## Question 18
 **Q:** TCP CUBIC was designed for better network utilization. True or False?
 
 **A:** **True.** TCP CUBIC aims to improve network performance, especially in high-bandwidth, high-latency networks.
 
 ---
 
-## Question 23
+## Question 19
 **Q:** TCP CUBIC congestion window growth function is designed to not overflow the receiver's buffer. True or False?
 
 **A:** **False.** TCP CUBIC is a **congestion control** algorithm, and its purpose is to optimize throughput based on network congestion. It does not handle flow control, which is responsible for preventing the receiver's buffer from overflowing. Flow control is managed by the receiver’s advertised window (rwnd), which limits the amount of data the sender can transmit based on the receiver's capacity.
 
 ---
 
-## Question 24
+## Question 20
 **Q:** TCP CUBIC uses a cubic function to increase the congestion window. True or False?
 
 **A:** **True.** TCP CUBIC uses a cubic function for adjusting its congestion window to optimize network performance.
 
 ---
 
-## Question 25
+## Question 21
 **Q:** TCP CUBIC increases the congestion window in every RTT. True or False?
 
 **A:** **False.** TCP CUBIC does not increase the congestion window strictly with every RTT. Instead, CUBIC uses a **cubic function** to adjust the congestion window based on the time since the last congestion event. While the congestion window typically increases during each RTT, the rate of increase is not linear or uniform. The window may also **decrease** after detecting congestion, like packet loss.
