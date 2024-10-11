@@ -179,9 +179,9 @@ At the **receiver's side**, the UDP socket is identified by the destination IP a
 ## Question 19
 **Q:** Consider the TCP Reno, congestion window is cut in half in both of the following events: a) a timeout occurs, b) a triple duplicate acknowledgement occurs. True or False?
 
-**A:** **True.** TCP Reno uses a multiplicative decrease strategy to reduce the congestion window in response to both timeouts and triple duplicate ACKs.
+**A:** **False.** In TCP Reno, the congestion window is cut in half only when a **triple duplicate acknowledgment** is received. When a **timeout** occurs, TCP Reno reduces the congestion window to its initial value (usually 1 Maximum Segment Size or MSS).
 
-**Explanation:** This reduction helps TCP adapt to signs of network congestion, maintaining stability.
+**Explanation:** TCP Reno treats these two congestion signals differently. A triple duplicate ACK indicates mild congestion, so TCP reduces the congestion window by half to probe the network for available capacity. A timeout, however, signals severe congestion, so TCP responds by resetting the congestion window to 1 MSS and entering slow start mode.
 
 ---
 
