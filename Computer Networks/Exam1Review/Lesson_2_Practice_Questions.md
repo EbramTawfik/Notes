@@ -210,7 +210,7 @@ At the **receiver's side**, the UDP socket is identified by the destination IP a
 ## Question 23
 **Q:** TCP CUBIC congestion window growth function is designed to not overflow the receiver's buffer. True or False?
 
-**A:** **False.** TCP CUBIC focuses on optimizing throughput based on network conditions, while flow control (not CUBIC itself) is responsible for preventing buffer overflow.
+**A:** **False.** TCP CUBIC is a **congestion control** algorithm, and its purpose is to optimize throughput based on network congestion. It does not handle flow control, which is responsible for preventing the receiver's buffer from overflowing. Flow control is managed by the receiver’s advertised window (rwnd), which limits the amount of data the sender can transmit based on the receiver's capacity.
 
 ---
 
