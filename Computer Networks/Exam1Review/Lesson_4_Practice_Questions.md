@@ -274,11 +274,11 @@ __________ filters are applied to ensure that each member AS only advertises rou
 - Import
 - Export
 
-**Answer:** Export
+**Answer:** Import
 
-**Explanation:** Export filters control the routes that an AS advertises to its peers, preventing the advertisement of routes that should remain private.
+**Explanation:** 
+**Import filters** are applied to ensure that each member AS only advertises routes that it is allowed to advertise. These filters check the routes as they are received by the route server or another AS to ensure compliance with policies before adding them to the routing table.
 
----
 
 
 # Group 7: 23 Questions
