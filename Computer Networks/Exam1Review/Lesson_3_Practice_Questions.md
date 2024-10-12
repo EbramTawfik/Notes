@@ -111,7 +111,12 @@ Select the words that can be used to describe the distance vector algorithm.
 
 **Answer:** Distributed, Iterative, Asynchronous
 
-**Explanation:** The distance vector algorithm is decentralized (distributed), operates iteratively until convergence, and asynchronously updates its tables.
+**Explanation:** The distance vector algorithm is:
+- **Distributed** because each router only knows about its directly connected neighbors and exchanges information with them.
+- **Iterative** because it continuously updates routing information until convergence (when no more changes occur in the routing tables).
+- **Asynchronous** because routers do not need to update their routing tables simultaneously; they update them whenever they receive new information from their neighbors.
+
+It is **not centralized** because no central controller determines the routing paths. It's **not synchronous** because routers do not need to update at the same time. It is also **not non-terminating**; the algorithm eventually converges and terminates when all routers have consistent routing tables.
 
 ### Question 2
 Determine which of the following can cause the count-to-infinity problem.
