@@ -66,13 +66,15 @@ In the previous example, node u was the source node, and distances were calculat
 **Explanation:** In Dijkstra's link-state algorithm, the number of iterations is equal to the number of nodes in the network minus one, regardless of the number of immediate neighbors of the source node. The algorithm iterates over all nodes to find the shortest path tree, so having more direct neighbors does not change the total number of iterations. It simply affects the initialization step and the initial costs set for the direct neighbors.
 
 ### Question 2
-Upon completion of Dijkstra's algorithm, all nodes in a network are assured of having the shortest path.
+Upon termination of Dijkstra's algorithm, all nodes in a network are aware of the entire network topology.
 - [ ] True
 - [ ] False
 
-**Answer:** True
+**Answer:** False
 
-**Explanation:** Dijkstra's algorithm ensures that each node in the network has the shortest path to the source node upon completion, given that the network's topology and link costs are known.
+**Explanation:** Dijkstra's algorithm itself does not provide awareness of the entire network topology to all nodes. It is executed by one node to compute the shortest paths to all other nodes. In a link-state routing protocol, each node must receive and share link-state information with other nodes to understand the full network topology. The awareness of the topology comes from the link-state protocol, not from the execution of Dijkstra's algorithm alone.
+
+---
 
 ### Question 3
 Consider the following topology. Let b be the source node. Use Dijkstra’s algorithm to determine the cost of the least-cost path from node b to all other nodes in the network upon termination of the algorithm.
