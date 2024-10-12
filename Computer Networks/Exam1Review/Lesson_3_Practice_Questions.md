@@ -83,10 +83,11 @@ Consider the following topology. Let b be the source node. Use Dijkstra’s algo
 
 ![Network Topology for Dijkstra's Algorithm](https://github.com/EbramTawfik/Notes/blob/main/Computer%20Networks/Exam1Review/images/Q-3-2-3.png?raw=true)
 
-- Cost from node 6 to node 2: _____
-- Cost from node 6 to node 3: _____
-- Cost from node 6 to node 4: _____
-- Cost from node 6 to node 5: _____
+- Cost from node a: _____
+- Cost from node c: _____
+- Cost from node d: _____
+- Cost from node e: _____
+- Cost from node f: _____
 
 **Answer:**
 - Cost from node 6 to node 2: 1
