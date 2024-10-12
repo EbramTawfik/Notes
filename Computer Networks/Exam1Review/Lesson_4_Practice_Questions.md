@@ -378,8 +378,8 @@ Consider the topology below and the types of BGP sessions the routers form.
 Select the true statements.
 - R-A1 ↔ R-A3 : iBGP
 - R-B1 ↔ R-A3 : eBGP
+- R-B3 ↔ R-D2 : iBGP
 - R-D3 ↔ R-D2 : eBGP
-- R-D3 ↔ R-D2 : iBGP
 
 **Answer:** R-A1 ↔ R-A3 : iBGP, R-B1 ↔ R-A3 : eBGP
 
