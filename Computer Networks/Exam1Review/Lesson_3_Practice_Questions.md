@@ -217,11 +217,13 @@ Consider the link-state routing protocol. The link costs are known to all nodes.
 **Explanation:** In link-state routing, all nodes have a complete view of the network's topology, including the costs of all links. This information is shared and updated through link-state advertisements.
 
 ### Question 5
-Consider the link-state routing protocol. The network topology is known to all nodes.
+Consider the link-state routing protocol. The link costs are known to all nodes.
 - [ ] True
 - [ ] False
 
 **Answer:** True
+
+**Explanation:** In a link-state routing protocol, all nodes have complete knowledge of the network topology, including the costs of all links. This information is exchanged through link-state advertisements (LSAs), ensuring that each node knows the cost of every link in the network. Based on this shared knowledge, each node can independently compute the shortest paths to all other nodes using algorithms such as Dijkstra's.
 
 **Explanation:** Link-state protocols like OSPF distribute information about the network topology to every router in the network, enabling each router to build a complete map of the network.
 
