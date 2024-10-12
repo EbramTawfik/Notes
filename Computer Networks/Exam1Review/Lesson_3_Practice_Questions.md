@@ -3,18 +3,20 @@
 
 ## Group 1: 4 Questions
 ### Question 1
-In this lecture, we discuss intradomain routing, where all the nodes and subnets are owned and managed by the same organization. In contrast, interdomain routing is about routing between different organizations, such as between two ISPs. As we learned, link-state and distance vector routing algorithms, which we use to solve the shortest-path edge expenses in their diagrams, what are we setting the least-cost path between two nodes?
+In this lecture, we discuss intradomain routing, where all the nodes and subnets are owned and managed by the same organization. (In contrast, interdomain routing is about routing between different organizations – such as between two ISPs.) Before we begin talking about intradomain routing algorithms, what could the weights on the graph edges represent in these diagrams, when we are seeking the least-cost path between two nodes?
 
 - [ ] Length of the cable
-- [ ] The effort to create the link
-- [ ] Monetary value
-- [ ] Routing knowledge
+- [ ] Time delay to traverse the link
+- [ ] Monetary cost
+- [ ] Business relationships
 - [ ] Link capacity
 - [ ] Current load on the link
 
-**Answer:** Current load on the link
+**Answer:** Length of the cable, Time delay to traverse the link, Monetary cost, Link capacity, Current load on the link
 
-**Explanation:** A special node adjusts the current load on the link – this means that the weight can be set as a factor and change drastically at a higher cost.
+**Explanation:** The weights on the graph edges can represent various metrics such as the physical length of the cable, the time delay to traverse a link, monetary costs for using the link, link capacity (bandwidth), or the current load on the link. These factors help determine the least-cost path between two nodes. Business relationships, while potentially influencing routing decisions in real-world networks, are not typically represented as graph edge weights in intradomain routing algorithms.
+
+---
 
 ### Question 2
 A packet is ___________ when it is moved from a router’s input link to the appropriate output link.
