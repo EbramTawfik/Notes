@@ -56,9 +56,9 @@ In a peering relationship, the traffic exchanged between the two peers must be h
 
 **Answer:** False
 
-**Explanation:** Peering relationships typically require balanced (symmetric) traffic exchange to maintain mutual benefits for both parties.
+**Explanation:** 
+In a peering relationship, the traffic exchanged between two peers is typically expected to be **balanced or symmetric**. If the traffic is **highly asymmetric**, one peer would send much more traffic than it receives, which may reduce the incentive for the other party to maintain the peering relationship, as they would not gain as much benefit from the arrangement. Symmetry in traffic helps ensure that both peers benefit equally from the exchange.
 
----
 
 ### Question 2
 A customer-provider relationship between ASes is based on a financial settlement, which determines how much the customer will pay the provider. The provider takes care of connecting the customer network with destinations found in the provider’s routing table. The customer pays regardless of the direction of the traffic.
