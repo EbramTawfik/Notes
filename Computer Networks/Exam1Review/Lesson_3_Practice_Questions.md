@@ -362,4 +362,4 @@ Assume a source and a destination host. As packets travel over a path from the s
 
 **Answer:** False
 
-**Explanation:** Routers in different administrative domains run interdomain routing protocols (e.g., BGP). Intradomain routing algorithms are specific to routers within the same administrative domain.
+**Explanation:** Routers in different administrative domains do not need to run the same intradomain routing algorithm. Instead, when traffic passes between different administrative domains, interdomain routing protocols, such as the Border Gateway Protocol (BGP), are used to handle the routing between the domains. Intradomain routing algorithms like OSPF or RIP are used within a single administrative domain (autonomous system). Different domains may use different routing protocols internally but still communicate effectively using interdomain protocols.
