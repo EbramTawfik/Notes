@@ -296,9 +296,10 @@ The count-to-infinity problem states that good news (e.g., a decrease in a link 
 - [ ] True
 - [ ] False
 
-**Answer:** True
+**Answer:** False
 
-**Explanation:** The count-to-infinity problem is typically associated with "bad news" (e.g., link failures). It causes slow convergence in the network, particularly in distance vector algorithms, due to the way routers update their tables.
+**Explanation:** The count-to-infinity problem specifically refers to how **bad news** (such as a link failure or increase in link cost) propagates slowly across the network in distance vector routing. Good news, such as a decrease in link cost, generally propagates quickly because nodes immediately update their routing tables to reflect the lower cost paths. The slow propagation of bad news is what causes routing loops and delayed convergence in distance vector protocols.
+
 
 ### Question 14
 The poison reverse technique solves the count-to-infinity problem for all network topologies.
