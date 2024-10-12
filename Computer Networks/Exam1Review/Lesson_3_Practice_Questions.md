@@ -219,7 +219,7 @@ Consider the link-state routing protocol. The link costs are known to all nodes.
 ### Question 5
 **Question:**
 Consider the link-state routing protocol. The network topology is known to all nodes.
-- [x] True
+- [ ] True
 - [ ] False
 
 **Answer:** True
