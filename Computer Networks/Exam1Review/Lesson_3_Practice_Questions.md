@@ -90,14 +90,12 @@ Consider the following topology. Let b be the source node. Use Dijkstra’s algo
 - Cost from node f: _____
 
 **Answer:**
-- Cost from node 6 to node 2: 1
-- Cost from node 6 to node 3: 2
-- Cost from node 6 to node 4: 3
-- Cost from node 6 to node 5: 4
+- Cost from node a: 3
+- Cost from node c: 4
+- Cost from node d: 6
+- Cost from node e: 8
+- Cost from node f: 9
 
-**Explanation:** Using Dijkstra's algorithm, we calculate the shortest paths from node 6 to all other nodes based on the link costs provided in the topology diagram. The values are computed iteratively by selecting the nodes with the minimum path cost in each iteration.
-
-**Explanation:** The link-state algorithm adds the node with the minimum cost path to the tree. In this network, node v has the minimum path cost in the first iteration.
 
 ---
 
