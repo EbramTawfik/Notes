@@ -20,9 +20,10 @@ Here are all the key concepts and definitions from the lesson on the **Kinematic
 ### 5. **Turning Radius ($R$)**
    - The radius of the circle traced by the rear axle during a turn. It is influenced by the steering angle $\alpha$ and the length of the robot $L$. The formula is:
 
-     $$
-     R = \frac{L}{\tan(\alpha)}
-     $$
+$$
+R = \frac{L}{\tan(\alpha)}
+$$
+
 
    - A larger steering angle results in a smaller turning radius.
 
