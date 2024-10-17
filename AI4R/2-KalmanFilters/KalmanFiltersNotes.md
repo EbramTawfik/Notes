@@ -92,15 +92,15 @@ $$
 - The update equations for the Kalman filter are:
   - **New Mean:** 
 
-  $$
-  \mu' = rac{\sigma^2_{	ext{measurement}} \cdot \mu_{	ext{prior}} + \sigma^2_{	ext{prior}} \cdot \mu_{	ext{measurement}}}{\sigma^2_{	ext{prior}} + \sigma^2_{	ext{measurement}}}
-  $$
+$$
+\mu' = rac{\sigma^2_{	ext{measurement}} \cdot \mu_{	ext{prior}} + \sigma^2_{	ext{prior}} \cdot \mu_{	ext{measurement}}}{\sigma^2_{	ext{prior}} + \sigma^2_{	ext{measurement}}}
+$$
 
   - **New Variance:**
 
-  $$
-  \sigma'^2 = rac{1}{rac{1}{\sigma^2_{	ext{prior}}} + rac{1}{\sigma^2_{	ext{measurement}}}}
-  $$
+$$
+\sigma'^2 = rac{1}{rac{1}{\sigma^2_{	ext{prior}}} + rac{1}{\sigma^2_{	ext{measurement}}}}
+$$
 
 ### 14. **Separated Gaussians**
 
