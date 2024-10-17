@@ -13,18 +13,28 @@ The Kalman gain is calculated in the prediction step of the Kalman filter.
 ---
 
 ### Question 2:
-Consider a robot whose state \( \bar{x} \) is its \((x, y)\) position. If it starts at state \( \bar{x}_0 = [4, 7]^T \) at time \( t=0 \) and moves according to the state transition model \( F = \begin{bmatrix} 0.7 & 0.3 \\ 0.1 & 0.5 \end{bmatrix} \), what is the \( y \)-component of its predicted state, \( \bar{x}_1 \), at time \( t = 1 \)? (Specify to 1 decimal place.)
+Consider a robot whose state $\bar{x}$ is its $(x, y)$ position. If it starts at state $\bar{x}_0 = [4, 7]^T$ at time $t=0$ and moves according to the state transition model 
+$$
+F = \begin{bmatrix} 0.7 & 0.3 \\ 0.1 & 0.5 \end{bmatrix}
+$$
+, what is the $y$-component of its predicted state, $\bar{x}_1$, at time $t = 1$? (Specify to 1 decimal place.)
 
 #### **Answer:** 3.9
 
 #### **Steps:**
-1. The initial state \( \bar{x}_0 = [4, 7]^T \) gives us \( x_0 = 4 \) and \( y_0 = 7 \).
-2. The state transition model \( F = \begin{bmatrix} 0.7 & 0.3 \\ 0.1 & 0.5 \end{bmatrix} \).
-3. To predict the next state \( \bar{x}_1 \), use the equation \( \bar{x}_1 = F \cdot \bar{x}_0 \):
-   \[
-   \begin{bmatrix} 0.7 & 0.3 \\ 0.1 & 0.5 \end{bmatrix} \cdot \begin{bmatrix} 4 \\ 7 \end{bmatrix} = \begin{bmatrix} 4.9 \\ 3.9 \end{bmatrix}
-   \]
-4. The \( y \)-component of the predicted state is **3.9**.
+1. The initial state $\bar{x}_0 = [4, 7]^T$ gives us $x_0 = 4$ and $y_0 = 7$.
+2. The state transition model 
+$$
+F = \begin{bmatrix} 0.7 & 0.3 \\ 0.1 & 0.5 \end{bmatrix}
+$$
+.
+3. To predict the next state $\bar{x}_1$, use the equation $\bar{x}_1 = F \cdot \bar{x}_0$:
+   
+$$
+\begin{bmatrix} 0.7 & 0.3 \\ 0.1 & 0.5 \end{bmatrix} \cdot \begin{bmatrix} 4 \\ 7 \end{bmatrix} = \begin{bmatrix} 4.9 \\ 3.9 \end{bmatrix}
+$$
+
+4. The $y$-component of the predicted state is **3.9**.
 
 ---
 
@@ -44,31 +54,31 @@ In GraphSLAM, landmarks must be distinguishable from one another.
 ### Question 4:
 For each equation below, determine whether the equation is part of the **measurement update step** or the **prediction step** of a Kalman Filter. If the equation is not part of either step, select "Other."
 
-(A) \( P' = (I - KH) P \)  
-(B) \( y_i = y_i + \alpha(x_i - y_i) + \beta(y_{i-1} - 2y_i + y_{i+1}) \)  
-(C) \( P' = F P F^T \)  
-(D) \( x' = x + K(z - Hx) \)  
-(E) \( K = P H^T (H P H^T + R)^{-1} \)  
-(F) \( x' = Fx + u \)
+(A) $P' = (I - KH) P$  
+(B) $y_i = y_i + \alpha(x_i - y_i) + \beta(y_{i-1} - 2y_i + y_{i+1})$  
+(C) $P' = F P F^T$  
+(D) $x' = x + K(z - Hx)$  
+(E) $K = P H^T (H P H^T + R)^{-1}$  
+(F) $x' = Fx + u$
 
 #### **Answer & Steps:**
 - **Equation A**: **Measurement update step**  
-   - \( P' = (I - KH) P \) is part of the **measurement update step**. It represents the update of the covariance matrix after incorporating the measurement.
+   - $P' = (I - KH) P$ is part of the **measurement update step**. It represents the update of the covariance matrix after incorporating the measurement.
 
 - **Equation B**: **Other**  
    - This equation is unrelated to the Kalman filter and likely comes from a different type of system.
 
 - **Equation C**: **Prediction step**  
-   - \( P' = F P F^T \) is part of the **prediction step**, where the covariance is predicted based on the system model.
+   - $P' = F P F^T$ is part of the **prediction step**, where the covariance is predicted based on the system model.
 
 - **Equation D**: **Measurement update step**  
-   - \( x' = x + K(z - Hx) \) is part of the **measurement update step**. This equation represents the state update after incorporating the measurement.
+   - $x' = x + K(z - Hx)$ is part of the **measurement update step**. This equation represents the state update after incorporating the measurement.
 
 - **Equation E**: **Measurement update step**  
-   - \( K = P H^T (H P H^T + R)^{-1} \) is part of the **measurement update step**. This equation calculates the Kalman gain.
+   - $K = P H^T (H P H^T + R)^{-1}$ is part of the **measurement update step**. This equation calculates the Kalman gain.
 
 - **Equation F**: **Prediction step**  
-   - \( x' = Fx + u \) is part of the **prediction step**, where the state is predicted based on the system's dynamics.
+   - $x' = Fx + u$ is part of the **prediction step**, where the state is predicted based on the system's dynamics.
 
 ---
 
