@@ -36,9 +36,9 @@
 
 **Gaussian Equations:**
 - The probability density function of a Gaussian:
-  $$
-  f(x) = rac{1}{\sqrt{2 \pi \sigma^2}} e^{-rac{(x-\mu)^2}{2\sigma^2}}
-  $$
+$$
+f(x) = rac{1}{\sqrt{2 \pi \sigma^2}} e^{-rac{(x-\mu)^2}{2\sigma^2}}
+$$
   where $\mu$ is the mean, and $\sigma^2$ is the variance.
 
 ### 5. **Variance Comparison**
@@ -55,9 +55,9 @@
 **Overview:**
 - A function $f(x)$ evaluates the probability density of a given state.
 - Example:
-  $$
-  	ext{For } \mu = 10, \sigma^2 = 4, 	ext{ and } x = 8, f(x) pprox 0.12
-  $$
+$$
+  ext{For } \mu = 10, \sigma^2 = 4, 	ext{ and } x = 8, f(x) pprox 0.12
+$$
   This function helps estimate the likelihood of the car being at a specific position.
 
 ### 8. **Maximize Gaussian**
@@ -87,13 +87,13 @@
 
 - The update equations for the Kalman filter are:
   - **New Mean:** 
-    $$
-    \mu' = rac{\sigma^2_{	ext{measurement}} \cdot \mu_{	ext{prior}} + \sigma^2_{	ext{prior}} \cdot \mu_{	ext{measurement}}}{\sigma^2_{	ext{prior}} + \sigma^2_{	ext{measurement}}}
-    $$
+  $$
+  \mu' = rac{\sigma^2_{	ext{measurement}} \cdot \mu_{	ext{prior}} + \sigma^2_{	ext{prior}} \cdot \mu_{	ext{measurement}}}{\sigma^2_{	ext{prior}} + \sigma^2_{	ext{measurement}}}
+  $$
   - **New Variance:**
-    $$
-    \sigma'^2 = rac{1}{rac{1}{\sigma^2_{	ext{prior}}} + rac{1}{\sigma^2_{	ext{measurement}}}}
-    $$
+  $$
+  \sigma'^2 = rac{1}{rac{1}{\sigma^2_{	ext{prior}}} + rac{1}{\sigma^2_{	ext{measurement}}}}
+  $$
 
 ### 14. **Separated Gaussians**
 
@@ -102,9 +102,9 @@
 ### 15. **New Mean and Variance**
 
 - Example of how the new mean and variance are calculated using the update equations:
-  $$
-  \mu' = 12.4, \sigma'^2 = 1.6
-  $$
+$$
+\mu' = 12.4, \sigma'^2 = 1.6
+$$
   The mean is closer to the more certain measurement, and the variance decreases.
 
 ### 16. **Gaussian Motion**
@@ -155,13 +155,13 @@
 ### 21. **Kalman Filter Prediction**
 
 - The prediction step uses the state transition matrix $F$ to predict the future state:
-  $$
-  x' = F \cdot x + u
-  $$
+$$
+x' = F \cdot x + u
+$$
   The covariance is updated as:
-  $$
-  P' = F \cdot P \cdot F^T + Q
-  $$
+$$
+P' = F \cdot P \cdot F^T + Q
+$$
 
 ### 22. **Another Prediction**
 
