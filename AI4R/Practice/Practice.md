@@ -303,3 +303,31 @@ In SLAM, the probability distribution representing the final robot location afte
 - In **SLAM**, the final probability distribution is not calculated by simply adding the individual distributions.
 - Instead, these distributions are combined using **convolution** to properly account for the accumulation of uncertainty over time. Convolution ensures that the resulting distribution reflects the combined effects of all movements and their respective uncertainties.
 - Adding distributions would not appropriately handle the probabilistic nature of movement, leading to an incorrect final estimate.
+
+
+### Question 19:
+**[True or False]**  
+A particle filter with no motion noise, no fuzzing, and a constant number of resampled particles will usually have all particles converge to a single point.
+
+#### **Answer:** True
+
+#### **Explanation:**
+- Without **motion noise** and **fuzzing** (random perturbation), a particle filter will continuously resample the particles based solely on their weights. 
+- Since there is no noise to spread the particles, the particles will tend to accumulate and **converge** to a single point that represents the most likely estimate of the state.
+- In the absence of noise and variation, particles lose diversity over time and concentrate around the best estimate, leading to convergence.
+
+
+### Question 20:
+A mapping from all states (such as each of the particular squares in a gridworld) to the actions to take in those states is called:
+
+- a policy
+- an admissible heuristic
+- a plan
+- a state space
+
+#### **Answer:** a policy
+
+#### **Explanation:**
+- A **policy** in the context of reinforcement learning or decision-making is a mapping from **states** to **actions**.
+- In a **gridworld** or similar environments, a policy dictates the action that the agent should take for each specific state it encounters.
+- Other options, such as "plan" or "state space," refer to broader concepts, while an "admissible heuristic" is used in search algorithms but doesn't refer to action mapping directly.
