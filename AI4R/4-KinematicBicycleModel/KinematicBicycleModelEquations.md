@@ -1,5 +1,4 @@
-![](https://github.com/EbramTawfik/Notes/blob/main/AI4R/4-KinematicBicycleModel/images/1.png?raw=true)
-
+![](https://github.com/EbramTawfik/Notes/blob/main/AI4R/4-KinematicBicycleModel/Images/1.png)
 
 ### 1. **Turning Radius (\( R \))**
 
