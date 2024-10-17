@@ -25,6 +25,8 @@ $$
 $$
 \text{center}_x = x - \sin(\theta) \times R
 $$
+
+
 $$
 \text{center}_y = y + \cos(\theta) \times R
 $$
@@ -48,6 +50,8 @@ $$
 $$
 x_{\text{offset}} = \sin(\theta + \beta) \times R
 $$
+
+
 $$
 y_{\text{offset}} = \cos(\theta + \beta) \times R
 $$
@@ -61,6 +65,8 @@ $$
 $$
 x_{\text{new}} = \text{center}_x + x_{\text{offset}}
 $$
+
+
 $$
 y_{\text{new}} = \text{center}_y - y_{\text{offset}}
 $$
@@ -94,9 +100,13 @@ $$
 $$
 x' = x + d \cdot \cos(\theta)
 $$
+
+
 $$
 y' = y + d \cdot \sin(\theta)
 $$
+
+
 $$
 \theta' = \theta
 $$
@@ -110,12 +120,18 @@ $$
 $$
 \beta = \frac{d}{R}
 $$
+
+
 $$
 x_{\text{new}} = \text{center}_x + \sin(\theta + \beta) \times R
 $$
+
+
 $$
 y_{\text{new}} = \text{center}_y - \cos(\theta + \beta) \times R
 $$
+
+
 $$
 \theta_{\text{new}} = (\theta + \beta) \mod 2\pi
 $$
