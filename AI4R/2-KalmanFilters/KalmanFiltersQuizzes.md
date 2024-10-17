@@ -66,22 +66,24 @@ Approximately 0.12.
 
 **Explanation:**  
 The equation for the Gaussian function is:
-\[
+
+$$
 f(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
-\]
+$$
+
 Substituting the values gives approximately 0.12.
 
 ---
 
 ### 6. **Maximize Gaussian Quiz**
 **Question:**  
-How do you modify x to get the maximum return value for the Gaussian function \( f(x) \)?
+How do you modify x to get the maximum return value for the Gaussian function $f(x)$?
 
 **Answer:**  
-Set \( x = \mu \), which maximizes the Gaussian function.
+Set $x = \mu$, which maximizes the Gaussian function.
 
 **Explanation:**  
-The Gaussian reaches its peak when \( x = \mu \), because the exponent term becomes zero, giving the maximum value of the function.
+The Gaussian reaches its peak when $x = \mu$, because the exponent term becomes zero, giving the maximum value of the function.
 
 ---
 
@@ -193,10 +195,10 @@ The motion adds 10 units to the mean, and the uncertainties (variances) are adde
 
 ### 15. **Kalman Prediction Quiz**
 **Question:**  
-Given a state transition matrix \( F \) and an initial state estimate, predict the next state.
+Given a state transition matrix $F$ and an initial state estimate, predict the next state.
 
 **Answer:**  
-The next state is calculated by multiplying the state transition matrix \( F \) with the current state.
+The next state is calculated by multiplying the state transition matrix $F$ with the current state.
 
 **Explanation:**  
 The prediction step involves applying the state transition model to the current state to predict the next state.
