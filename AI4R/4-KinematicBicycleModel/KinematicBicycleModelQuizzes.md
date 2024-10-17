@@ -1,24 +1,22 @@
-
-
 ### **1. Kinematic Bicycle Model - 07 - Simple Movement - Diagonal (Question)**
 
 **Question**: What is the final pose of the robot after applying a forward movement when the robot is oriented diagonally with respect to the x-axis?
 
 **Given**:
-- Initial Pose: \( x = 2, y = 2, \theta = \frac{\pi}{3} \)
-- Forward Movement Distance: \( d = 10 \)
+- Initial Pose: $x = 2, y = 2, \theta = \frac{\pi}{3}$
+- Forward Movement Distance: $d = 10$
 
 **Answer**: 
-- \( x_{\text{final}} = 7 \)
-- \( y_{\text{final}} = 10.7 \)
-- \( \theta_{\text{final}} = \frac{\pi}{3} \)
+- $x_{\text{final}} = 7$
+- $y_{\text{final}} = 10.7$
+- $\theta_{\text{final}} = \frac{\pi}{3}$
 
 **Explanation**: 
 - To calculate the final pose, we use trigonometry:
-  - \( y_{\text{dist}} = \sin(\theta) \times d \)
-  - \( x_{\text{dist}} = \cos(\theta) \times d \)
+  - $y_{\text{dist}} = \sin(\theta) \times d$
+  - $x_{\text{dist}} = \cos(\theta) \times d$
   - Add the calculated distances to the initial x and y positions.
-- For this specific example, the forward movement is applied diagonally, meaning both the x and y positions change, while the orientation (\( \theta \)) remains the same.
+- For this specific example, the forward movement is applied diagonally, meaning both the x and y positions change, while the orientation ($\theta$) remains the same.
 
 ---
 
@@ -85,35 +83,35 @@
 **Question**: What distance must the robot travel in order to return to its current position (assuming a fixed steering angle)?
  
 **Answer**: 
-- \( 2\pi \times R \)
+- $2\pi \times R$
 
 **Explanation**: 
-- The robot needs to complete a full circle to return to its starting point. The distance for a full circle is the circumference, which is given by \( 2\pi R \), where \( R \) is the turning radius.
+- The robot needs to complete a full circle to return to its starting point. The distance for a full circle is the circumference, which is given by $2\pi R$, where $R$ is the turning radius.
 
 ---
 
 ### **7. Kinematic Bicycle Model - 28 - Example Problem (Question)**
 
 **Given**:
-- Starting Pose: \( x = 0.118, y = -0.54, \theta = 0.1 \)
-- Steering Angle: \( \alpha = 0.166 \)
-- Forward Distance: \( d = 1.07 \)
-- Robot Length: \( L = 0.2 \)
+- Starting Pose: $x = 0.118, y = -0.54, \theta = 0.1$
+- Steering Angle: $\alpha = 0.166$
+- Forward Distance: $d = 1.07$
+- Robot Length: $L = 0.2$
 
 **Question**: What is the final pose of the robot after traveling the given distance with the specified steering angle?
 
 **Answer**: 
-- \( x_{\text{new}} = 1 \)
-- \( y_{\text{new}} = 0 \)
-- \( \theta_{\text{new}} = 1 \)
+- $x_{\text{new}} = 1$
+- $y_{\text{new}} = 0$
+- $\theta_{\text{new}} = 1$
 
 **Explanation**:
-- First, calculate the turning radius \( R \) using \( R = \frac{L}{\tan(\alpha)} \), which gives \( R \approx 1.194 \).
-- Then, find the central angle \( \beta = \frac{d}{R} \approx 0.896 \).
+- First, calculate the turning radius $R$ using $R = \frac{L}{\tan(\alpha)}$, which gives $R \approx 1.194$.
+- Then, find the central angle $\beta = \frac{d}{R} \approx 0.896$.
 - Using the equations for the new x, y position and orientation:
-  - \( x_{\text{new}} = \text{center}_x + \sin(\theta + \beta) \times R \)
-  - \( y_{\text{new}} = \text{center}_y - \cos(\theta + \beta) \times R \)
-  - \( \theta_{\text{new}} = (\theta + \beta) \mod 2\pi \)
-- The calculated final pose rounds to \( x = 1 \), \( y = 0 \), and \( \theta = 1 \).
+  - $x_{\text{new}} = \text{center}_x + \sin(\theta + \beta) \times R$
+  - $y_{\text{new}} = \text{center}_y - \cos(\theta + \beta) \times R$
+  - $\theta_{\text{new}} = (\theta + \beta) \mod 2\pi$
+- The calculated final pose rounds to $x = 1$, $y = 0$, and $\theta = 1$.
 
 ---
