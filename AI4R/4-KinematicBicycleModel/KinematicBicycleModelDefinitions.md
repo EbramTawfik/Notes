@@ -17,9 +17,11 @@ Here are all the key concepts and definitions from the lesson on the **Kinematic
 
 ### 5. **Turning Radius (\( R \))**
    - The radius of the circle traced by the rear axle during a turn. It is influenced by the steering angle \( \alpha \) and the length of the robot \( L \). The formula is:
+     
      $$
      R = \frac{L}{\tan(\alpha)}
      $$
+     
    - A larger steering angle results in a smaller turning radius.
 
 ### 6. **Center of the Circle**
@@ -27,16 +29,21 @@ Here are all the key concepts and definitions from the lesson on the **Kinematic
 
 ### 7. **Arc Length**
    - The distance traveled by the robot along the circumference of a circle during its motion. It is calculated as the product of the turning angle \( \beta \) and the radius \( R \):
+
      $$
      \text{Arc Length} = \beta \times R
      $$
+     
    - \( \beta \) is the central angle subtended by the arc at the center of the circle.
 
 ### 8. **Central Angle (\( \beta \))**
    - The angle by which the robot turns as it moves along a circular arc. It is calculated using the formula:
+
+     
      $$
      \beta = \frac{d}{R}
      $$
+     
    where \( d \) is the forward distance traveled by the robot.
 
 ### 9. **Offset from Center**
