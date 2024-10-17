@@ -54,10 +54,10 @@ $$
 
   
   Where:
-  - \( P(X_i | Z) \) is the updated belief (posterior probability) that the robot is in position \( X_i \), given the measurement \( Z \).
-  - \( P(Z | X_i) \) is the likelihood of getting the measurement \( Z \) if the robot is actually in position \( X_i \).
-  - \( P(X_i) \) is the prior belief that the robot is in position \( X_i \).
-  - \( P(Z) \) is the probability of receiving the measurement \( Z \).
+  - $P(X_i | Z)$ is the updated belief (posterior probability) that the robot is in position $X_i$, given the measurement $Z$.
+  - $P(Z | X_i)$ is the likelihood of getting the measurement $Z$ if the robot is actually in position $X_i$.
+  - $P(X_i)$ is the prior belief that the robot is in position $X_i$.
+  - $P(Z)$ is the probability of receiving the measurement $Z$.
 
 ---
 
@@ -75,7 +75,7 @@ For example, if the robot is certain it was in a particular cell, after moving o
 
 The **total probability theorem** is used when the robot updates its belief based on the motion. It accounts for the fact that the robot could have come from multiple different locations.
 
-The updated belief \( P(X_i^t) \) at time \( t \) is computed by summing the probabilities from all possible previous locations \( X_j^{t-1} \):
+The updated belief $P(X_i^t)$ at time $t$ is computed by summing the probabilities from all possible previous locations $X_j^{t-1}$:
 
 
 $$
@@ -117,12 +117,12 @@ Let’s apply Bayes' rule to a practical example:
 #### Cancer Test Problem
 
 In this example, you're given:
-- \( P(C) = 0.001 \) (Probability of having cancer)
-- \( P(\neg C) = 0.999 \) (Probability of not having cancer)
-- \( P(\text{Pos} | C) = 0.8 \) (Probability of a positive test result given cancer)
-- \( P(\text{Pos} | \neg C) = 0.1 \) (Probability of a positive result given no cancer)
+- $P(C) = 0.001$ (Probability of having cancer)
+- $P(\neg C) = 0.999$ (Probability of not having cancer)
+- $P(\text{Pos} | C) = 0.8$ (Probability of a positive test result given cancer)
+- $P(\text{Pos} | \neg C) = 0.1$ (Probability of a positive result given no cancer)
 
-The goal is to compute the probability of having cancer given a positive test result \( P(C | \text{Pos}) \).
+The goal is to compute the probability of having cancer given a positive test result $P(C | \text{Pos})$.
 
 **Solution**:
 
@@ -134,7 +134,7 @@ P(C | \text{Pos}) = \frac{P(\text{Pos} | C) P(C)}{P(\text{Pos})}
 $$
 
 
-Where \( P(\text{Pos}) \) is the total probability of getting a positive test result:
+Where $P(\text{Pos})$ is the total probability of getting a positive test result:
 
 
 $$
@@ -150,7 +150,7 @@ P(\text{Pos}) = (0.8 \times 0.001) + (0.1 \times 0.999) = 0.0008 + 0.0999 = 0.10
 $$
 
 
-Finally, calculate \( P(C | \text{Pos}) \):
+Finally, calculate $P(C | \text{Pos})$:
 
 
 $$
