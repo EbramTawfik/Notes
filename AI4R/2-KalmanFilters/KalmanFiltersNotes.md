@@ -120,8 +120,18 @@ $$
 ### 16. **Gaussian Motion**
 
 - The **motion update** adds the system’s predicted movement to the current state:
-  - **New Mean:** $\mu' = \mu + u$
-  - **New Variance:** $\sigma'^2 = \sigma^2 + r^2$
+  - **New Mean:**
+    
+$$
+\mu' = \mu + u
+$$
+    
+  - **New Variance:**
+ 
+$$
+\sigma'^2 = \sigma^2 + r^2
+$$
+
   where $u$ is the motion, and $r^2$ is the motion uncertainty.
 
 ### 17. **Predict Function**
