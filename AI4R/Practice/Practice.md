@@ -178,3 +178,128 @@ The particle with the highest weight is always sampled.
 - While particles with higher weights are more **likely** to be sampled, it is not guaranteed that the particle with the highest weight will always be selected.
 - This probabilistic approach ensures diversity in the particle set, preventing the filter from collapsing onto a potentially incorrect state.
 
+
+### Question 11:
+In Sebastian's lecture on Localization, Bayes' Rule applies to the motion (move function), whereas the Law of Total Probability applies to the measurement (sense function).
+
+- True
+- False
+
+#### **Answer:** False
+
+#### **Explanation:**
+- In the context of **robot localization**, **Bayes' Rule** is applied to the **measurement (sense function)**, as it is used to update the belief about the robot's position after receiving a new sensor measurement.
+- The **Law of Total Probability** applies to the **motion (move function)**, as it is used to predict the new state of the robot by summing over all possible previous states, weighted by the probability of moving from those states to the current state.
+- Thus, the correct assignment is that Bayes' Rule is used for the **sense function**, and the Law of Total Probability is used for the **move function**.
+
+
+
+### Question 12:
+If a single noisy measurement throws off your particle filter, which of the following changes to your particle filter tuning parameters are likely to improve the situation? (Choose ALL that apply.)
+
+- Increase the number of particles
+- Decrease the number of particles
+- Increase sigma of your importance weighting function
+- Decrease sigma of your importance weighting function
+- Use deepcopy
+
+### Question 13:
+When using the resampling wheel technique discussed in the lecture videos, the same particle will never be picked twice in a row. [Assume the largest particle weight makes up 25% of the total sum of the weights.]
+
+- True
+- False
+
+#### **Answer:** False
+
+#### **Explanation:**
+- In the **resampling wheel** technique, particles are selected with a probability proportional to their weights. While particles with higher weights are more likely to be selected, it is still possible for a particle to be picked multiple times in a row.
+- In this scenario, since the largest particle weight makes up 25% of the total sum of the weights, it is likely that this particle will be picked frequently, but it is **not impossible** for it to be selected twice or more consecutively.
+- This randomness is part of the probabilistic nature of the resampling process.
+
+### Question 14:
+If A and B are independent random variables, and $P(A) = 0.2$ and $P(B) = 0.3$, what is $P(A \text{ or } B)$? Note that "A or B" means "Only A, only B, or both A and B."
+
+#### **Answer:** 
+$$
+P(A \text{ or } B) = 0.44
+$$
+
+#### **Explanation & Steps:**
+The formula for the probability of $A \text{ or } B$ (i.e., the union of A and B) is:
+
+$$
+P(A \cup B) = P(A) + P(B) - P(A \cap B)
+$$
+
+Since A and B are independent events, the probability of both A and B happening (i.e., $P(A \cap B)$) is:
+
+$$
+P(A \cap B) = P(A) \times P(B) = 0.2 \times 0.3 = 0.06
+$$
+
+Now, substitute the values into the formula for $P(A \cup B)$:
+
+$$
+P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.2 + 0.3 - 0.06 = 0.44
+$$
+
+Thus, $P(A \text{ or } B) = 0.44$.
+
+
+
+### Question 15:
+**[True or False]**  
+In particle filters, during each iteration, we should resample the particles before determining their importance weights to make sure we are only calculating weights for the particles that matter.
+
+#### **Answer:** False
+
+#### **Explanation:**
+- In a particle filter, the **importance weights** are calculated **before resampling**. The weights represent how well each particle matches the observed measurements. Resampling is done **after** the weights are computed to focus on particles that have higher weights (i.e., those that better match the observations).
+- Resampling before calculating weights would defeat the purpose, as you wouldn’t know which particles are more important without first determining the weights based on the current measurement. Therefore, particles are resampled **after** the weight calculation step.
+
+
+
+### Question 16:
+Label each of the Gaussian distributions based on its relative value of \( \sigma \) (sigma).
+![](https://github.com/EbramTawfik/Notes/blob/main/AI4R/Practice/Images/16.png)
+- **A:** [Choose]  
+- **B:** [Choose]  
+- **C:** [Choose]
+
+#### Options:
+- Small
+- Medium
+- Large
+
+#### **Answer:**
+- **A:** Medium  
+- **B:** Small  
+- **C:** Large  
+
+#### **Explanation:**
+- The standard deviation \( \sigma \) controls the spread of a Gaussian distribution.
+  - A **small** \( \sigma \) results in a narrow, tall peak (as shown in distribution **B**).
+  - A **large** \( \sigma \) results in a wide, flat curve (as shown in distribution **C**).
+  - **A** represents a medium \( \sigma \) with a distribution between these two extremes.
+
+### Question 17:
+**[True or False]**  
+When using online Graph SLAM, any included measurements with an error that exceeds the modeled measurement uncertainty will cause future position estimates to have increased error.
+
+#### **Answer:** True
+
+#### **Explanation:**
+- In **Graph SLAM**, errors in the measurements are propagated through the system. If a measurement has an error that exceeds the modeled uncertainty and is not properly accounted for, it can lead to incorrect position estimates.
+- This incorrect information can affect future position estimates as the graph becomes more constrained based on these measurements. The system will integrate this erroneous information into the map, increasing the overall error.
+- Ensuring accurate measurement models and outlier detection mechanisms helps mitigate such issues.
+
+### Question 18:
+**[True or False]**  
+In SLAM, the probability distribution representing the final robot location after a sequence of noisy movements can be calculated by adding together the individual distributions representing each movement.
+
+#### **Answer:** False
+
+#### **Explanation:**
+- In **SLAM**, the final probability distribution is not calculated by simply adding the individual distributions.
+- Instead, these distributions are combined using **convolution** to properly account for the accumulation of uncertainty over time. Convolution ensures that the resulting distribution reflects the combined effects of all movements and their respective uncertainties.
+- Adding distributions would not appropriately handle the probabilistic nature of movement, leading to an incorrect final estimate.
