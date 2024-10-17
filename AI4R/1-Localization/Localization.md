@@ -47,9 +47,11 @@ The key to understanding localization lies in the use of **probability theory**.
 - **Bayesian filtering** is central to localization. The robot maintains a belief about its position, which gets updated based on new sensor information and movement data.
 - Bayes' rule allows the robot to update its belief about its current state based on the likelihood of a measurement:
   
-  \[
-  P(X_i | Z) = \frac{P(Z | X_i) \cdot P(X_i)}{P(Z)}
-  \]
+  
+$$
+P(X_i | Z) = \frac{P(Z | X_i) \cdot P(X_i)}{P(Z)}
+$$
+
   
   Where:
   - \( P(X_i | Z) \) is the updated belief (posterior probability) that the robot is in position \( X_i \), given the measurement \( Z \).
@@ -75,9 +77,11 @@ The **total probability theorem** is used when the robot updates its belief base
 
 The updated belief \( P(X_i^t) \) at time \( t \) is computed by summing the probabilities from all possible previous locations \( X_j^{t-1} \):
 
-\[
+
+$$
 P(X_i^t) = \sum_j P(X_j^{t-1}) \cdot P(X_i | X_j)
-\]
+$$
+
 
 ---
 
@@ -95,9 +99,11 @@ The robot gathers information using its sensors. These sensors are not perfect, 
   
   The entropy of a probability distribution is given by:
 
-  \[
-  \text{Entropy} = - \sum p(x) \log p(x)
-  \]
+  
+$$
+\text{Entropy} = - \sum p(x) \log p(x)
+$$
+
 
 - **Movement increases entropy** because it introduces uncertainty (as the robot isn’t sure exactly where it ended up).
 - **Sensing decreases entropy** because it provides additional information that refines the robot's belief about its position.
@@ -122,27 +128,35 @@ The goal is to compute the probability of having cancer given a positive test re
 
 Using Bayes' Rule:
 
-\[
+
+$$
 P(C | \text{Pos}) = \frac{P(\text{Pos} | C) P(C)}{P(\text{Pos})}
-\]
+$$
+
 
 Where \( P(\text{Pos}) \) is the total probability of getting a positive test result:
 
-\[
+
+$$
 P(\text{Pos}) = P(\text{Pos} | C) P(C) + P(\text{Pos} | \neg C) P(\neg C)
-\]
+$$
+
 
 Substitute the known values:
 
-\[
+
+$$
 P(\text{Pos}) = (0.8 \times 0.001) + (0.1 \times 0.999) = 0.0008 + 0.0999 = 0.1007
-\]
+$$
+
 
 Finally, calculate \( P(C | \text{Pos}) \):
 
-\[
+
+$$
 P(C | \text{Pos}) = \frac{0.8 \times 0.001}{0.1007} \approx 0.0079
-\]
+$$
+
 
 So, there is a **0.79%** chance of having cancer given a positive test result.
 
