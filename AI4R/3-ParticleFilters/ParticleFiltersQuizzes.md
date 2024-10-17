@@ -1,58 +1,60 @@
 
 ### **1. Never Sampled 1 (Quiz)**
 
-- **Question**: Is it possible that particle \( P_1 \), with an importance weight of \( 0.1 \), is never sampled in the resampling step?
+- **Question**: Is it possible that particle $P_1$, with an importance weight of $0.1$, is never sampled in the resampling step?
     - **Options**: 
       - Yes
       - No
 
 - **Answer**: **Yes**.
-    - **Explanation**: In the random resampling process, a particle with a small importance weight, such as \( P_1 \), which has an importance weight of 0.1, has a lower probability of being sampled. Therefore, it is possible that it may never be sampled.
+    - **Explanation**: In the random resampling process, a particle with a small importance weight, such as $P_1$, which has an importance weight of 0.1, has a lower probability of being sampled. Therefore, it is possible that it may never be sampled.
 
 ---
 
 ### **2. Never Sampled 2 (Quiz)**
 
-- **Question**: Is it possible that particle \( P_3 \), with the largest importance weight of \( 0.4 \), is never sampled in the resampling step?
+- **Question**: Is it possible that particle $P_3$, with the largest importance weight of $0.4$, is never sampled in the resampling step?
     - **Options**: 
       - Yes
       - No
 
 - **Answer**: **Yes**.
-    - **Explanation**: Even though \( P_3 \) has the largest importance weight (0.4), it is still possible that during the resampling process, it could be skipped due to randomness in the process. There's always a chance that other particles may be selected instead.
+    - **Explanation**: Even though $P_3$ has the largest importance weight (0.4), it is still possible that during the resampling process, it could be skipped due to randomness in the process. There's always a chance that other particles may be selected instead.
 
 ---
 
 ### **3. Never Sampled 3 (Quiz)**
 
-- **Question**: What is the probability that particle \( P_3 \), with an importance weight of \( 0.4 \), is never sampled after five resampling steps?
+- **Question**: What is the probability that particle $P_3$, with an importance weight of $0.4$, is never sampled after five resampling steps?
   
-- **Answer**: The probability of **never sampling \( P_3 \)** is **0.0777**.
+- **Answer**: The probability of **never sampling $P_3$** is **0.0777**.
     - **Explanation**: This probability is calculated using the formula:
-      \[
-      P(\text{not selected}) = (1 - \alpha_3)^N
-      \]
-      where \( \alpha_3 = 0.4 \) is the normalized weight, and \( N = 5 \) is the number of resampling steps. The probability is approximately 7.77%.
+      
+$$
+P(\text{not selected}) = (1 - \alpha_3)^N
+$$
+
+      where $\alpha_3 = 0.4$ is the normalized weight, and $N = 5$ is the number of resampling steps. The probability is approximately 7.77%.
 
 ---
 
 ### **4. Resampling Quiz**
 
 - **Question**: Suppose we have five particles with the following importance weights:
-    - \( P_1 \): \( 0.6 \)
-    - \( P_2 \): \( 1.2 \)
-    - \( P_3 \): \( 2.4 \)
-    - \( P_4 \): \( 0.6 \)
-    - \( P_5 \): \( 1.2 \)
+    - $P_1$: $0.6$
+    - $P_2$: $1.2$
+    - $P_3$: $2.4$
+    - $P_4$: $0.6$
+    - $P_5$: $1.2$
   
   What is the normalized probability of drawing each particle during the resampling step?
 
 - **Answer**:
-    - \( P(P_1) = 0.1 \)
-    - \( P(P_2) = 0.2 \)
-    - \( P(P_3) = 0.4 \)
-    - \( P(P_4) = 0.1 \)
-    - \( P(P_5) = 0.2 \)
+    - $P(P_1) = 0.1$
+    - $P(P_2) = 0.2$
+    - $P(P_3) = 0.4$
+    - $P(P_4) = 0.1$
+    - $P(P_5) = 0.2$
     - **Explanation**: The total weight is 6, so the normalized probability of drawing each particle is calculated by dividing each particle's weight by the total weight (6).
 
 ---

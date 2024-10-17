@@ -6,7 +6,7 @@
 ---
 
 ### **2. State Space**
-- **Definition**: The state space refers to all possible states the system (robot) can be in. In the context of particle filters for localization, the state is typically represented as \( (x, y, \theta) \), where \( x \) and \( y \) are coordinates, and \( \theta \) is the orientation.
+- **Definition**: The state space refers to all possible states the system (robot) can be in. In the context of particle filters for localization, the state is typically represented as $(x, y, \theta)$, where $x$ and $y$ are coordinates, and $\theta$ is the orientation.
 - **Key Concept**: The robot's position and orientation at any time are described by these values.
 
 ---
@@ -26,7 +26,7 @@
 
 ### **5. Sensor Model**
 - **Definition**: The sensor model describes how the robot's sensors perceive the environment. It accounts for noise and uncertainty in sensor readings.
-- **Key Formula**: \( P(Z|X) \) is the probability of getting sensor measurement \( Z \), given the robot is in state \( X \).
+- **Key Formula**: $P(Z|X)$ is the probability of getting sensor measurement $Z$, given the robot is in state $X$.
 - **Key Concept**: Sensors are noisy, so the sensor model reflects the probability of a measurement being correct.
 
 ---
@@ -57,7 +57,7 @@
 
 ### **10. Measurement Update**
 - **Definition**: During the measurement update, each particle’s weight is recalculated based on the difference between the actual sensor readings and the predicted readings for that particle.
-- **Key Formula**: \( P(X|Z) \propto P(Z|X)P(X) \), which combines the likelihood of the measurement with the prior belief about the state.
+- **Key Formula**: $P(X|Z) \propto P(Z|X)P(X)$, which combines the likelihood of the measurement with the prior belief about the state.
 - **Key Concept**: This step updates the belief based on sensor data.
 
 ---

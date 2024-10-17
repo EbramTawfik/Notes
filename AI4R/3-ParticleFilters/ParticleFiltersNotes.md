@@ -246,8 +246,8 @@
 ### **44. Filters**
 - This section explains the mathematical foundation behind particle filters. The key formulas describe how the filter updates its belief based on sensor readings (measurement update) and movement (motion update).
 - **Key Formula**: 
-   - Measurement Update: \( P(X|Z) \propto P(Z|X)P(X) \)
-   - Motion Update: \( P(X') = \sum P(X'|X)P(X) \)
+   - Measurement Update: $P(X|Z) \propto P(Z|X)P(X)$
+   - Motion Update: $P(X') = \sum P(X'|X)P(X)$
 
 ---
 
