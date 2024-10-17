@@ -29,14 +29,16 @@ Here are all the key concepts and definitions from the lesson on the **Kinematic
 
 ### 7. **Arc Length**
    - The distance traveled by the robot along the circumference of a circle during its motion. It is calculated as the product of the turning angle $\beta$ and the radius $R$:
-     $$
+    
+      $$
      \text{Arc Length} = \beta \times R
      $$
    - $\beta$ is the central angle subtended by the arc at the center of the circle.
 
 ### 8. **Central Angle ($\beta$)**
    - The angle by which the robot turns as it moves along a circular arc. It is calculated using the formula:
-     $$
+    
+      $$
      \beta = \frac{d}{R}
      $$
    where $d$ is the forward distance traveled by the robot.
@@ -53,7 +55,8 @@ Here are all the key concepts and definitions from the lesson on the **Kinematic
      x_{\text{new}} = \text{center}_x + x_{\text{offset}}, \quad y_{\text{new}} = \text{center}_y - y_{\text{offset}}
      $$
    The new orientation is computed as:
-     $$
+    
+      $$
      \theta_{\text{new}} = (\theta + \beta) \mod 2\pi
      $$
 
@@ -62,7 +65,8 @@ Here are all the key concepts and definitions from the lesson on the **Kinematic
 
 ### 12. **Distance to Return to the Same Point**
    - To return to the starting point after a circular motion, the robot must travel the circumference of the circle:
-     $$
+    
+      $$
      \text{Distance} = 2\pi \times R
      $$
 
