@@ -2,7 +2,9 @@
 
 ### 1. **Turning Radius (\( R \))**
 
+$$
 R = \frac{L}{\tan(\alpha)}
+$$
 
 
 - **Explanation**: The turning radius \( R \) depends on the length of the vehicle \( L \) and the steering angle \( \alpha \). A larger steering angle results in a smaller turning radius. This equation allows us to calculate the radius of the circular path that the rear axle will follow during the motion.
